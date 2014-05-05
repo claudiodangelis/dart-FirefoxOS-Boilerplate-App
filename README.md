@@ -10,17 +10,17 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 - ~~Take picture~~
 - ~~Dial number~~
 - ~~Send SMS~~
-- Add contact
-- Share URL
-- Share Image
-- View URL
-- Compose mail
-- Save bookmark
-- Open video
+- ~~Add contact~~
+- ~~Share URL~~
+- ~~Share Image~~
+- ~~View URL~~
+- ~~Compose mail~~
+- ~~Save bookmark~~
+- ~~Open video~~
 
 ### WebAPIs
 
-- Add notification
+- ~~Add notification~~
 - Orientation lock
 - Vibrate 2 sec
 - Check connection
@@ -50,6 +50,8 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 - Robert Nyman is the original creator of Firefox OS Boilerplate App.
 
 ## License
+
+  MIT
 
 ## Author(s)
 - Claudio d'Angelis - [@claudiodangelis](https://github.com/claudiodangelis)
