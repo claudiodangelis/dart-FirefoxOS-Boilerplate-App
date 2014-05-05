@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:js';
 
 // Top-level DOM elements
 ButtonElement pickImage = querySelector('#pick-image'),
@@ -40,9 +41,35 @@ DivElement  connectionDisplay = querySelector('#connection-display'),
             deviceOrientationDisplay = querySelector('#device-orientation-display'),
             logVisibilityDisplay =  querySelector('#log-visibility-display'),
             crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display'),
-            deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display'),
+            deviceStoragePicturesDisplay =querySelector('#device-storiage-pictures-display'),
             getAllContactsDisplay = querySelector('#get-all-contacts-display');
 
 main() {
-  pickImage.onClick.listen((e) => print("It's going to work"));
+  // WebActivities
+  pickImage.onClick.listen((e) {
+    // For a more readable code, we separate declare options outside the
+    // MozActivity constructor
+    var pickOptions = new JsObject.jsify({
+      "name": "pick",
+      "data": {
+        "type": ["image/png", "image/jpg", "image/jpeg"],
+        "nocrop": true
+      }
+    });
+    var pick = new JsObject(context["MozActivity"], [pickOptions]);
+    pick["onsuccess"] = (_) {
+      ImageElement img = new ImageElement();
+      img.src = Url.createObjectUrlFromBlob(pick["result"]["blob"]);
+      DivElement imagePresenter = querySelector('#image-presenter');
+      // `..' is the cascade operator. `imagePresenter' is the receiver for both
+      // methods
+      imagePresenter
+        ..append(img)
+        ..style.display = 'block';
+    };
+    
+    pick["onerror"] = (_) {
+      print("Can't view the image");
+    };
+  });
 }
