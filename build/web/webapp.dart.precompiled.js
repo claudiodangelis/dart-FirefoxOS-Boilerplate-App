@@ -458,7 +458,7 @@ y.Hg=x+1
 y=P.L5(null,null,null,J.im,H.yo)
 w=P.Ls(null,null,null,J.im)
 v=new H.yo(0,null,!1)
-u=new H.aX(x,y,w,new I(),v,P.N3(),P.N3(),!1,[],P.Ls(null,null,null,null),null,!1)
+u=new H.aX(x,y,w,new I(),v,P.Jz(),P.Jz(),!1,[],P.Ls(null,null,null,null),null,!1)
 w.h(0,0)
 u.aU(0,v)
 init.globalState.yc=u
@@ -500,7 +500,7 @@ y.Hg=q+1
 y=P.L5(null,null,null,J.im,H.yo)
 p=P.Ls(null,null,null,J.im)
 o=new H.yo(0,null,!1)
-n=new H.aX(q,y,p,new I(),o,P.N3(),P.N3(),!1,[],P.Ls(null,null,null,null),null,!1)
+n=new H.aX(q,y,p,new I(),o,P.Jz(),P.Jz(),!1,[],P.Ls(null,null,null,null),null,!1)
 p.h(0,0)
 n.aU(0,o)
 init.globalState.Xz.Rk.NZ(new H.IY(n,new H.jl(w,v,u,t,s,r),"worker-start"))
@@ -560,9 +560,9 @@ if(e===!0){z.v8(w,w)
 init.globalState.Xz.Rk.NZ(new H.IY(z,x,"start isolate"))}else x.call$0()},"call$6","Jr",12,0,null,12,8,13,14,15,16],
 Gy:[function(a){var z
 if(init.globalState.ji===!0){z=new H.Bj(0,new H.X1())
-z.iq=new H.fP(null)
+z.iq=new H.aJ(null)
 return z.h7(a)}else{z=new H.NO(new H.X1())
-z.iq=new H.fP(null)
+z.iq=new H.aJ(null)
 return z.h7(a)}},"call$1","YH",2,0,null,13],
 Hh:[function(a){if(init.globalState.ji===!0)return new H.II(null).QS(a)
 else return a},"call$1","MJ",2,0,null,13],
@@ -810,7 +810,7 @@ u=v.Zt(w)
 if(u==null)return
 return new H.JM(u,x)}else return new H.ns(y,w,x)},
 Op:function(a){return new H.ku(J.UQ(a,1))}},
-fP:{
+aJ:{
 "^":"a;kw",
 t:function(a,b){return b.__MessageTraverser__attached_info__},
 u:function(a,b,c){this.kw.push(b)
@@ -3246,7 +3246,7 @@ w=z.call$1(C.jn.JV(C.jn.cU(y,1000000),60))
 v=new P.P7().call$1(C.jn.JV(y,1000000))
 return""+C.jn.cU(y,3600000000)+":"+H.d(x)+":"+H.d(w)+"."+H.d(v)},
 $isa6:true,
-static:{"^":"Wt,S4,dk,Lo,zj,b2,q9,Ie,Do,Cv,kT,IJ,D9,Vk,S8,rG",k5:function(a,b,c,d,e,f){return new P.a6(a*86400000000+b*3600000000+e*60000000+f*1000000+d*1000+c)}}},
+static:{"^":"Wt,S4,dk,Lo,zj,b2,q9,Ie,Do,f4,kT,IJ,D9,Vk,S8,rG",k5:function(a,b,c,d,e,f){return new P.a6(a*86400000000+b*3600000000+e*60000000+f*1000000+d*1000+c)}}},
 P7:{
 "^":"Tp:150;",
 call$1:[function(a){if(a>=100000)return""+a
@@ -3537,7 +3537,7 @@ gVl:function(a){return H.VM(new W.eu(a,C.T1.Ph,!1),[null])},
 IU:{
 "^":"a;",
 $isIU:true,
-static:{N3:function(){return new H.ku((Math.random()*0x100000000>>>0)+(Math.random()*0x100000000>>>0)*4294967296)}}}}],["dart.js","dart:js",,P,{
+static:{Jz:function(){return new H.ku((Math.random()*0x100000000>>>0)+(Math.random()*0x100000000>>>0)*4294967296)}}}}],["dart.js","dart:js",,P,{
 "^":"",
 R4:[function(a,b,c,d){var z
 if(b===!0){z=[c]
@@ -3853,7 +3853,11 @@ return}throw "Unable to print message: " + String(a)},"call$1","ah",2,0,null,130
 QL:[function(){var z=J.Vg($.Ea())
 H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.em()),z.Sg),[H.Kp(z,0)]).Zz()
 z=J.Vg($.e6())
-H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Lb()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Lb()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.N3())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.QA()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.xE())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Cv()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
 em:{
 "^":"Tp:127;",
 call$1:[function(a){var z,y,x
@@ -3899,6 +3903,33 @@ $isEH:true},
 Hi:{
 "^":"Tp:127;",
 call$1:[function(a){P.mp("An error occurred")},"call$1",null,2,0,null,142,"call"],
+$isEH:true},
+QA:{
+"^":"Tp:127;",
+call$1:[function(a){var z,y,x
+z=P.jT(H.B7(["name","record","data",H.B7(["type",["photos"]],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+y=P.uw(J.UQ($.cM(),"MozActivity"),[z])
+x=J.w1(y)
+x.u(y,"onsuccess",new S.BT(y))
+x.u(y,"onerror",new S.PY())},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+BT:{
+"^":"Tp:127;c",
+call$1:[function(a){var z,y
+z=W.jm(null,null,null)
+J.Yj(z,(self.URL||self.webkitURL).createObjectURL(J.UQ(J.UQ(this.c,"result"),"blob")))
+y=document.querySelector("#image-presenter")
+y.appendChild(z)
+J.oH(y.style,"block")},"call$1",null,2,0,null,142,"call"],
+$isEH:true},
+PY:{
+"^":"Tp:127;",
+call$1:[function(a){window.alert("No taken picture returned")},"call$1",null,2,0,null,142,"call"],
+$isEH:true},
+Cv:{
+"^":"Tp:127;",
+call$1:[function(a){var z=P.jT(H.B7(["name","dial","data",H.B7(["number","+46777888999"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
 $isEH:true}},1],])
 I.$finishClasses($$,$,null)
 $$=null
@@ -4234,6 +4265,8 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(o) { this.o = o; }})
 I.$lazy($,"pickImage","z4","Ea",function(){return document.querySelector("#pick-image")})
 I.$lazy($,"pickAnything","AM","e6",function(){return document.querySelector("#pick-anything")})
+I.$lazy($,"record","OB","N3",function(){return document.querySelector("#record")})
+I.$lazy($,"dial","fP","xE",function(){return document.querySelector("#dial")})
 
 init.functionAliases={}
 init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"zx",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","element","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},];$=null
@@ -5031,11 +5064,11 @@ if(!"name" in Iv)Iv.name="Iv"
 $desc=$collectedClasses.Iv
 if($desc instanceof Array)$desc=$desc[1]
 Iv.prototype=$desc
-function BT(){}BT.builtin$cls="BT"
-if(!"name" in BT)BT.name="BT"
-$desc=$collectedClasses.BT
+function WP(){}WP.builtin$cls="WP"
+if(!"name" in WP)WP.name="WP"
+$desc=$collectedClasses.WP
 if($desc instanceof Array)$desc=$desc[1]
-BT.prototype=$desc
+WP.prototype=$desc
 function yY(){}yY.builtin$cls="yY"
 if(!"name" in yY)yY.name="yY"
 $desc=$collectedClasses.yY
@@ -5912,11 +5945,11 @@ if(!"name" in II)II.name="II"
 $desc=$collectedClasses.II
 if($desc instanceof Array)$desc=$desc[1]
 II.prototype=$desc
-function fP(kw){this.kw=kw}fP.builtin$cls="fP"
-if(!"name" in fP)fP.name="fP"
-$desc=$collectedClasses.fP
+function aJ(kw){this.kw=kw}aJ.builtin$cls="aJ"
+if(!"name" in aJ)aJ.name="aJ"
+$desc=$collectedClasses.aJ
 if($desc instanceof Array)$desc=$desc[1]
-fP.prototype=$desc
+aJ.prototype=$desc
 function X1(){}X1.builtin$cls="X1"
 if(!"name" in X1)X1.name="X1"
 $desc=$collectedClasses.X1
@@ -6944,4 +6977,24 @@ if(!"name" in Hi)Hi.name="Hi"
 $desc=$collectedClasses.Hi
 if($desc instanceof Array)$desc=$desc[1]
 Hi.prototype=$desc
-return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,fW,y4,d7,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,Ax,xf,Vb,ST,tb,Sg,pA,Mi,HL,In,wP,eP,A6,Og,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,Q0,eY,KV,KY,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,bX,UL,MC,Mx,j2,X4,lp,kd,I0,yN,Cp,ua,HN,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,BT,yY,kJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,Nf,Nc,rj,Zv,Q7,hF,yK,Dh,ZJ,mU,ph,IT,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,eW,Qy,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,tc,GH,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,im,VA,O,PK,JO,O2,aX,oU,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,SU,GD,Ca,vs,da,pV,U7,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,Xz,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Y2,CL,fR,iP,a6,P7,DW,Ge,LK,AT,bJ,JS,ub,ds,lj,UV,VS,t7,HG,eV,kM,An,c8,a,mE,Rn,wv,BV,id,I2,RO,eu,xC,IU,E4,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,em,VW,oZ,Lb,y8,Hi]}
+function QA(){}QA.builtin$cls="QA"
+if(!"name" in QA)QA.name="QA"
+$desc=$collectedClasses.QA
+if($desc instanceof Array)$desc=$desc[1]
+QA.prototype=$desc
+function BT(c){this.c=c}BT.builtin$cls="BT"
+if(!"name" in BT)BT.name="BT"
+$desc=$collectedClasses.BT
+if($desc instanceof Array)$desc=$desc[1]
+BT.prototype=$desc
+function PY(){}PY.builtin$cls="PY"
+if(!"name" in PY)PY.name="PY"
+$desc=$collectedClasses.PY
+if($desc instanceof Array)$desc=$desc[1]
+PY.prototype=$desc
+function Cv(){}Cv.builtin$cls="Cv"
+if(!"name" in Cv)Cv.name="Cv"
+$desc=$collectedClasses.Cv
+if($desc instanceof Array)$desc=$desc[1]
+Cv.prototype=$desc
+return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,fW,y4,d7,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,Ax,xf,Vb,ST,tb,Sg,pA,Mi,HL,In,wP,eP,A6,Og,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,Q0,eY,KV,KY,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,bX,UL,MC,Mx,j2,X4,lp,kd,I0,yN,Cp,ua,HN,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,WP,yY,kJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,Nf,Nc,rj,Zv,Q7,hF,yK,Dh,ZJ,mU,ph,IT,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,eW,Qy,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,tc,GH,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,im,VA,O,PK,JO,O2,aX,oU,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,aJ,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,SU,GD,Ca,vs,da,pV,U7,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,Xz,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Y2,CL,fR,iP,a6,P7,DW,Ge,LK,AT,bJ,JS,ub,ds,lj,UV,VS,t7,HG,eV,kM,An,c8,a,mE,Rn,wv,BV,id,I2,RO,eu,xC,IU,E4,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,em,VW,oZ,Lb,y8,Hi,QA,BT,PY,Cv]}

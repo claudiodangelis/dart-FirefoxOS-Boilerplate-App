@@ -111,4 +111,12 @@ main() {
     };
   });
   
+  dial.onClick.listen((e) {
+    JsObject dialOptions = new JsObject.jsify({
+      "name": "dial",
+      "data": {"number": "+46777888999"}
+    });
+    new JsObject(context["MozActivity"], [dialOptions]);
+  });
+  
 }
