@@ -152,4 +152,15 @@ main() {
     new JsObject(context["MozActivity"], [addContactOptions]);
   });
   
+  share.onClick.listen((e) {
+    JsObject sOptions = new JsObject.jsify({
+      "name": "share",
+      "data": {
+        "number": 1,
+        "url": "http://robertnyman"
+      }
+    });
+    
+    new JsObject(context["MozActivity"], [sOptions]);
+  });
 }
