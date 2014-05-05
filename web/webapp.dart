@@ -203,4 +203,115 @@ main() {
     }
   });
   
+  viewUrl.onClick.listen((e) {
+    JsObject viewOptions = new JsObject.jsify({
+      "name": "view",
+      "data": {
+        "type": "url",  // Possibly text/html in future versions
+        "url": "http://robertnyman.com"
+      }
+    });
+    new JsObject(context["MozActivity"], [viewOptions]);
+  });
+  
+  composeEmail.onClick.listen((e) {
+    JsObject composeEmailOptions = new JsObject.jsify({
+      "name": "new",  // Possibly compose-mail in future versions
+      "data": {
+        "type": "mail",
+        "url": "mailto:example@example.org"
+      }
+    });
+    new JsObject(context["MozActivity"], [composeEmailOptions]);
+  });
+  
+  saveBookmark.onClick.listen((e) {
+    JsObject saveBookmarkOptions = new JsObject.jsify({
+      "name": "save-bookmark",
+      "data": {
+        "type": "url",
+        "url": "http://robertnyman.com",
+        "name": "Robert's talk",
+        "icon": "http://robertnyman.com/favicon.png"
+      }
+    });
+    new JsObject(context["MozActivity"], [saveBookmarkOptions]);
+  });
+  
+  openVideo.onClick.listen((e) {
+    JsObject openVideoOptions = new JsObject.jsify({
+      "name": "open",
+      "data": {
+        "type": [
+          "video/webm",
+          "video/mp4",
+          "video/3gpp",
+          "video/youtube"
+        ],
+        "url": "http://v2v.cc/~j/theora_testsuite/320x240.ogg"
+      }
+    });
+    new JsObject(context["MozActivity"], [openVideoOptions]);    
+  });
+  
+  addNotification.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  lockOrientation.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  vibrate.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  checkConnection.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  checkBattery.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  geolocation.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  ambientLight.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  proximity.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  userProximity.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  deviceOrientation.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  logVisibility.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  crossDomainXhr.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  deviceStoragePictures.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  getAllContacts.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
+  keepscreen.onClick.listen((e) {
+    print("Not implemented yet");
+  });
+  
 }
