@@ -114,9 +114,21 @@ main() {
   dial.onClick.listen((e) {
     JsObject dialOptions = new JsObject.jsify({
       "name": "dial",
-      "data": {"number": "+46777888999"}
+      "data": {
+        "number": "+46777888999"
+      }
     });
     new JsObject(context["MozActivity"], [dialOptions]);
+  });
+  
+  sendSms.onClick.listen((e) {
+    JsObject sendSmsOptions = new JsObject.jsify({
+      "name": "new",
+      "data": {
+        "type":"websms/sms",
+        "number":"+46777888999"
+      }
+    }); 
   });
   
 }
