@@ -1,5 +1,7 @@
 This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert Nyman to Dart.
 
+Before pushing the app to your phone / simulator, be sure to run `pub build`.
+
 
 ## Roadmap
 
