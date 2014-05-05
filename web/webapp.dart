@@ -128,7 +128,11 @@ main() {
         "type":"websms/sms",
         "number":"+46777888999"
       }
-    }); 
+    });
+
+    new JsObject(context["MozActivity"], [sendSmsOptions]);
   });
+  
+  
   
 }
