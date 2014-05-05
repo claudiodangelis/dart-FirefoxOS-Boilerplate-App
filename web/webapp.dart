@@ -133,6 +133,23 @@ main() {
     new JsObject(context["MozActivity"], [sendSmsOptions]);
   });
   
-  
+  addContact.onClick.listen((e) {
+    JsObject addContactOptions = new JsObject.jsify({
+      "name": "new",
+      "data": {
+        "type": "webcontacts/contact",
+        "params": {
+          "givenName": "Robert",
+          "lastName": "Nyman",
+          "tel": "+44789",
+          "email": "robert@mozilla.com",
+          "address": "San Francisco",
+          "note": "This is a note",
+          "company": "Mozilla"
+        }
+      }
+    });
+    new JsObject(context["MozActivity"], [addContactOptions]);
+  });
   
 }

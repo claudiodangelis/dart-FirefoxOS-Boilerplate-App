@@ -5,11 +5,11 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 
 ### WebActivities
 
-- Pick image
-- Pick anything
-- Take picture
-- Dial number
-- Send SMS
+- ~~Pick image~~
+- ~~Pick anything~~
+- ~~Take picture~~
+- ~~Dial number~~
+- ~~Send SMS~~
 - Add contact
 - Share URL
 - Share Image

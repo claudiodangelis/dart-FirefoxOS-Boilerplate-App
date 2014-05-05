@@ -3857,7 +3857,11 @@ H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Lb()),z.Sg),[H.Kp(z,0)]).Zz()
 z=J.Vg($.N3())
 H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.QA()),z.Sg),[H.Kp(z,0)]).Zz()
 z=J.Vg($.xE())
-H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Cv()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Cv()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.DD())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.ed()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.y8())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.wa()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
 em:{
 "^":"Tp:127;",
 call$1:[function(a){var z,y,x
@@ -3886,10 +3890,10 @@ call$1:[function(a){var z,y,x
 z=P.jT(H.B7(["name","pick"],P.L5(null,null,null,null,null)))
 y=P.uw(J.UQ($.cM(),"MozActivity"),[z])
 x=J.w1(y)
-x.u(y,"onsuccess",new S.y8(y))
-x.u(y,"onerror",new S.Hi())},"call$1",null,2,0,null,10,"call"],
+x.u(y,"onsuccess",new S.Hi(y))
+x.u(y,"onerror",new S.BT())},"call$1",null,2,0,null,10,"call"],
 $isEH:true},
-y8:{
+Hi:{
 "^":"Tp:127;b",
 call$1:[function(a){var z,y,x,w
 z=W.jm(null,null,null)
@@ -3900,7 +3904,7 @@ w=document.querySelector("#image-presenter")
 w.appendChild(z)
 J.oH(w.style,"block")}},"call$1",null,2,0,null,142,"call"],
 $isEH:true},
-Hi:{
+BT:{
 "^":"Tp:127;",
 call$1:[function(a){P.mp("An error occurred")},"call$1",null,2,0,null,142,"call"],
 $isEH:true},
@@ -3910,10 +3914,10 @@ call$1:[function(a){var z,y,x
 z=P.jT(H.B7(["name","record","data",H.B7(["type",["photos"]],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
 y=P.uw(J.UQ($.cM(),"MozActivity"),[z])
 x=J.w1(y)
-x.u(y,"onsuccess",new S.BT(y))
-x.u(y,"onerror",new S.PY())},"call$1",null,2,0,null,10,"call"],
+x.u(y,"onsuccess",new S.PY(y))
+x.u(y,"onerror",new S.kJ())},"call$1",null,2,0,null,10,"call"],
 $isEH:true},
-BT:{
+PY:{
 "^":"Tp:127;c",
 call$1:[function(a){var z,y
 z=W.jm(null,null,null)
@@ -3922,13 +3926,23 @@ y=document.querySelector("#image-presenter")
 y.appendChild(z)
 J.oH(y.style,"block")},"call$1",null,2,0,null,142,"call"],
 $isEH:true},
-PY:{
+kJ:{
 "^":"Tp:127;",
 call$1:[function(a){window.alert("No taken picture returned")},"call$1",null,2,0,null,142,"call"],
 $isEH:true},
 Cv:{
 "^":"Tp:127;",
 call$1:[function(a){var z=P.jT(H.B7(["name","dial","data",H.B7(["number","+46777888999"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+ed:{
+"^":"Tp:127;",
+call$1:[function(a){var z=P.jT(H.B7(["name","new","data",H.B7(["type","websms/sms","number","+46777888999"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+wa:{
+"^":"Tp:127;",
+call$1:[function(a){var z=P.jT(H.B7(["name","new","data",H.B7(["type","webcontacts/contact","params",H.B7(["givenName","Robert","lastName","Nyman","tel","+44789","email","robert@mozilla.com","address","San Francisco","note","This is a note","company","Mozilla"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
 P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
 $isEH:true}},1],])
 I.$finishClasses($$,$,null)
@@ -4267,6 +4281,8 @@ I.$lazy($,"pickImage","z4","Ea",function(){return document.querySelector("#pick-
 I.$lazy($,"pickAnything","AM","e6",function(){return document.querySelector("#pick-anything")})
 I.$lazy($,"record","OB","N3",function(){return document.querySelector("#record")})
 I.$lazy($,"dial","fP","xE",function(){return document.querySelector("#dial")})
+I.$lazy($,"sendSms","zN","DD",function(){return document.querySelector("#send-sms")})
+I.$lazy($,"addContact","H2","y8",function(){return document.querySelector("#add-contact")})
 
 init.functionAliases={}
 init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"zx",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","element","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},];$=null
