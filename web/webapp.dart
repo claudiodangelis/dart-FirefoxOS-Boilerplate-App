@@ -49,14 +49,14 @@ main() {
   pickImage.onClick.listen((e) {
     // For a more readable code, we separate declare options outside the
     // MozActivity constructor
-    var pickOptions = new JsObject.jsify({
+    JsObject pickOptions = new JsObject.jsify({
       "name": "pick",
       "data": {
         "type": ["image/png", "image/jpg", "image/jpeg"],
         "nocrop": true
       }
     });
-    var pick = new JsObject(context["MozActivity"], [pickOptions]);
+    JsObject pick = new JsObject(context["MozActivity"], [pickOptions]);
     pick["onsuccess"] = (_) {
       ImageElement img = new ImageElement();
       img.src = Url.createObjectUrlFromBlob(pick["result"]["blob"]);
@@ -72,4 +72,24 @@ main() {
       print("Can't view the image");
     };
   });
+  
+  pickAnything.onClick.listen((e) {
+    JsObject pickAnyOptions = new JsObject.jsify({"name":"pick"});
+    JsObject pickAny = new JsObject(context["MozActivity"], [pickAnyOptions]);
+    pickAny["onsuccess"] = (_){
+      ImageElement img = new ImageElement();
+      if (pickAny["result"]["type"].startsWith("image/")) {
+        img.src = Url.createObjectUrlFromBlob(pickAny["result"]["blob"]);
+        DivElement imagePresenter = querySelector('#image-presenter');
+        imagePresenter
+          ..append(img)
+          ..style.display = 'block';
+      }
+    };
+    pickAny["onerror"] = (_) {
+      print("An error occurred");
+    };
+  });
+  
+  
 }
