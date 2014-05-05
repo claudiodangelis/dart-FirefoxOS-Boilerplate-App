@@ -2,46 +2,46 @@ import 'dart:html';
 import 'dart:js';
 
 // Top-level DOM elements
-ButtonElement pickImage = querySelector('#pick-image'),
-              pickAnything = querySelector('#pick-anything'),
-              record = querySelector('#record'),
-              dial = querySelector('#dial'),
-              sendSms = querySelector('#send-sms'),
-              addContact = querySelector('#add-contact'),
-              share = querySelector('#share'),
-              shareImage = querySelector('#share-image'),
-              viewUrl = querySelector('#view-url'),
-              composeEmail = querySelector('#compose-email'),
-              saveBookmark = querySelector('#save-bookmark'),
-              openVideo = querySelector('#open-video'),
+ButtonElement pickImage       = querySelector('#pick-image'),
+              pickAnything    = querySelector('#pick-anything'),
+              record          = querySelector('#record'),
+              dial            = querySelector('#dial'),
+              sendSms         = querySelector('#send-sms'),
+              addContact      = querySelector('#add-contact'),
+              share           = querySelector('#share'),
+              shareImage      = querySelector('#share-image'),
+              viewUrl         = querySelector('#view-url'),
+              composeEmail    = querySelector('#compose-email'),
+              saveBookmark    = querySelector('#save-bookmark'),
+              openVideo       = querySelector('#open-video'),
               addNotification = querySelector('#add-notification'),
               lockOrientation = querySelector('#lock-orientation'),
-              vibrate = querySelector('#vibrate'),
+              vibrate         = querySelector('#vibrate'),
               checkConnection = querySelector('#cehck-connection'),
-              checkBattery = querySelector('#check-battery'),
-              geolocation = querySelector('#geolocation'),
-              ambientLight = querySelector('#ambient-light'),
-              proximity = querySelector('#proximity'),
-              userProximity = querySelector('#user-proximity'),
+              checkBattery    = querySelector('#check-battery'),
+              geolocation     = querySelector('#geolocation'),
+              ambientLight    = querySelector('#ambient-light'),
+              proximity       = querySelector('#proximity'),
+              userProximity   = querySelector('#user-proximity'),
               deviceOrientation = querySelector('#device-orientation'),
-              logVisibility = querySelector('#log-visibility'),
-              crossDomainXhr = querySelector('#cross-domain-xhr'),
+              logVisibility   = querySelector('#log-visibility'),
+              crossDomainXhr  = querySelector('#cross-domain-xhr'),
               deviceStoragePictures = querySelector('#device-storage-pictures'),
-              getAllContacts = querySelector('#get-all-contacts'),
-              keepscreen = querySelector('#keep-screen-on');
+              getAllContacts  = querySelector('#get-all-contacts'),
+              keepscreen      = querySelector('#keep-screen-on');
 
 ImageElement imgToShare = querySelector('#image-to-share');
 
-DivElement  connectionDisplay = querySelector('#connection-display'),
-            batteryDisplay = querySelector('#battery-display'),
-            geolocationDisplay = querySelector('#geolocation-display'),
-            ambientLightDisplay = querySelector('#ambient-light-display'),
-            proximityDisplay = querySelector('#proximity-display'),
-            userProximityDisplay = querySelector('#user-proximity-display'),
+DivElement  connectionDisplay     = querySelector('#connection-display'),
+            batteryDisplay        = querySelector('#battery-display'),
+            geolocationDisplay    = querySelector('#geolocation-display'),
+            ambientLightDisplay   = querySelector('#ambient-light-display'),
+            proximityDisplay      = querySelector('#proximity-display'),
+            userProximityDisplay  = querySelector('#user-proximity-display'),
             deviceOrientationDisplay = querySelector('#device-orientation-display'),
-            logVisibilityDisplay =  querySelector('#log-visibility-display'),
+            logVisibilityDisplay  = querySelector('#log-visibility-display'),
             crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display'),
-            deviceStoragePicturesDisplay =querySelector('#device-storiage-pictures-display'),
+            deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display'),
             getAllContactsDisplay = querySelector('#get-all-contacts-display');
 
 main() {
@@ -163,4 +163,44 @@ main() {
     
     new JsObject(context["MozActivity"], [sOptions]);
   });
+  
+  callback(Blob blob) {
+    print("ehi!");
+    print(blob);
+  }
+
+  shareImage.onClick.listen((e) {
+    if (imgToShare.naturalWidth > 0) {
+      // Create dummy canvas
+      CanvasElement blobCanvas = new CanvasElement();
+      blobCanvas.width = imgToShare.width;
+      blobCanvas.height = imgToShare.height;
+      
+      // Get context and draw image
+      CanvasRenderingContext2D blobCanvasContext = blobCanvas.getContext('2d');
+      blobCanvasContext.drawImage(imgToShare, 0, 0);
+      
+      // Export to blob and share through a Web Activity
+      //
+      // Note: `toBlob()' method is not available in Dart API, we'using the one
+      // from Javascript with a little workaround
+      
+      var toBlobCallback = (Blob blob) {
+        JsObject sOptions = new JsObject.jsify({
+          "name": "share",
+          "data": {
+            "type": "image/*",
+            "number": 1,
+            "blobs": [blob]
+          }
+        });
+        new JsObject(context["MozActivity"], [sOptions]);
+      };
+      new JsObject.fromBrowserObject(blobCanvas).callMethod("toBlob",[toBlobCallback]);
+      
+    } else {
+      window.alert("Image failed to load, can't be shared");
+    }
+  });
+  
 }

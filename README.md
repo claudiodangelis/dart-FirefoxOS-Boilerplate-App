@@ -43,6 +43,7 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 
 - l18n
 - offline capabilities
+- comments
 
 ## Credits
 

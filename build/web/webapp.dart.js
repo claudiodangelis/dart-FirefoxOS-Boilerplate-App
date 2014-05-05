@@ -275,7 +275,7 @@ n:function(a,b){return a===b},
 giO:function(a){return H.eQ(a)},
 bu:function(a){return H.a5(a)},
 T:function(a,b){throw H.b(P.lr(a,b.gWa(),b.gnd(),b.gVm(),null))},
-"%":"ArrayBuffer|DOMError|FileError|MediaError|MediaKeyError|Navigator|NavigatorUserMediaError|PositionError|SQLError|SVGAnimatedNumberList"},
+"%":"ArrayBuffer|DOMError|FileError|MediaError|MediaKeyError|Navigator|NavigatorUserMediaError|PositionError|SQLError|SVGAnimatedLength|SVGAnimatedNumberList"},
 kn:{
 "^":"bool/Gv;",
 bu:function(a){return String(a)},
@@ -3389,7 +3389,7 @@ if(z===C.NU)return a
 return z.oj(a,!0)},"call$1","vi",2,0,null,100],
 qE:{
 "^":"cv;",
-"%":"HTMLAppletElement|HTMLBRElement|HTMLBaseElement|HTMLBodyElement|HTMLButtonElement|HTMLCanvasElement|HTMLContentElement|HTMLDListElement|HTMLDataListElement|HTMLDetailsElement|HTMLDialogElement|HTMLDirectoryElement|HTMLDivElement|HTMLFieldSetElement|HTMLFontElement|HTMLFrameElement|HTMLFrameSetElement|HTMLHRElement|HTMLHeadElement|HTMLHeadingElement|HTMLHtmlElement|HTMLKeygenElement|HTMLLIElement|HTMLLabelElement|HTMLLegendElement|HTMLLinkElement|HTMLMapElement|HTMLMarqueeElement|HTMLMenuElement|HTMLMetaElement|HTMLMeterElement|HTMLModElement|HTMLOListElement|HTMLObjectElement|HTMLOptGroupElement|HTMLOptionElement|HTMLOutputElement|HTMLParagraphElement|HTMLParamElement|HTMLPreElement|HTMLProgressElement|HTMLQuoteElement|HTMLShadowElement|HTMLSpanElement|HTMLStyleElement|HTMLTableCaptionElement|HTMLTableCellElement|HTMLTableColElement|HTMLTableDataCellElement|HTMLTableElement|HTMLTableHeaderCellElement|HTMLTableRowElement|HTMLTableSectionElement|HTMLTemplateElement|HTMLTextAreaElement|HTMLTitleElement|HTMLUListElement|HTMLUnknownElement;HTMLElement"},
+"%":"HTMLAppletElement|HTMLBRElement|HTMLBaseElement|HTMLBodyElement|HTMLButtonElement|HTMLContentElement|HTMLDListElement|HTMLDataListElement|HTMLDetailsElement|HTMLDialogElement|HTMLDirectoryElement|HTMLDivElement|HTMLFieldSetElement|HTMLFontElement|HTMLFrameElement|HTMLFrameSetElement|HTMLHRElement|HTMLHeadElement|HTMLHeadingElement|HTMLHtmlElement|HTMLKeygenElement|HTMLLIElement|HTMLLabelElement|HTMLLegendElement|HTMLLinkElement|HTMLMapElement|HTMLMarqueeElement|HTMLMenuElement|HTMLMetaElement|HTMLMeterElement|HTMLModElement|HTMLOListElement|HTMLOptGroupElement|HTMLOptionElement|HTMLOutputElement|HTMLParagraphElement|HTMLParamElement|HTMLPreElement|HTMLProgressElement|HTMLQuoteElement|HTMLShadowElement|HTMLSpanElement|HTMLStyleElement|HTMLTableCaptionElement|HTMLTableCellElement|HTMLTableColElement|HTMLTableDataCellElement|HTMLTableElement|HTMLTableHeaderCellElement|HTMLTableRowElement|HTMLTableSectionElement|HTMLTemplateElement|HTMLTextAreaElement|HTMLTitleElement|HTMLUListElement|HTMLUnknownElement;HTMLElement"},
 Gh:{
 "^":"qE;",
 bu:function(a){return a.toString()},
@@ -3402,6 +3402,18 @@ Az:{
 "^":"Gv;",
 $isAz:true,
 "%":"Blob|File"},
+Ny:{
+"^":"qE;fg:height%,R:width%",
+eW:function(a,b,c){return a.getContext(b)},
+Bf:function(a,b){return this.eW(a,b,null)},
+"%":"HTMLCanvasElement"},
+Y5:{
+"^":"Gv;",
+"%":"WebGLRenderingContext;CanvasRenderingContext"},
+Gc:{
+"^":"Y5;",
+qH:function(a,b,c,d){return a.drawImage(b,c,d)},
+"%":"CanvasRenderingContext2D"},
 nx:{
 "^":"KV;B:length=",
 "%":"CDATASection|CharacterData|Comment|ProcessingInstruction|Text"},
@@ -3422,7 +3434,7 @@ bu:function(a){return a.localName},
 gVl:function(a){return H.VM(new W.eu(a,C.T1.Ph,!1),[null])},
 "%":";Element"},
 Fs:{
-"^":"qE;LA:src}",
+"^":"qE;fg:height%,LA:src},R:width%",
 "%":"HTMLEmbedElement"},
 hY:{
 "^":"ea;kc:error=",
@@ -3440,22 +3452,22 @@ Yu:{
 "^":"qE;B:length=",
 "%":"HTMLFormElement"},
 tb:{
-"^":"qE;LA:src}",
+"^":"qE;fg:height%,LA:src},R:width%",
 "%":"HTMLIFrameElement"},
 Sg:{
 "^":"Gv;",
 $isSg:true,
 "%":"ImageData"},
 pA:{
-"^":"qE;LA:src}",
+"^":"qE;fg:height%,JR:naturalWidth=,LA:src},R:width%",
 "%":"HTMLImageElement"},
 Mi:{
-"^":"qE;LA:src}",
+"^":"qE;fg:height%,LA:src},R:width%",
 $isKV:true,
 "%":"HTMLInputElement"},
 El:{
 "^":"qE;kc:error=,LA:src}",
-"%":"HTMLAudioElement|HTMLMediaElement|HTMLVideoElement"},
+"%":"HTMLAudioElement;HTMLMediaElement"},
 Aj:{
 "^":"w6;",
 "%":"DragEvent|MSPointerEvent|MouseEvent|MouseScrollEvent|MouseWheelEvent|PointerEvent|WheelEvent"},
@@ -3465,6 +3477,9 @@ bu:function(a){var z=a.nodeValue
 return z==null?J.Gv.prototype.bu.call(this,a):z},
 $isKV:true,
 "%":"Attr|Document|DocumentFragment|DocumentType|HTMLDocument|Notation|ShadowRoot|XMLDocument;Node"},
+G7:{
+"^":"qE;fg:height%,R:width%",
+"%":"HTMLObjectElement"},
 j2:{
 "^":"qE;LA:src}",
 "%":"HTMLScriptElement"},
@@ -3483,6 +3498,9 @@ RH:{
 w6:{
 "^":"ea;",
 "%":"CompositionEvent|FocusEvent|KeyboardEvent|SVGZoomEvent|TextEvent|TouchEvent;UIEvent"},
+aG:{
+"^":"El;fg:height%,R:width%",
+"%":"HTMLVideoElement"},
 K5:{
 "^":"D0;",
 bu:function(a){return a.toString()},
@@ -3529,10 +3547,88 @@ hF:{
 $ishF:true,
 "%":"IDBKeyRange"}}],["dart.dom.svg","dart:svg",,P,{
 "^":"",
+jw:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEBlendElement"},
+lv:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEColorMatrixElement"},
+pf:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEComponentTransferElement"},
+NV:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFECompositeElement"},
+Tx:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEConvolveMatrixElement"},
+HC:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEDiffuseLightingElement"},
+wf:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEDisplacementMapElement"},
+ih:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEFloodElement"},
+v6:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEGaussianBlurElement"},
+me:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEImageElement"},
+oB:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEMergeElement"},
+EI:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEMorphologyElement"},
+MI:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFEOffsetElement"},
+bM:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFESpecularLightingElement"},
+Qy:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFETileElement"},
+ju:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFETurbulenceElement"},
+OE:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGFilterElement"},
+N9:{
+"^":"tp;fg:height=,R:width=",
+"%":"SVGForeignObjectElement"},
+d0:{
+"^":"tp;",
+"%":"SVGCircleElement|SVGEllipseElement|SVGLineElement|SVGPathElement|SVGPolygonElement|SVGPolylineElement;SVGGeometryElement"},
+tp:{
+"^":"d5;",
+"%":"SVGAElement|SVGAltGlyphElement|SVGClipPathElement|SVGDefsElement|SVGGElement|SVGSwitchElement|SVGTSpanElement|SVGTextContentElement|SVGTextElement|SVGTextPathElement|SVGTextPositioningElement;SVGGraphicsElement"},
+rE:{
+"^":"tp;fg:height=,R:width=",
+"%":"SVGImageElement"},
+Yd:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGMaskElement"},
+Gr:{
+"^":"d5;fg:height=,R:width=",
+"%":"SVGPatternElement"},
+NJ:{
+"^":"d0;fg:height=,R:width=",
+"%":"SVGRectElement"},
 d5:{
 "^":"cv;",
 gVl:function(a){return H.VM(new W.eu(a,C.T1.Ph,!1),[null])},
-"%":"SVGAElement|SVGAltGlyphDefElement|SVGAltGlyphElement|SVGAltGlyphItemElement|SVGAnimateElement|SVGAnimateMotionElement|SVGAnimateTransformElement|SVGAnimationElement|SVGCircleElement|SVGClipPathElement|SVGComponentTransferFunctionElement|SVGCursorElement|SVGDefsElement|SVGDescElement|SVGDiscardElement|SVGElement|SVGEllipseElement|SVGFEBlendElement|SVGFEColorMatrixElement|SVGFEComponentTransferElement|SVGFECompositeElement|SVGFEConvolveMatrixElement|SVGFEDiffuseLightingElement|SVGFEDisplacementMapElement|SVGFEDistantLightElement|SVGFEDropShadowElement|SVGFEFloodElement|SVGFEFuncAElement|SVGFEFuncBElement|SVGFEFuncGElement|SVGFEFuncRElement|SVGFEGaussianBlurElement|SVGFEImageElement|SVGFEMergeElement|SVGFEMergeNodeElement|SVGFEMorphologyElement|SVGFEOffsetElement|SVGFEPointLightElement|SVGFESpecularLightingElement|SVGFESpotLightElement|SVGFETileElement|SVGFETurbulenceElement|SVGFilterElement|SVGFontElement|SVGFontFaceElement|SVGFontFaceFormatElement|SVGFontFaceNameElement|SVGFontFaceSrcElement|SVGFontFaceUriElement|SVGForeignObjectElement|SVGGElement|SVGGeometryElement|SVGGlyphElement|SVGGlyphRefElement|SVGGradientElement|SVGGraphicsElement|SVGHKernElement|SVGImageElement|SVGLineElement|SVGLinearGradientElement|SVGMPathElement|SVGMarkerElement|SVGMaskElement|SVGMetadataElement|SVGMissingGlyphElement|SVGPathElement|SVGPatternElement|SVGPolygonElement|SVGPolylineElement|SVGRadialGradientElement|SVGRectElement|SVGSVGElement|SVGScriptElement|SVGSetElement|SVGStopElement|SVGStyleElement|SVGSwitchElement|SVGSymbolElement|SVGTSpanElement|SVGTextContentElement|SVGTextElement|SVGTextPathElement|SVGTextPositioningElement|SVGTitleElement|SVGUseElement|SVGVKernElement|SVGViewElement"}}],["dart.isolate","dart:isolate",,P,{
+"%":"SVGAltGlyphDefElement|SVGAltGlyphItemElement|SVGAnimateElement|SVGAnimateMotionElement|SVGAnimateTransformElement|SVGAnimationElement|SVGComponentTransferFunctionElement|SVGCursorElement|SVGDescElement|SVGDiscardElement|SVGFEDistantLightElement|SVGFEDropShadowElement|SVGFEFuncAElement|SVGFEFuncBElement|SVGFEFuncGElement|SVGFEFuncRElement|SVGFEMergeNodeElement|SVGFEPointLightElement|SVGFESpotLightElement|SVGFontElement|SVGFontFaceElement|SVGFontFaceFormatElement|SVGFontFaceNameElement|SVGFontFaceSrcElement|SVGFontFaceUriElement|SVGGlyphElement|SVGGlyphRefElement|SVGGradientElement|SVGHKernElement|SVGLinearGradientElement|SVGMPathElement|SVGMarkerElement|SVGMetadataElement|SVGMissingGlyphElement|SVGRadialGradientElement|SVGScriptElement|SVGSetElement|SVGStopElement|SVGStyleElement|SVGSymbolElement|SVGTitleElement|SVGVKernElement|SVGViewElement;SVGElement"},
+hy:{
+"^":"tp;fg:height=,R:width=",
+"%":"SVGSVGElement"},
+o4:{
+"^":"tp;fg:height=,R:width=",
+"%":"SVGUseElement"}}],["dart.isolate","dart:isolate",,P,{
 "^":"",
 IU:{
 "^":"a;",
@@ -3590,6 +3686,10 @@ bu:function(a){var z,y
 try{z=String(this.eh)
 return z}catch(y){H.Ru(y)
 return P.a.prototype.bu.call(this,this)}},
+K9:function(a,b){var z,y
+z=this.eh
+y=b==null?null:P.F(H.VM(new H.A8(b,P.En()),[null,null]),!0,null)
+return P.dU(z[a].apply(z,y))},
 $isE4:true,
 static:{uw:function(a,b){var z,y,x
 z=P.wY(a)
@@ -3861,7 +3961,11 @@ H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Cv()),z.Sg),[H.Kp(z,0)]).Zz()
 z=J.Vg($.DD())
 H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.ed()),z.Sg),[H.Kp(z,0)]).Zz()
 z=J.Vg($.y8())
-H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.wa()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.wa()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.hV())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.Or()),z.Sg),[H.Kp(z,0)]).Zz()
+z=J.Vg($.xN())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.YL()),z.Sg),[H.Kp(z,0)]).Zz()},"call$0","HA",0,0,131],
 em:{
 "^":"Tp:127;",
 call$1:[function(a){var z,y,x
@@ -3944,6 +4048,32 @@ wa:{
 "^":"Tp:127;",
 call$1:[function(a){var z=P.jT(H.B7(["name","new","data",H.B7(["type","webcontacts/contact","params",H.B7(["givenName","Robert","lastName","Nyman","tel","+44789","email","robert@mozilla.com","address","San Francisco","note","This is a note","company","Mozilla"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
 P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+Or:{
+"^":"Tp:127;",
+call$1:[function(a){var z=P.jT(H.B7(["name","share","data",H.B7(["number",1,"url","http://robertnyman"],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+hO:{
+"^":"Tp:152;",
+call$1:[function(a){P.mp("ehi!")
+P.mp(a)},"call$1",null,2,0,null,151,"call"],
+$isEH:true},
+YL:{
+"^":"Tp:127;",
+call$1:[function(a){var z=J.Q6($.SV())
+if(typeof z!=="number")return z.D()
+if(z>0){a=document.createElement("canvas",null)
+z=J.RE(a)
+z.sR(a,J.DO($.SV()))
+z.sfg(a,J.Jv($.SV()))
+J.W1(z.Bf(a,"2d"),$.SV(),0,0)
+P.ND(P.wY(a)).K9("toBlob",[new S.Un()])}else window.alert("Image failed to load, can't be shared")},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+Un:{
+"^":"Tp:152;",
+call$1:[function(a){var z=P.jT(H.B7(["name","share","data",H.B7(["type","image/*","number",1,"blobs",[a]],P.L5(null,null,null,null,null))],P.L5(null,null,null,null,null)))
+P.uw(J.UQ($.cM(),"MozActivity"),[z])},"call$1",null,2,0,null,151,"call"],
 $isEH:true}},1],])
 I.$finishClasses($$,$,null)
 $$=null
@@ -3976,6 +4106,8 @@ W.Aj.$isa=true
 H.yo.$isa=true
 H.IY.$isa=true
 H.aX.$isa=true
+W.Az.$isAz=true
+W.Az.$isa=true
 J.kn.$isbool=true
 J.kn.$isa=true
 P.mE.$ismE=true
@@ -4025,8 +4157,11 @@ J.AG=function(a){return J.x(a).bu(a)}
 J.Bl=function(a,b){if(typeof a=="number"&&typeof b=="number")return a<=b
 return J.Wx(a).E(a,b)}
 J.C0=function(a,b){return J.w1(a).ez(a,b)}
+J.DO=function(a){return J.RE(a).gR(a)}
 J.GJ=function(a,b,c,d){return J.RE(a).Y9(a,b,c,d)}
 J.GP=function(a){return J.w1(a).gA(a)}
+J.Jv=function(a){return J.RE(a).gfg(a)}
+J.Q6=function(a){return J.RE(a).gJR(a)}
 J.Ts=function(a,b){return J.Wx(a).Z(a,b)}
 J.UN=function(a,b){if(typeof a=="number"&&typeof b=="number")return(a^b)>>>0
 return J.Wx(a).w(a,b)}
@@ -4034,6 +4169,7 @@ J.UQ=function(a,b){if(a.constructor==Array||typeof a=="string"||H.wV(a,a[init.di
 return J.U6(a).t(a,b)}
 J.V1=function(a,b){return J.w1(a).Rz(a,b)}
 J.Vg=function(a){return J.RE(a).gVl(a)}
+J.W1=function(a,b,c,d){return J.RE(a).qH(a,b,c,d)}
 J.WB=function(a,b){if(typeof a=="number"&&typeof b=="number")return a+b
 return J.Qc(a).g(a,b)}
 J.Yj=function(a,b){return J.RE(a).sLA(a,b)}
@@ -4283,9 +4419,12 @@ I.$lazy($,"record","OB","N3",function(){return document.querySelector("#record")
 I.$lazy($,"dial","fP","xE",function(){return document.querySelector("#dial")})
 I.$lazy($,"sendSms","zN","DD",function(){return document.querySelector("#send-sms")})
 I.$lazy($,"addContact","H2","y8",function(){return document.querySelector("#add-contact")})
+I.$lazy($,"share","SP","hV",function(){return document.querySelector("#share")})
+I.$lazy($,"shareImage","Ro","xN",function(){return document.querySelector("#share-image")})
+I.$lazy($,"imgToShare","tk","SV",function(){return document.querySelector("#image-to-share")})
 
 init.functionAliases={}
-init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"zx",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","element","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},];$=null
+init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"zx",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","element","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},"blob",{func:"ow",args:[W.Az]},];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(properties) {
