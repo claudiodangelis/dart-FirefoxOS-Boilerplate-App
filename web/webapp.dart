@@ -91,5 +91,24 @@ main() {
     };
   });
   
+  record.onClick.listen((e) {
+    JsObject recOptions = new JsObject.jsify({
+      "name":"record",
+      "data": {"type":["photos"]}
+    });
+    JsObject rec = new JsObject(context["MozActivity"], [recOptions]);
+    rec["onsuccess"] = (_) {
+      ImageElement img = new ImageElement();
+      img.src = Url.createObjectUrlFromBlob(rec["result"]["blob"]);
+      DivElement imagePresenter = querySelector('#image-presenter');
+      imagePresenter
+        ..append(img)
+        ..style.display = 'block';
+    };
+    
+    rec["onerror"] = (_) {
+      window.alert("No taken picture returned");
+    };
+  });
   
 }
