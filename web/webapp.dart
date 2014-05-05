@@ -1,49 +1,6 @@
 import 'dart:html';
 import 'dart:js';
 
-// Top-level DOM elements
-ButtonElement pickImage       = querySelector('#pick-image'),
-              pickAnything    = querySelector('#pick-anything'),
-              record          = querySelector('#record'),
-              dial            = querySelector('#dial'),
-              sendSms         = querySelector('#send-sms'),
-              addContact      = querySelector('#add-contact'),
-              share           = querySelector('#share'),
-              shareImage      = querySelector('#share-image'),
-              viewUrl         = querySelector('#view-url'),
-              composeEmail    = querySelector('#compose-email'),
-              saveBookmark    = querySelector('#save-bookmark'),
-              openVideo       = querySelector('#open-video'),
-              addNotification = querySelector('#add-notification'),
-              lockOrientation = querySelector('#lock-orientation'),
-              vibrate         = querySelector('#vibrate'),
-              checkConnection = querySelector('#check-connection'),
-              checkBattery    = querySelector('#check-battery'),
-              geolocation     = querySelector('#geolocation'),
-              ambientLight    = querySelector('#ambient-light'),
-              proximity       = querySelector('#proximity'),
-              userProximity   = querySelector('#user-proximity'),
-              deviceOrientation = querySelector('#device-orientation'),
-              logVisibility   = querySelector('#log-visibility'),
-              crossDomainXhr  = querySelector('#cross-domain-xhr'),
-              deviceStoragePictures = querySelector('#device-storage-pictures'),
-              getAllContacts  = querySelector('#get-all-contacts'),
-              keepscreen      = querySelector('#keep-screen-on');
-
-ImageElement imgToShare = querySelector('#image-to-share');
-
-DivElement  connectionDisplay     = querySelector('#connection-display'),
-            batteryDisplay        = querySelector('#battery-display'),
-            geolocationDisplay    = querySelector('#geolocation-display'),
-            ambientLightDisplay   = querySelector('#ambient-light-display'),
-            proximityDisplay      = querySelector('#proximity-display'),
-            userProximityDisplay  = querySelector('#user-proximity-display'),
-            deviceOrientationDisplay = querySelector('#device-orientation-display'),
-            logVisibilityDisplay  = querySelector('#log-visibility-display'),
-            crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display'),
-            deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display'),
-            getAllContactsDisplay = querySelector('#get-all-contacts-display');
-
 main() {
 
   /*
@@ -65,6 +22,7 @@ main() {
   */
 
   // WebActivities
+  ButtonElement pickImage = querySelector('#pick-image');
   pickImage.onClick.listen((e) {
     // For a more readable code, we separate declare options outside the
     // MozActivity constructor
@@ -95,6 +53,7 @@ main() {
     };
   });
 
+  ButtonElement pickAnything = querySelector('#pick-anything');
   pickAnything.onClick.listen((e) {
     JsObject pickAnyOptions = new JsObject.jsify({"name":"pick"});
     JsObject pickAny = new JsObject(context["MozActivity"], [pickAnyOptions]);
@@ -113,6 +72,7 @@ main() {
     };
   });
 
+  ButtonElement record = querySelector('#record');
   record.onClick.listen((e) {
     JsObject recOptions = new JsObject.jsify({
       "name":"record", // Possibly capture in future versions
@@ -133,6 +93,7 @@ main() {
     };
   });
 
+  ButtonElement dial = querySelector('#dial');
   dial.onClick.listen((e) {
     JsObject dialOptions = new JsObject.jsify({
       "name": "dial",
@@ -143,6 +104,7 @@ main() {
     new JsObject(context["MozActivity"], [dialOptions]);
   });
 
+  ButtonElement sendSms = querySelector('#send-sms');
   sendSms.onClick.listen((e) {
     JsObject sendSmsOptions = new JsObject.jsify({
       "name": "new", // Possible compose-sms in future versions
@@ -155,6 +117,7 @@ main() {
     new JsObject(context["MozActivity"], [sendSmsOptions]);
   });
 
+  ButtonElement addContact = querySelector('#add-contact');
   addContact.onClick.listen((e) {
     JsObject addContactOptions = new JsObject.jsify({
       "name": "new", // Possibly add-contact in future versions
@@ -174,6 +137,7 @@ main() {
     new JsObject(context["MozActivity"], [addContactOptions]);
   });
 
+  ButtonElement share = querySelector('#share');
   share.onClick.listen((e) {
     JsObject sOptions = new JsObject.jsify({
       "name": "share",
@@ -187,7 +151,9 @@ main() {
     new JsObject(context["MozActivity"], [sOptions]);
   });
 
+  ButtonElement shareImage = querySelector('#share-image');
   shareImage.onClick.listen((e) {
+    ImageElement imgToShare = querySelector('#image-to-share');
     if (imgToShare.naturalWidth > 0) {
       // Create dummy canvas
       CanvasElement blobCanvas = new CanvasElement();
@@ -221,6 +187,7 @@ main() {
     }
   });
 
+  ButtonElement viewUrl = querySelector('#view-url');
   viewUrl.onClick.listen((e) {
     JsObject viewOptions = new JsObject.jsify({
       "name": "view",
@@ -232,6 +199,7 @@ main() {
     new JsObject(context["MozActivity"], [viewOptions]);
   });
 
+  ButtonElement composeEmail = querySelector('#compose-email');
   composeEmail.onClick.listen((e) {
     JsObject composeEmailOptions = new JsObject.jsify({
       "name": "new",  // Possibly compose-mail in future versions
@@ -243,6 +211,7 @@ main() {
     new JsObject(context["MozActivity"], [composeEmailOptions]);
   });
 
+  ButtonElement saveBookmark = querySelector('#save-bookmark');
   saveBookmark.onClick.listen((e) {
     JsObject saveBookmarkOptions = new JsObject.jsify({
       "name": "save-bookmark",
@@ -256,6 +225,7 @@ main() {
     new JsObject(context["MozActivity"], [saveBookmarkOptions]);
   });
 
+  ButtonElement openVideo = querySelector('#open-video');
   openVideo.onClick.listen((e) {
     JsObject openVideoOptions = new JsObject.jsify({
       "name": "open",
@@ -272,6 +242,7 @@ main() {
     new JsObject(context["MozActivity"], [openVideoOptions]);
   });
 
+  ButtonElement addNotification = querySelector('#add-notification');
   addNotification.onClick.listen((e) {
     //Note: Dart's Notification API seems not to be working fine when compiled
     // to Javascript right now, we will use the Javascript implementation here
@@ -305,58 +276,83 @@ main() {
     }
   });
 
+  ButtonElement lockOrientation = querySelector('#lock-orientation');
   lockOrientation.onClick.listen((e) {
     print("Not implemented yet");
   });
 
+  ButtonElement vibrate = querySelector('#vibrate');
   vibrate.onClick.listen((e) {
     print("Not implemented yet");
   });
 
+  ButtonElement checkConnection = querySelector('#check-connection');
   checkConnection.onClick.listen((e) {
+    DivElement connectionDisplay = querySelector('#connection-display');
     print("Not implemented yet");
   });
 
+  ButtonElement checkBattery = querySelector('#check-battery');
   checkBattery.onClick.listen((e) {
+    DivElement batteryDisplay = querySelector('#battery-display');
     print("Not implemented yet");
   });
 
+  ButtonElement geolocation = querySelector('#geolocation');
   geolocation.onClick.listen((e) {
+    DivElement geolocationDisplay = querySelector('#geolocation-display');
     print("Not implemented yet");
   });
 
+  ButtonElement ambientLight = querySelector('#ambient-light');
   ambientLight.onClick.listen((e) {
+    DivElement ambientLightDisplay = querySelector('#ambient-light-display');
     print("Not implemented yet");
   });
 
+  ButtonElement proximity = querySelector('#proximity');
   proximity.onClick.listen((e) {
+    DivElement proximityDisplay = querySelector('#proximity-display');
     print("Not implemented yet");
   });
 
+  ButtonElement userProximity = querySelector('#user-proximity');
   userProximity.onClick.listen((e) {
+    DivElement userProximityDisplay = querySelector('#user-proximity-display');
     print("Not implemented yet");
   });
 
+  ButtonElement deviceOrientation = querySelector('#device-orientation');
   deviceOrientation.onClick.listen((e) {
+    DivElement deviceOrientationDisplay = querySelector('#device-orientation-display');
     print("Not implemented yet");
   });
 
+  ButtonElement logVisibility = querySelector('#log-visibility');
   logVisibility.onClick.listen((e) {
+    DivElement logVisibilityDisplay = querySelector('#log-visibility-display');
     print("Not implemented yet");
   });
 
+  ButtonElement crossDomainXhr = querySelector('#cross-domain-xhr');
   crossDomainXhr.onClick.listen((e) {
+    DivElement crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display');
     print("Not implemented yet");
   });
 
+  ButtonElement deviceStoragePictures = querySelector('#device-storage-pictures');
   deviceStoragePictures.onClick.listen((e) {
+    DivElement deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display');
     print("Not implemented yet");
   });
 
+  ButtonElement getAllContacts = querySelector('#get-all-contacts');
   getAllContacts.onClick.listen((e) {
+    DivElement getAllContactsDisplay = querySelector('#get-all-contacts-display');
     print("Not implemented yet");
   });
 
+  ButtonElement keepscreen = querySelector('#keep-screen-on');
   keepscreen.onClick.listen((e) {
     print("Not implemented yet");
   });
