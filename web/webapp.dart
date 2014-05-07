@@ -372,15 +372,11 @@ main() {
     ambientLightDisplay.style.display = 'block';
     print("Starting ambientLight fn");
     var onDeviceLightCallback = (event) {
-      print("Callback called");
       // Read out the lux value
-      print(event["value"].runtimeType);
       String lux = "<strong>Ambient light: </strong> ${event["value"]} lux";
-      print("Lux is set");
       ambientLightDisplay.innerHtml = lux;
     };
 
-    print("ondevicelight Event");
     context["ondevicelight"] = onDeviceLightCallback;
   });
 
@@ -390,29 +386,71 @@ main() {
     DivElement proximityDisplay = querySelector('#proximity-display');
     proximityDisplay.style.display = 'block';
     var onDeviceProximityCallback = (event) {
-      var prox = "<strong>Proximity: </strong>" + event["value"] + " cm<br>"
-                 "<strong>Min value supported: </strong>" + event.min + " cm<br>"
-                 "<strong>Max value supported: </strong>" + event.max + " cm";
+      var prox = "<strong>Proximity: </strong> ${event["value"]} cm<br>"
+                 "<strong>Min value supported: </strong> ${event["min"]} cm<br>"
+                 "<strong>Max value supported: </strong> ${event["max"]} cm";
     };
     context["ondeviceproximity"] = onDeviceProximityCallback;
   });
 
+  // User proximity
   ButtonElement userProximity = querySelector('#user-proximity');
   userProximity.onClick.listen((e) {
     DivElement userProximityDisplay = querySelector('#user-proximity-display');
-    window.alert("Not implemented yet");
+    context["onuserproximity"] = (event) {
+      // Check user proximity
+      String userProx = "<strong>User proximity - near:</strong> ${event["near"]}<br/>";
+      userProximityDisplay
+        ..innerHtml = userProx
+        ..style.display = 'block';
+    };
   });
 
+  // Device orientation
   ButtonElement deviceOrientation = querySelector('#device-orientation');
   deviceOrientation.onClick.listen((e) {
     DivElement deviceOrientationDisplay = querySelector('#device-orientation-display');
-    window.alert("Not implemented yet");
+    context["ondeviceorientation"] = (event) {
+      String orientedTo = (event["beta"] > 45 && event["beta"] < 135) ? "top" :
+        (event["beta"] < -45 && event["beta"] > -135) ? "bottom" :
+          (event["gamma"] > 45) ? "right" :
+            (event["gamma"] < -45) ? "left" :
+              "flat";
+
+      String orientation = "<strong>Absolute: </strong> ${event["absolute"]}<br>"
+                          "<strong>Alpha: </strong>  ${event["alpha"]}<br>"
+                          "<strong>Beta: </strong> ${event["beta"]}<br>"
+                          "<strong>Gamma: </strong> ${event["gamma"]}<br>"
+                          "<strong>Device orientation: </strong> $orientedTo";
+
+      deviceOrientationDisplay.innerHtml = orientation;
+    };
   });
 
+  // Log visibility of the app
   ButtonElement logVisibility = querySelector('#log-visibility');
   logVisibility.onClick.listen((e) {
     DivElement logVisibilityDisplay = querySelector('#log-visibility-display');
-    window.alert("Not implemented yet");
+    logVisibilityDisplay
+      ..innerHtml = 'I have focus!<br/>'
+      ..style.display = 'block';
+    document.onVisibilityChange.listen((e) {
+      //NOTE: Dart implementation of `document.hidden` is experimental and only
+      // supported on Chrome and Safari at time of writing, using
+      // `visiblityState' as a workaround.
+      //
+      // https://api.dartlang.org/apidocs/channels/stable/dartdoc-viewer/dart-dom-html.HtmlDocument#id_hidden
+      switch(document.visibilityState) {
+        case "visible":
+          print("Firefox OS Boilerplate App has focus");
+          logVisibilityDisplay.appendHtml("I have focus!<br/>");
+          break;
+        case "hidden":
+          print("Firefox OS Boilerplate App is hidden");
+          logVisibilityDisplay.appendHtml("Now I'm in the background<br/>");
+          break;
+      }
+    });
   });
 
   ButtonElement crossDomainXhr = querySelector('#cross-domain-xhr');
