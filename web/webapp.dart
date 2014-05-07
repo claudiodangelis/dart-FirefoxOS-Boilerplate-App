@@ -26,7 +26,7 @@ main() {
   pickImage.onClick.listen((e) {
     // For a more readable code, we separate declare options outside the
     // MozActivity constructor
-    JsObject pickOptions = new JsObject.jsify({
+    var pickOptions = new JsObject.jsify({
       "name": "pick",
       "data": {
         "type": ["image/png", "image/jpg", "image/jpeg"],
@@ -36,7 +36,7 @@ main() {
         "nocrop": true // don't allow the user to crop the image
       }
     });
-    JsObject pick = new JsObject(context["MozActivity"], [pickOptions]);
+    var pick = new JsObject(context["MozActivity"], [pickOptions]);
     pick["onsuccess"] = (_) {
       ImageElement img = new ImageElement();
       img.src = Url.createObjectUrlFromBlob(pick["result"]["blob"]);
@@ -55,8 +55,8 @@ main() {
 
   ButtonElement pickAnything = querySelector('#pick-anything');
   pickAnything.onClick.listen((e) {
-    JsObject pickAnyOptions = new JsObject.jsify({"name":"pick"});
-    JsObject pickAny = new JsObject(context["MozActivity"], [pickAnyOptions]);
+    var pickAnyOptions = new JsObject.jsify({"name":"pick"});
+    var pickAny = new JsObject(context["MozActivity"], [pickAnyOptions]);
     pickAny["onsuccess"] = (_){
       ImageElement img = new ImageElement();
       if (pickAny["result"]["type"].startsWith("image/")) {
@@ -74,11 +74,11 @@ main() {
 
   ButtonElement record = querySelector('#record');
   record.onClick.listen((e) {
-    JsObject recOptions = new JsObject.jsify({
+    var recOptions = new JsObject.jsify({
       "name":"record", // Possibly capture in future versions
       "data": {"type":["photos"]}
     });
-    JsObject rec = new JsObject(context["MozActivity"], [recOptions]);
+    var rec = new JsObject(context["MozActivity"], [recOptions]);
     rec["onsuccess"] = (_) {
       ImageElement img = new ImageElement();
       img.src = Url.createObjectUrlFromBlob(rec["result"]["blob"]);
@@ -95,7 +95,7 @@ main() {
 
   ButtonElement dial = querySelector('#dial');
   dial.onClick.listen((e) {
-    JsObject dialOptions = new JsObject.jsify({
+    var dialOptions = new JsObject.jsify({
       "name": "dial",
       "data": {
         "number": "+46777888999"
@@ -106,7 +106,7 @@ main() {
 
   ButtonElement sendSms = querySelector('#send-sms');
   sendSms.onClick.listen((e) {
-    JsObject sendSmsOptions = new JsObject.jsify({
+    var sendSmsOptions = new JsObject.jsify({
       "name": "new", // Possible compose-sms in future versions
       "data": {
         "type":"websms/sms",
@@ -119,7 +119,7 @@ main() {
 
   ButtonElement addContact = querySelector('#add-contact');
   addContact.onClick.listen((e) {
-    JsObject addContactOptions = new JsObject.jsify({
+    var addContactOptions = new JsObject.jsify({
       "name": "new", // Possibly add-contact in future versions
       "data": {
         "type": "webcontacts/contact",
@@ -139,7 +139,7 @@ main() {
 
   ButtonElement share = querySelector('#share');
   share.onClick.listen((e) {
-    JsObject sOptions = new JsObject.jsify({
+    var sOptions = new JsObject.jsify({
       "name": "share",
       "data": {
         //type: "url", // Possibly text/html in future versions
@@ -170,7 +170,7 @@ main() {
       // from Javascript with a little workaround
 
       var toBlobCallback = (Blob blob) {
-        JsObject sOptions = new JsObject.jsify({
+        var sOptions = new JsObject.jsify({
           "name": "share",
           "data": {
             "type": "image/*",
@@ -189,7 +189,7 @@ main() {
 
   ButtonElement viewUrl = querySelector('#view-url');
   viewUrl.onClick.listen((e) {
-    JsObject viewOptions = new JsObject.jsify({
+    var viewOptions = new JsObject.jsify({
       "name": "view",
       "data": {
         "type": "url",  // Possibly text/html in future versions
@@ -201,7 +201,7 @@ main() {
 
   ButtonElement composeEmail = querySelector('#compose-email');
   composeEmail.onClick.listen((e) {
-    JsObject composeEmailOptions = new JsObject.jsify({
+    var composeEmailOptions = new JsObject.jsify({
       "name": "new",  // Possibly compose-mail in future versions
       "data": {
         "type": "mail",
@@ -213,7 +213,7 @@ main() {
 
   ButtonElement saveBookmark = querySelector('#save-bookmark');
   saveBookmark.onClick.listen((e) {
-    JsObject saveBookmarkOptions = new JsObject.jsify({
+    var saveBookmarkOptions = new JsObject.jsify({
       "name": "save-bookmark",
       "data": {
         "type": "url",
@@ -227,7 +227,7 @@ main() {
 
   ButtonElement openVideo = querySelector('#open-video');
   openVideo.onClick.listen((e) {
-    JsObject openVideoOptions = new JsObject.jsify({
+    var openVideoOptions = new JsObject.jsify({
       "name": "open",
       "data": {
         "type": [
@@ -260,7 +260,7 @@ main() {
       }
 
       if (context["Notification"]["permission"] == "granted") {
-        JsObject notificationOptions = new JsObject.jsify({
+        var notificationOptions = new JsObject.jsify({
           "body":"This is a notification"
         });
         new JsObject(context["Notification"], ["See this", notificationOptions]);
@@ -269,7 +269,7 @@ main() {
     } else {
       // Firefox OS 1.0
       //WARNING: not tested yet
-      JsObject notify = context["navigator"]["mozNotification"].callMethod(
+      var notify = context["navigator"]["mozNotification"].callMethod(
           "createNotification",
           ["See this", "This is a notification"]
       );
@@ -289,7 +289,7 @@ main() {
             "portrait-primary"
             "portrait-secondary"
     */
-    JsObject portraitLock = context["screen"].callMethod("mozLockOrientation", ["portrait"]);
+    var portraitLock = context["screen"].callMethod("mozLockOrientation", ["portrait"]);
     if (portraitLock != null) { // In Dart only `true' is `true'
       window.alert("Orientation locked to potrait");
     }
@@ -313,78 +313,95 @@ main() {
   ButtonElement checkConnection = querySelector('#check-connection');
   checkConnection.onClick.listen((e) {
     DivElement connectionDisplay = querySelector('#connection-display');
-    JsObject connection = context["navigator"]["mozConnection"];
+    var connection = context["navigator"]["mozConnection"];
+    //FIXME
     String online = "<strong>Connected:</strong> " + connection["bandwidth"].toString();
     String metered = "<strong>Metered:</strong> " + connection["metered"].toString();
-    connectionDisplay.innerHtml = "<h4>Result from Check connection</h4>" +
+
+    connectionDisplay
+      ..innerHtml = "<h4>Result from Check connection</h4>" +
                                   online + "<br/>" +
-                                  metered;
-    connectionDisplay.style.display = 'block';
+                                  metered
+      ..style.display = 'block';
   });
 
+  // Check battery
   ButtonElement checkBattery = querySelector('#check-battery');
   checkBattery.onClick.listen((e) {
     DivElement batteryDisplay = querySelector('#battery-display');
-    print("Not implemented yet");
+    var battery = context["navigator"]["battery"],
+        batteryLevel = "${(battery["level"] * 100).round()}%",
+        charghing = battery["charging"],
+        chargingTime = battery["chargingTime"] / 60,
+        dischargingTime = battery["dischargingTime"] / 60,
+        batteryInfo = "<h4>Result from Check battery</h4>" +
+                      "<strong>Battery level:</strong> $batteryLevel <br/>" +
+                      "<strong>Battery charging:</strong> $charghing <br/>" +
+                      "<strong>Battery charging time:</strong> $chargingTime <br>" +
+                      "<strong>Battery discharging time:</strong> $dischargingTime";
+
+    batteryDisplay
+      ..innerHtml = batteryInfo
+      ..style.display = 'block';
   });
 
   ButtonElement geolocation = querySelector('#geolocation');
   geolocation.onClick.listen((e) {
     DivElement geolocationDisplay = querySelector('#geolocation-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement ambientLight = querySelector('#ambient-light');
   ambientLight.onClick.listen((e) {
     DivElement ambientLightDisplay = querySelector('#ambient-light-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement proximity = querySelector('#proximity');
   proximity.onClick.listen((e) {
     DivElement proximityDisplay = querySelector('#proximity-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement userProximity = querySelector('#user-proximity');
   userProximity.onClick.listen((e) {
     DivElement userProximityDisplay = querySelector('#user-proximity-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement deviceOrientation = querySelector('#device-orientation');
   deviceOrientation.onClick.listen((e) {
     DivElement deviceOrientationDisplay = querySelector('#device-orientation-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement logVisibility = querySelector('#log-visibility');
   logVisibility.onClick.listen((e) {
     DivElement logVisibilityDisplay = querySelector('#log-visibility-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement crossDomainXhr = querySelector('#cross-domain-xhr');
   crossDomainXhr.onClick.listen((e) {
     DivElement crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement deviceStoragePictures = querySelector('#device-storage-pictures');
   deviceStoragePictures.onClick.listen((e) {
     DivElement deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement getAllContacts = querySelector('#get-all-contacts');
   getAllContacts.onClick.listen((e) {
     DivElement getAllContactsDisplay = querySelector('#get-all-contacts-display');
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
   ButtonElement keepscreen = querySelector('#keep-screen-on');
   keepscreen.onClick.listen((e) {
-    print("Not implemented yet");
+    window.alert("Not implemented yet");
   });
 
 }
