@@ -2391,7 +2391,7 @@ $isEH:true},
 fI:{
 "^":"a;LD@"},
 LV:{
-"^":"fI;P,LD",
+"^":"fI;P>,LD",
 dP:function(a){a.Iv(this.P)}},
 DS:{
 "^":"fI;kc>,I4<,LD",
@@ -4728,7 +4728,7 @@ VWl:{
 "^":"Tp:131;f",
 call$1:[function(a){var z
 P.mp("Callback called")
-z=C.xB.g("<strong>Ambient light: </strong>",J.UQ(a,"value"))+" lux"
+z=C.xB.g("<strong>Ambient light: </strong>",J.Vm(a))+" lux"
 P.mp("Lux is set")
 J.Qy(this.f,z)},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
@@ -7471,6 +7471,7 @@ if(!"name" in LV)LV.name="LV"
 $desc=$collectedClasses.LV
 if($desc instanceof Array)$desc=$desc[1]
 LV.prototype=$desc
+LV.prototype.gP=function(receiver){return this.P}
 function DS(kc,I4,LD){this.kc=kc
 this.I4=I4
 this.LD=LD}DS.builtin$cls="DS"
