@@ -41,11 +41,12 @@ Before pushing the app to your phone / simulator, be sure to run `pub build`.
 - deviceStorage - pictures
 - Get all contacts
 
-### Other features
+### Other
 
 - l18n
 - offline capabilities
 - comments
+- instructions on how to setup the environment and run the app
 
 ## Credits
 

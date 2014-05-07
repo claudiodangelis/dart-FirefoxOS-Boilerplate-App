@@ -242,6 +242,7 @@ main() {
     new JsObject(context["MozActivity"], [openVideoOptions]);
   });
 
+  // Notifications
   ButtonElement addNotification = querySelector('#add-notification');
   addNotification.onClick.listen((e) {
     //Note: Dart's Notification API seems not to be working fine when compiled
@@ -276,9 +277,22 @@ main() {
     }
   });
 
+  // Lock orientation
   ButtonElement lockOrientation = querySelector('#lock-orientation');
   lockOrientation.onClick.listen((e) {
-    print("Not implemented yet");
+    /*
+        Possible values:
+            "landscape",
+            "portrait"
+            "landscape-primary"
+            "landscape-secondary"
+            "portrait-primary"
+            "portrait-secondary"
+    */
+    JsObject portraitLock = context["screen"].callMethod("mozLockOrientation", ["portrait"]);
+    if (portraitLock != null) { // In Dart only `true' is `true'
+      window.alert("Orientation locked to potrait");
+    }
   });
 
   ButtonElement vibrate = querySelector('#vibrate');
