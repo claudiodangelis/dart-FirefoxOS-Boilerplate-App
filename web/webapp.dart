@@ -295,9 +295,10 @@ main() {
     }
   });
 
+  // Vibration
   ButtonElement vibrate = querySelector('#vibrate');
   vibrate.onClick.listen((e) {
-    print("Not implemented yet");
+    context["navigator"].callMethod("vibrate", [2000]);
   });
 
   ButtonElement checkConnection = querySelector('#check-connection');
