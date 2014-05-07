@@ -345,10 +345,25 @@ main() {
       ..style.display = 'block';
   });
 
+  // Geolocation
   ButtonElement geolocation = querySelector('#geolocation');
   geolocation.onClick.listen((e) {
     DivElement geolocationDisplay = querySelector('#geolocation-display');
-    window.alert("Not implemented yet");
+    var getCurrentPositionCallback = (position) {
+      geolocationDisplay
+        ..innerHtml = "<strong>Latitude:</strong> ${position["coords"]["latitude"]} "
+                      "<strong>Longitude:</strong> ${position["coords"]["longitude"]}"
+        ..style.display = 'block';
+    };
+
+    var getCurrentPositionFallback = () {
+      geolocationDisplay
+        ..innerHtml = "Failed to get your current location"
+        ..style.display = 'block';
+    };
+
+    context["navigator"]["geolocation"].callMethod("getCurrentPosition",
+        [getCurrentPositionCallback, getCurrentPositionFallback]);
   });
 
   ButtonElement ambientLight = querySelector('#ambient-light');
