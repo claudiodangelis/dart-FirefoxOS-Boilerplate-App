@@ -299,12 +299,27 @@ main() {
   ButtonElement vibrate = querySelector('#vibrate');
   vibrate.onClick.listen((e) {
     context["navigator"].callMethod("vibrate", [2000]);
+    /*
+        Possible values:
+        On/off pattern:
+        navigator.vibrate([200, 100, 200, 100]);
+
+        Turn off vibration
+        navigator.vibrate(0);
+    */
   });
 
+  // Check connection
   ButtonElement checkConnection = querySelector('#check-connection');
   checkConnection.onClick.listen((e) {
     DivElement connectionDisplay = querySelector('#connection-display');
-    print("Not implemented yet");
+    JsObject connection = context["navigator"]["mozConnection"];
+    String online = "<strong>Connected:</strong> " + connection["bandwidth"].toString();
+    String metered = "<strong>Metered:</strong> " + connection["metered"].toString();
+    connectionDisplay.innerHtml = "<h4>Result from Check connection</h4>" +
+                                  online + "<br/>" +
+                                  metered;
+    connectionDisplay.style.display = 'block';
   });
 
   ButtonElement checkBattery = querySelector('#check-battery');
