@@ -370,7 +370,6 @@ main() {
   ambientLight.onClick.listen((e) {
     DivElement ambientLightDisplay = querySelector('#ambient-light-display');
     ambientLightDisplay.style.display = 'block';
-    print("Starting ambientLight fn");
     var onDeviceLightCallback = (event) {
       // Read out the lux value
       String lux = "<strong>Ambient light: </strong> ${event["value"]} lux";
@@ -435,7 +434,7 @@ main() {
       ..innerHtml = 'I have focus!<br/>'
       ..style.display = 'block';
     document.onVisibilityChange.listen((e) {
-      //NOTE: Dart implementation of `document.hidden` is experimental and only
+      // NOTE: Dart implementation of `document.hidden` is experimental and only
       // supported on Chrome and Safari at time of writing, using
       // `visiblityState' as a workaround.
       //
@@ -456,24 +455,103 @@ main() {
   ButtonElement crossDomainXhr = querySelector('#cross-domain-xhr');
   crossDomainXhr.onClick.listen((e) {
     DivElement crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display');
-    window.alert("Not implemented yet");
+    // NOTE: We can not pass the constructor of HttpRequest (Dart implementation
+    //  of `XMLHttpRequest' the parameter {mozSystem: true}, required by FFOS
+    //  for cross-domains requests, so we'll use JS's XMLHttpRequest instead
+    var xhr = new JsObject(context["XMLHttpRequest"],
+        [new JsObject.jsify({"mozSystem":true})]);
+
+    xhr.callMethod("open", ["GET", "http://robnyman.github.io/Firefox-OS-Boilerplate-App/README.md", true]);
+    xhr["onreadystatechange"] = (_) {
+      if (xhr["status"] == 200 && xhr["readyState"] == 4) {
+        crossDomainXhrDisplay
+          ..innerHtml = "<h4>Result from Cross-domain XHR</h4> ${xhr["response"]}"
+          ..style.display = 'block';
+      }
+    };
+
+    xhr["onerror"] = () {
+      crossDomainXhrDisplay
+        ..innerHtml = '<h4>Result from Cross-domain XHR</h4><p>Cross-domain XHR failed</p>'
+        ..style.display = 'block';
+    };
+
+    xhr.callMethod("send");
   });
 
+  // deviceStorage, pictures
   ButtonElement deviceStoragePictures = querySelector('#device-storage-pictures');
   deviceStoragePictures.onClick.listen((e) {
-    DivElement deviceStoragePicturesDisplay = querySelector('#device-storiage-pictures-display');
-    window.alert("Not implemented yet");
+    DivElement deviceStoragePicturesDisplay = querySelector('#device-storage-pictures-display');
+    var deviceStorage = context["navigator"].callMethod("getDeviceStorage", ["pictures"]);
+
+    var cursor = deviceStorage.callMethod("enumerate");
+    deviceStoragePicturesDisplay.innerHtml = '<h4>Result from deviceStorage - pictures</h4>';
+
+    cursor["onsuccess"] = (_) {
+
+      if (cursor["result"] == null) {
+        deviceStoragePicturesDisplay.innerHtml = 'No files';
+      }
+
+      JsObject file = new JsObject.fromBrowserObject(cursor["result"]);
+      String filePresentation;
+      // FIXME: Use native Dart elements instead of mixing html and data
+      String fileSrcUrl = context["URL"].callMethod("createObjectURL", [file]);
+      filePresentation = "<strong> ${file["name"]}:</strong> ${file["size"] / 1024} kb<br>"
+                         "<p><img src='$fileSrcUrl' alt=''></p>";
+
+      deviceStoragePicturesDisplay
+        ..appendHtml(filePresentation)
+        ..style.display = 'block';
+    };
+
+    cursor["onerror"] = () {
+      print("Error");
+      deviceStoragePicturesDisplay
+        ..innerHtml = "<h4>Result from deviceStorage - pictures</h4><p>deviceStorage failed</p>"
+        ..style.display = 'block';
+    };
+
   });
 
+  // List contacts
   ButtonElement getAllContacts = querySelector('#get-all-contacts');
   getAllContacts.onClick.listen((e) {
     DivElement getAllContactsDisplay = querySelector('#get-all-contacts-display');
-    window.alert("Not implemented yet");
+    var getContacts = context["navigator"]["mozContacts"].callMethod("getAll",
+        [new JsObject.jsify({})]);
+
+    getAllContactsDisplay.style.display = 'block';
+
+    getContacts["onsuccess"] = (_) {
+      var result = getContacts["result"];
+      if (result != null) {
+        // FIXME: results should not look like [givenName] [familyName]
+        getAllContactsDisplay.appendHtml("${result["givenName"]} ${result["familyName"]}");
+        getContacts.callMethod("continue");
+      }
+    };
+
+    getContacts["onerror"] = () {
+      getAllContactsDisplay.appendHtml('Error');
+    };
+
   });
 
+  // Keep screen on
   ButtonElement keepscreen = querySelector('#keep-screen-on');
+  var lock = null;
   keepscreen.onClick.listen((e) {
-    window.alert("Not implemented yet");
+    if (lock == null) {
+      lock = context["navigator"].callMethod("requestWakeLock", ["screen"]);
+      keepscreen.innerHtml = 'Remove the lock';
+
+    } else {
+      lock.callMethod("unlock");
+      lock = null;
+      keepscreen.innerHtml = 'Keep screen on';
+    }
   });
 
 }

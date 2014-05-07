@@ -29,23 +29,23 @@ Before pushing the app to your phone / simulator, be sure to run `pub build`.
 - ~~Check battery~~
 - ~~Geolocation~~
 - ~~Ambient light~~
-- Proximity
-- User proximity
-- Device orientation
-- Keep screen on
+- ~~Proximity~~
+- ~~User proximity~~
+- ~~Device orientation~~
+- ~~Keep screen on~~
 
 ### Privileged APIs
 
-- App visibility
-- Cross-domain XHR
-- deviceStorage - pictures
-- Get all contacts
+- ~~App visibility~~
+- ~~Cross-domain XHR~~
+- ~~deviceStorage - pictures~~
+- ~~Get all contacts~~
 
 ### Other
 
 - l18n
 - offline capabilities
-- comments
+- ~~comments~~
 - instructions on how to setup the environment and run the app
 
 ## Credits
