@@ -369,7 +369,14 @@ main() {
   ButtonElement ambientLight = querySelector('#ambient-light');
   ambientLight.onClick.listen((e) {
     DivElement ambientLightDisplay = querySelector('#ambient-light-display');
-    window.alert("Not implemented yet");
+    ambientLightDisplay.style.display = 'block';
+    var onDeviceLightCallback = (e) {
+      // Read out the lux value
+      String lux = "<strong>Ambient light: </strong>" + e["value"] + " lux";
+      ambientLightDisplay.innerHtml = lux;
+    };
+
+    context["ondevicelight"] = onDeviceLightCallback;
   });
 
   ButtonElement proximity = querySelector('#proximity');
