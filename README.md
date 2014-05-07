@@ -23,12 +23,12 @@ Before pushing the app to your phone / simulator, be sure to run `pub build`.
 ### WebAPIs
 
 - ~~Add notification~~
-- Orientation lock
-- Vibrate 2 sec
-- Check connection
-- Check battery
-- Geolocation
-- Ambient light
+- ~~Orientation lock~~
+- ~~Vibrate 2 sec~~
+- ~~Check connection~~
+- ~~Check battery~~
+- ~~Geolocation~~
+- ~~Ambient light~~
 - Proximity
 - User proximity
 - Device orientation
@@ -50,7 +50,8 @@ Before pushing the app to your phone / simulator, be sure to run `pub build`.
 
 ## Credits
 
-- Robert Nyman is the original creator of Firefox OS Boilerplate App.
+- [Robert Nyman](https://twitter.com/robertnyman) is the original creator of [Firefox OS Boilerplate App](https://github.com/robnyman/Firefox-OS-Boilerplate-App).
+- [Daniele Scasciafratte](https://github.com/mte90) tested this app on his phones (Keon, Alcatel One Touch Fire)
 
 ## License
 

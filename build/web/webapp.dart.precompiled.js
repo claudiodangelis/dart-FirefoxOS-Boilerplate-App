@@ -3575,7 +3575,7 @@ pA:{
 "^":"qE;fg:height%,JR:naturalWidth=,LA:src},R:width%",
 "%":"HTMLImageElement"},
 Mi:{
-"^":"qE;fg:height%,oc:name=,LA:src},P:value=,R:width%",
+"^":"qE;fg:height%,A5:max=,Bp:min=,oc:name=,LA:src},P:value=,R:width%",
 $iscv:true,
 $isKV:true,
 "%":"HTMLInputElement"},
@@ -3603,7 +3603,7 @@ Ee:{
 "^":"qE;oc:name=",
 "%":"HTMLMetaElement"},
 Qb:{
-"^":"qE;P:value=",
+"^":"qE;A5:max=,Bp:min=,P:value=",
 "%":"HTMLMeterElement"},
 PG:{
 "^":"ea;tp:port=",
@@ -3657,7 +3657,7 @@ HD:{
 "^":"qE;oc:name=,P:value=",
 "%":"HTMLParamElement"},
 KR:{
-"^":"qE;P:value=",
+"^":"qE;A5:max=,P:value=",
 "%":"HTMLProgressElement"},
 u2:{
 "^":"Gv;",
@@ -4720,16 +4720,27 @@ wfa:{
 "^":"Tp:131;",
 call$1:[function(a){var z=document.querySelector("#ambient-light-display")
 J.oH(z.style,"block")
+P.mp("Starting ambientLight fn")
+P.mp("ondevicelight Event")
 J.kW($.cM(),"ondevicelight",new S.VWl(z))},"call$1",null,2,0,null,10,"call"],
 $isEH:true},
 VWl:{
 "^":"Tp:131;f",
-call$1:[function(a){J.Qy(this.f,C.xB.g("<strong>Ambient light: </strong>",J.UQ(a,"value"))+" lux")},"call$1",null,2,0,null,10,"call"],
+call$1:[function(a){var z
+P.mp("Callback called")
+z=C.xB.g("<strong>Ambient light: </strong>",J.UQ(a,"value"))+" lux"
+P.mp("Lux is set")
+J.Qy(this.f,z)},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
 Oaa:{
 "^":"Tp:131;",
-call$1:[function(a){document.querySelector("#proximity-display")
-window.alert("Not implemented yet")},"call$1",null,2,0,null,10,"call"],
+call$1:[function(a){J.oH(document.querySelector("#proximity-display").style,"block")
+J.kW($.cM(),"ondeviceproximity",new S.oZ2())},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+oZ2:{
+"^":"Tp:131;",
+call$1:[function(a){var z=J.U6(a)
+C.xB.g(C.xB.g(C.xB.g("<strong>Proximity: </strong>",z.t(a,"value"))+" cm<br><strong>Min value supported: </strong>",z.gBp(a))+" cm<br><strong>Max value supported: </strong>",z.gA5(a))+" cm"},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
 e0:{
 "^":"Tp:131;",
@@ -5142,7 +5153,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(o) { this.o = o; }})
 
 init.functionAliases={}
-init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"thing",{func:"Vv",ret:J.kn,args:[W.cv,J.O,J.O,W.JQ]},"element","attributeName","captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"WD",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},"attr","node",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","position",];$=null
+init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"thing",{func:"Vv",ret:J.kn,args:[W.cv,J.O,J.O,W.JQ]},"element","attributeName","captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"WD",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},"attr","node",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","position","event",];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(properties) {
@@ -5660,6 +5671,8 @@ if($desc instanceof Array)$desc=$desc[1]
 Mi.prototype=$desc
 Mi.prototype.gfg=function(receiver){return receiver.height}
 Mi.prototype.sfg=function(receiver,v){return receiver.height=v}
+Mi.prototype.gA5=function(receiver){return receiver.max}
+Mi.prototype.gBp=function(receiver){return receiver.min}
 Mi.prototype.goc=function(receiver){return receiver.name}
 Mi.prototype.sLA=function(receiver,v){return receiver.src=v}
 Mi.prototype.gP=function(receiver){return receiver.value}
@@ -5775,6 +5788,8 @@ if(!"name" in Qb)Qb.name="Qb"
 $desc=$collectedClasses.Qb
 if($desc instanceof Array)$desc=$desc[1]
 Qb.prototype=$desc
+Qb.prototype.gA5=function(receiver){return receiver.max}
+Qb.prototype.gBp=function(receiver){return receiver.min}
 Qb.prototype.gP=function(receiver){return receiver.value}
 function PG(){}PG.builtin$cls="PG"
 if(!"name" in PG)PG.name="PG"
@@ -5912,6 +5927,7 @@ if(!"name" in KR)KR.name="KR"
 $desc=$collectedClasses.KR
 if($desc instanceof Array)$desc=$desc[1]
 KR.prototype=$desc
+KR.prototype.gA5=function(receiver){return receiver.max}
 KR.prototype.gP=function(receiver){return receiver.value}
 function ew(){}ew.builtin$cls="ew"
 if(!"name" in ew)ew.name="ew"
@@ -8302,6 +8318,11 @@ if(!"name" in Oaa)Oaa.name="Oaa"
 $desc=$collectedClasses.Oaa
 if($desc instanceof Array)$desc=$desc[1]
 Oaa.prototype=$desc
+function oZ2(){}oZ2.builtin$cls="oZ2"
+if(!"name" in oZ2)oZ2.name="oZ2"
+$desc=$collectedClasses.oZ2
+if($desc instanceof Array)$desc=$desc[1]
+oZ2.prototype=$desc
 function e0(){}e0.builtin$cls="e0"
 if(!"name" in e0)e0.name="e0"
 $desc=$collectedClasses.e0
@@ -8337,4 +8358,4 @@ if(!"name" in e6)e6.name="e6"
 $desc=$collectedClasses.e6
 if($desc instanceof Array)$desc=$desc[1]
 e6.prototype=$desc
-return[qE,Gh,rK,fY,Mr,lJ,P2,nB,i3,it,Az,QP,IF,n6,Ny,Y5,Gc,nx,QQ,fW,y4,d7,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,BK,ae,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,Ax,xf,Vb,ST,tb,Sg,pA,Mi,HL,Xb,wP,eP,A6,Og,cS,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,xe,AI,bn,Ik,xI,Aj,Q0,eY,KV,BH,KY,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,u2,bX,UL,MC,Mx,qI,Ea,lp,kd,I0,yN,Cp,ua,HN,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,WP,yY,yJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,fA,K5,Xg,UM,hq,NL,yp,Eh,Mq,Nf,Nc,rj,rh,Zv,Q7,hF,yK,Dh,ZJ,mU,ph,IT,JY,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,Tx,HC,kK,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,pQ,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,GH,To,jr,j2,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,bi,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Jo,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,im,VA,O,PK,JO,O2,aX,oU,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,GS,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,U5,SO,SU,GD,Ca,vs,da,pV,U7,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,Xz,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,ar,lD,LG,Sw,o0,Y2,CL,fR,iP,a6,P7,DW,Ge,LK,AT,bJ,JS,ub,ds,lj,UV,TO,VS,t7,HG,eV,kM,An,c8,a,mE,Rn,wv,BV,id,l4,e7,zL,ec,hm,x5,tJ,i7,I2,RO,eu,xC,JQ,Pb,vD,mD,Eg,m6,ct,IA,Ow,W9,rB,kF,mk,MM,fm,IU,E4,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,em,VW,oZ,Lb,y8,Hi,QA,BT,PY,Cv,ed,wa,Or,YL,kJ,wf,Oa,emv,Lbd,QAa,Un,CvS,edy,waE,Ore,YLa,Zb,oa,wfa,VWl,Oaa,e0,e1,e2,e3,e4,e5,e6]}
+return[qE,Gh,rK,fY,Mr,lJ,P2,nB,i3,it,Az,QP,IF,n6,Ny,Y5,Gc,nx,QQ,fW,y4,d7,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,BK,ae,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,Ax,xf,Vb,ST,tb,Sg,pA,Mi,HL,Xb,wP,eP,A6,Og,cS,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,xe,AI,bn,Ik,xI,Aj,Q0,eY,KV,BH,KY,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,u2,bX,UL,MC,Mx,qI,Ea,lp,kd,I0,yN,Cp,ua,HN,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,WP,yY,yJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,fA,K5,Xg,UM,hq,NL,yp,Eh,Mq,Nf,Nc,rj,rh,Zv,Q7,hF,yK,Dh,ZJ,mU,ph,IT,JY,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,Tx,HC,kK,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,pQ,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,GH,To,jr,j2,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,bi,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Jo,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,im,VA,O,PK,JO,O2,aX,oU,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,GS,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,U5,SO,SU,GD,Ca,vs,da,pV,U7,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,Xz,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,ar,lD,LG,Sw,o0,Y2,CL,fR,iP,a6,P7,DW,Ge,LK,AT,bJ,JS,ub,ds,lj,UV,TO,VS,t7,HG,eV,kM,An,c8,a,mE,Rn,wv,BV,id,l4,e7,zL,ec,hm,x5,tJ,i7,I2,RO,eu,xC,JQ,Pb,vD,mD,Eg,m6,ct,IA,Ow,W9,rB,kF,mk,MM,fm,IU,E4,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,em,VW,oZ,Lb,y8,Hi,QA,BT,PY,Cv,ed,wa,Or,YL,kJ,wf,Oa,emv,Lbd,QAa,Un,CvS,edy,waE,Ore,YLa,Zb,oa,wfa,VWl,Oaa,oZ2,e0,e1,e2,e3,e4,e5,e6]}

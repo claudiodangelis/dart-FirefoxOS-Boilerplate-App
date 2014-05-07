@@ -370,19 +370,30 @@ main() {
   ambientLight.onClick.listen((e) {
     DivElement ambientLightDisplay = querySelector('#ambient-light-display');
     ambientLightDisplay.style.display = 'block';
-    var onDeviceLightCallback = (e) {
+    print("Starting ambientLight fn");
+    var onDeviceLightCallback = (event) {
+      print("Callback called");
       // Read out the lux value
-      String lux = "<strong>Ambient light: </strong>" + e["value"] + " lux";
+      String lux = "<strong>Ambient light: </strong>" + event["value"] + " lux";
+      print("Lux is set");
       ambientLightDisplay.innerHtml = lux;
     };
 
+    print("ondevicelight Event");
     context["ondevicelight"] = onDeviceLightCallback;
   });
 
+  // Proximity
   ButtonElement proximity = querySelector('#proximity');
   proximity.onClick.listen((e) {
     DivElement proximityDisplay = querySelector('#proximity-display');
-    window.alert("Not implemented yet");
+    proximityDisplay.style.display = 'block';
+    var onDeviceProximityCallback = (event) {
+      var prox = "<strong>Proximity: </strong>" + event["value"] + " cm<br>"
+                 "<strong>Min value supported: </strong>" + event.min + " cm<br>"
+                 "<strong>Max value supported: </strong>" + event.max + " cm";
+    };
+    context["ondeviceproximity"] = onDeviceProximityCallback;
   });
 
   ButtonElement userProximity = querySelector('#user-proximity');

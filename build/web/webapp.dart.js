@@ -3575,7 +3575,7 @@ pA:{
 "^":"qE;fg:height%,JR:naturalWidth=,LA:src},R:width%",
 "%":"HTMLImageElement"},
 Mi:{
-"^":"qE;fg:height%,oc:name=,LA:src},P:value=,R:width%",
+"^":"qE;fg:height%,A5:max=,Bp:min=,oc:name=,LA:src},P:value=,R:width%",
 $iscv:true,
 $isKV:true,
 "%":"HTMLInputElement"},
@@ -3603,7 +3603,7 @@ Ee:{
 "^":"qE;oc:name=",
 "%":"HTMLMetaElement"},
 Qb:{
-"^":"qE;P:value=",
+"^":"qE;A5:max=,Bp:min=,P:value=",
 "%":"HTMLMeterElement"},
 PG:{
 "^":"ea;tp:port=",
@@ -3657,7 +3657,7 @@ HD:{
 "^":"qE;oc:name=,P:value=",
 "%":"HTMLParamElement"},
 KR:{
-"^":"qE;P:value=",
+"^":"qE;A5:max=,P:value=",
 "%":"HTMLProgressElement"},
 u2:{
 "^":"Gv;",
@@ -4720,16 +4720,27 @@ wfa:{
 "^":"Tp:131;",
 call$1:[function(a){var z=document.querySelector("#ambient-light-display")
 J.oH(z.style,"block")
+P.mp("Starting ambientLight fn")
+P.mp("ondevicelight Event")
 J.kW($.cM(),"ondevicelight",new S.VWl(z))},"call$1",null,2,0,null,10,"call"],
 $isEH:true},
 VWl:{
 "^":"Tp:131;f",
-call$1:[function(a){J.Qy(this.f,C.xB.g("<strong>Ambient light: </strong>",J.UQ(a,"value"))+" lux")},"call$1",null,2,0,null,10,"call"],
+call$1:[function(a){var z
+P.mp("Callback called")
+z=C.xB.g("<strong>Ambient light: </strong>",J.UQ(a,"value"))+" lux"
+P.mp("Lux is set")
+J.Qy(this.f,z)},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
 Oaa:{
 "^":"Tp:131;",
-call$1:[function(a){document.querySelector("#proximity-display")
-window.alert("Not implemented yet")},"call$1",null,2,0,null,10,"call"],
+call$1:[function(a){J.oH(document.querySelector("#proximity-display").style,"block")
+J.kW($.cM(),"ondeviceproximity",new S.oZ2())},"call$1",null,2,0,null,10,"call"],
+$isEH:true},
+oZ2:{
+"^":"Tp:131;",
+call$1:[function(a){var z=J.U6(a)
+C.xB.g(C.xB.g(C.xB.g("<strong>Proximity: </strong>",z.t(a,"value"))+" cm<br><strong>Min value supported: </strong>",z.gBp(a))+" cm<br><strong>Max value supported: </strong>",z.gA5(a))+" cm"},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
 e0:{
 "^":"Tp:131;",
@@ -5142,7 +5153,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(o) { this.o = o; }})
 
 init.functionAliases={}
-init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"thing",{func:"Vv",ret:J.kn,args:[W.cv,J.O,J.O,W.JQ]},"element","attributeName","captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"WD",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},"attr","node",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","position",];$=null
+init.metadata=["object","interceptor","proto","extension","indexability","isolate","function","entry","args","sender","e","msg","topLevel","message","isSpawnUri","startPaused","replyTo","x","record","value","array","codePoints","charCodes","receiver","key","positionalArguments","namedArguments","argument","index","ex","expression","keyValuePairs","result","closure","numberOfArguments","arg1","arg2","arg3","arg4","arity","functions","reflectionInfo","isStatic","jsArguments","propertyName","isSuperCall","stubName","isIntercepted","name","fieldName","staticName","list","returnType","parameterTypes","optionalParameterTypes","target","typeInfo","substitutionName",,"type","onTypeVariable","types","startIndex","substitution","arguments","s","t","signature","context","contextName","allowShorter","obj","property","tag","interceptorClass","transformer","hooks","iterable","f","leftDelimiter","rightDelimiter","start","end","from","skipCount","src","srcStart","dst","dstStart","count","a","left","right","compare","victim","errorHandler","zone","source","listeners",{func:"X0",void:true},"callback",{func:"G5",void:true,args:[null]},{func:"Vx",void:true,args:[null],opt:[P.mE]},"error","stackTrace","userCode","onSuccess","onError","subscription","future","duration","self","parent","arg","table",{func:"Gl",ret:J.kn,args:[null,null]},"b",{func:"bX",ret:J.im,args:[null]},"parts","m",{func:"Vs",ret:J.im,args:[P.fR,P.fR]},"n",{func:"E0",ret:J.kn,args:[P.a,P.a]},{func:"ZY",ret:J.im,args:[P.a]},"thing",{func:"Vv",ret:J.kn,args:[W.cv,J.O,J.O,W.JQ]},"element","attributeName","captureThis","data","o",{func:"aB",args:[null]},"createProxy",{func:"uJ",ret:P.a,args:[null]},"string",{func:"NT"},"val",{func:"bh",args:[null,null]},{func:"WD",args:[J.O]},{func:"Za",args:[J.O,null]},"parameter",{func:"TS",args:[null,J.O]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:J.kn},"ignored","_",{func:"bb",args:[null,P.mE]},{func:"N5",void:true,args:[null,P.mE]},"each","k","v","symbol",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:J.O,args:[J.im]},"attr","node",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","position","event",];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(properties) {
