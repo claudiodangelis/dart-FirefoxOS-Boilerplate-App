@@ -4728,12 +4728,8 @@ VWl:{
 "^":"Tp:131;f",
 call$1:[function(a){var z,y
 P.mp("Callback called")
-P.mp("Debug 1")
-z=J.RE(a)
-P.mp(z.gP(a))
-P.mp("Debug 2")
-P.mp(J.AG(z.gP(a)))
 P.mp("Debug 3")
+z=J.U6(a)
 P.mp(z.t(a,"value"))
 P.mp("Debug 4")
 P.mp(J.AG(z.t(a,"value")))
