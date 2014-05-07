@@ -374,11 +374,8 @@ main() {
     var onDeviceLightCallback = (event) {
       print("Callback called");
       // Read out the lux value
-      print("Debug 3");
-      print(event["value"]);
-      print("Debug 4");
-      print(event["value"].toString());
-      String lux = "<strong>Ambient light: </strong>" + event.value + " lux";
+      print(event["value"].runtimeType);
+      String lux = "<strong>Ambient light: </strong> ${event["value"]} lux";
       print("Lux is set");
       ambientLightDisplay.innerHtml = lux;
     };
