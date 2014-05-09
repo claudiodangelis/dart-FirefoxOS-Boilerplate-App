@@ -8520,9 +8520,11 @@ var $$ = {};
     "^": "Closure:136;mozApps_1,checkIfInstalled_2",
     call$0: [function() {
       var install, manifestUrl, t1;
-      if (J.$index$asx(this.checkIfInstalled_2, "result") != null)
+      if (J.$index$asx(this.checkIfInstalled_2, "result") != null) {
+        P.print("Already installed");
         J.set$display$x(document.querySelector("#installation-instructions").style, "none");
-      else {
+      } else {
+        P.print("Not installed");
         install = document.querySelector("#install");
         manifestUrl = J.substring$2$s(J.get$href$x(C.Window_methods.get$location(window)), 0, J.lastIndexOf$1$asx(J.toString$0(C.Window_methods.get$location(window)), "/")) + "manifest.webapp";
         install.className = "show-install";
@@ -8546,6 +8548,7 @@ var $$ = {};
   main___closure: {
     "^": "Closure:136;install_6",
     call$0: [function() {
+      P.print("Successfully installed");
       J.set$display$x(this.install_6.style, "none");
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true

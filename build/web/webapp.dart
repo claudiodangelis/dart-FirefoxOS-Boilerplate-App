@@ -11,9 +11,11 @@ main() {
     checkIfInstalled["onsuccess"] = () {
       if (checkIfInstalled["result"] != null) {
         // Already installed
+        print("Already installed");
         ParagraphElement installationInstructions = querySelector('#installation-instructions');
         installationInstructions.style.display = 'none';
       } else {
+        print("Not installed");
         ButtonElement install = querySelector('#install');
         String manifestUrl = window.location.href.substring(0,
             window.location.toString().lastIndexOf('/')) + 'manifest.webapp';
@@ -22,6 +24,7 @@ main() {
         install.onClick.listen((e) {
           var installApp = mozApps.callMethod("install", [manifestUrl]);
           installApp["onsuccess"] = () {
+            print("Successfully installed");
             install.style.display = 'none';
           };
 
