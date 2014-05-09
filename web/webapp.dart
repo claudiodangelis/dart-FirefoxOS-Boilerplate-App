@@ -2,6 +2,42 @@ import 'dart:html';
 import 'dart:js';
 
 main() {
+  // Install app
+  var mozApps = context["navigator"]["mozApps"];
+  if (mozApps != null) {
+    var checkIfInstalled = mozApps.callMethod("getSelf",[]);
+    checkIfInstalled["onsuccess"] = () {
+      if (checkIfInstalled["result"] != null) {
+        // Already installed
+        ParagraphElement installationInstructions = querySelector('#installation-instructions');
+        installationInstructions.style.display = 'none';
+      } else {
+        ButtonElement install = querySelector('#install');
+        String manifestUrl = window.location.href.substring(0,
+            window.location.toString().lastIndexOf('/')) + 'manifest.webapp';
+        install.className = 'show-install';
+        install.onClick.listen((e) {
+          var installApp = mozApps.callMethod("install", [manifestUrl]);
+          installApp["onsuccess"] = () {
+            install.style.display = 'none';
+          };
+
+          installApp["onerror"] = () {
+            var errorName = installApp["error"]["name"];
+            window.alert("Install failed:\n\n" + errorName);
+          };
+        });
+      }
+    };
+  } else {
+    print("Open Web Apps not supported");
+  }
+
+  var reload = querySelector('#reload');
+  reload.onClick.listen((e) {
+    window.location.reload();
+  });
+
   // Appcache
   var appCache = window.applicationCache;
 
