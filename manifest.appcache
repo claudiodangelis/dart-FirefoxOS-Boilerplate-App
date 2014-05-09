@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Version 0.6799999
+
+index.html
+css/base.css
+webapp.dart.precompiled.js
+js/offline.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ fallback.html
