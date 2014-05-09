@@ -5,14 +5,14 @@
   "launch_path": "/build/web/index.html",
   "description": "Boilerplate Firefox OS app with example use cases to get started",
   "icons": {
-    "16": "/images/logo16.png",
-    "32": "/images/logo32.png",
-    "48": "/images/logo48.png",
-    "60": "/images/logo60.png",
-    "64": "/images/logo64.png",
-    "90": "/images/logo90.png",
-    "120": "/images/logo120.png",
-    "128": "/images/logo128.png"
+    "16": "/web/images/logo16.png",
+    "32": "/web/images/logo32.png",
+    "48": "/web/images/logo48.png",
+    "60": "/web/images/logo60.png",
+    "64": "/web/images/logo64.png",
+    "90": "/web/images/logo90.png",
+    "120": "/web/images/logo120.png",
+    "128": "/web/images/logo128.png"
   },
   "developer": {
     "name": "Robert Nyman",
@@ -22,11 +22,10 @@
     "*"
   ],
   "default_locale": "en",
-  
   "permissions": {
-    "systemXHR":{},
+    "systemXHR": {},
     "contacts": {
-      "description" : "Reading out contacts",
+      "description": "Reading out contacts",
       "access": "readcreate"
     },
     "desktop-notification": {
@@ -57,7 +56,7 @@
       "name": "Firefox OS Boilerplate Εφαρμογή",
       "description": "Boilerplate Firefox OS εφαρμογή με παραδείγματα χρήσης για να ξεκινήσετε"
     },
-   "en": {
+    "en": {
       "name": "Firefox OS Boilerplate App",
       "description": "Boilerplate Firefox OS app with example use cases to get started"
     },
