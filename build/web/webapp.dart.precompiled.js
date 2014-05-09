@@ -610,7 +610,7 @@ var $$ = {};
     },
     $ge: function(receiver, other) {
       if (typeof other !== "number")
-        throw H.wrapException(P.ArgumentError$(other));
+        throw H.wrapException(new P.ArgumentError(other));
       return receiver >= other;
     },
     $isnum: true,
@@ -8518,8 +8518,8 @@ var $$ = {};
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure29(t1, keepscreen)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
   }, "call$0", "main$closure", 0, 0, 136],
   main_closure: {
-    "^": "Closure:136;mozApps_1,checkIfInstalled_2",
-    call$0: [function() {
+    "^": "Closure:132;mozApps_1,checkIfInstalled_2",
+    call$1: [function(_) {
       var install, manifestUrl, t1;
       window.alert("right after check if installed on success");
       if (J.$index$asx(this.checkIfInstalled_2, "result") != null) {
@@ -8535,7 +8535,7 @@ var $$ = {};
         t1 = J.get$onClick$x(install);
         H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._target, t1._eventType, W._wrapZone(new S.main__closure(this.mozApps_1, install, manifestUrl)), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
       }
-    }, "call$0", null, 0, 0, null, "call"],
+    }, "call$1", null, 2, 0, null, 146, "call"],
     $isFunction: true
   },
   main__closure: {
