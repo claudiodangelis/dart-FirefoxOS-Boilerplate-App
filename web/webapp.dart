@@ -10,7 +10,9 @@ main() {
     var checkIfInstalled = mozApps.callMethod("getSelf",[]);
     window.alert("right after getSelf");
     checkIfInstalled["onsuccess"] = () {
+      window.alert("right after check if installed on success");
       if (checkIfInstalled["result"] != null) {
+        window.alert("Already installed");
         // Already installed
         window.alert("Already installed");
         ParagraphElement installationInstructions = querySelector('#installation-instructions');

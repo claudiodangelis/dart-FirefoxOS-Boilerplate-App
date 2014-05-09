@@ -8521,7 +8521,9 @@ var $$ = {};
     "^": "Closure:136;mozApps_1,checkIfInstalled_2",
     call$0: [function() {
       var install, manifestUrl, t1;
+      window.alert("right after check if installed on success");
       if (J.$index$asx(this.checkIfInstalled_2, "result") != null) {
+        window.alert("Already installed");
         window.alert("Already installed");
         J.set$display$x(document.querySelector("#installation-instructions").style, "none");
       } else {
