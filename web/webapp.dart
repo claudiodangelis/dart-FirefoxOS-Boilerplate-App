@@ -8,6 +8,7 @@ main() {
     window.alert("debug");
     window.alert(mozApps);
     var checkIfInstalled = mozApps.callMethod("getSelf",[]);
+    window.alert("right after getSelf");
     checkIfInstalled["onsuccess"] = () {
       if (checkIfInstalled["result"] != null) {
         // Already installed
