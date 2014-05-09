@@ -9,6 +9,7 @@ main() {
     window.alert(mozApps);
     var checkIfInstalled = mozApps.callMethod("getSelf",[]);
     window.alert("right after getSelf");
+    window.alert(checkIfInstalled.hasProperty("onsuccess"));
     checkIfInstalled["onsuccess"] = (_) {
       window.alert("right after check if installed on success");
       if (checkIfInstalled["result"] != null) {

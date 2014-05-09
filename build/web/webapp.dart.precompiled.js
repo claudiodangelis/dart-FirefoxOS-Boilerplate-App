@@ -8447,6 +8447,7 @@ var $$ = {};
       window.alert(mozApps);
       checkIfInstalled = mozApps.callMethod$2("getSelf", []);
       window.alert("right after getSelf");
+      window.alert(checkIfInstalled.hasProperty$1("onsuccess"));
       J.$indexSet$ax(checkIfInstalled, "onsuccess", new S.main_closure(mozApps, checkIfInstalled));
     } else
       P.print("Open Web Apps not supported");
