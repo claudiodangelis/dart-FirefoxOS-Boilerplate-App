@@ -8443,8 +8443,8 @@ var $$ = {};
     t1 = {};
     mozApps = J.$index$asx(J.$index$asx($.get$context(), "navigator"), "mozApps");
     if (mozApps != null) {
-      P.print("Debug...");
-      P.print(mozApps);
+      window.alert("debug");
+      window.alert(mozApps);
       checkIfInstalled = mozApps.callMethod$2("getSelf", []);
       J.$indexSet$ax(checkIfInstalled, "onsuccess", new S.main_closure(mozApps, checkIfInstalled));
     } else
@@ -8521,12 +8521,13 @@ var $$ = {};
     call$0: [function() {
       var install, manifestUrl, t1;
       if (J.$index$asx(this.checkIfInstalled_2, "result") != null) {
-        P.print("Already installed");
+        window.alert("Already installed");
         J.set$display$x(document.querySelector("#installation-instructions").style, "none");
       } else {
-        P.print("Not installed");
+        window.alert("Not installed");
         install = document.querySelector("#install");
         manifestUrl = J.substring$2$s(J.get$href$x(C.Window_methods.get$location(window)), 0, J.lastIndexOf$1$asx(J.toString$0(C.Window_methods.get$location(window)), "/")) + "manifest.webapp";
+        window.alert("Debug: before className");
         install.className = "show-install";
         t1 = J.get$onClick$x(install);
         H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._target, t1._eventType, W._wrapZone(new S.main__closure(this.mozApps_1, install, manifestUrl)), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
@@ -8539,6 +8540,7 @@ var $$ = {};
     call$1: [function(e) {
       var installApp, t1;
       installApp = this.mozApps_3.callMethod$2("install", [this.manifestUrl_5]);
+      window.alert("before onsuccess");
       t1 = J.getInterceptor$ax(installApp);
       t1.$indexSet(installApp, "onsuccess", new S.main___closure(this.install_4));
       t1.$indexSet(installApp, "onerror", new S.main___closure0(installApp));

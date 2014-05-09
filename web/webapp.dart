@@ -5,24 +5,26 @@ main() {
   // Install app
   var mozApps = context["navigator"]["mozApps"];
   if (mozApps != null) {
-    print("Debug...");
-    print(mozApps);
+    window.alert("debug");
+    window.alert(mozApps);
     var checkIfInstalled = mozApps.callMethod("getSelf",[]);
     checkIfInstalled["onsuccess"] = () {
       if (checkIfInstalled["result"] != null) {
         // Already installed
-        print("Already installed");
+        window.alert("Already installed");
         ParagraphElement installationInstructions = querySelector('#installation-instructions');
         installationInstructions.style.display = 'none';
       } else {
-        print("Not installed");
+        window.alert("Not installed");
         ButtonElement install = querySelector('#install');
         String manifestUrl = window.location.href.substring(0,
             window.location.toString().lastIndexOf('/')) + 'manifest.webapp';
 
+        window.alert("Debug: before className");
         install.className = 'show-install';
         install.onClick.listen((e) {
           var installApp = mozApps.callMethod("install", [manifestUrl]);
+          window.alert("before onsuccess");
           installApp["onsuccess"] = () {
             print("Successfully installed");
             install.style.display = 'none';
