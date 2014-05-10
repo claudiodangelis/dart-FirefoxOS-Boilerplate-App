@@ -2,7 +2,7 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 
 ## Running the app
 
-To run the app you can simply open Firefox OS's browser and go to: [https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web](https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web) -- on top-right corner there will be a "+" button to install it.
+To run the app you can simply open Firefox OS's browser and go to: [https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web](https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web) -- on top-right corner there will be a "+" button to install it. Warning: install button won't work out of the box because of app's security level.
 
 If you want to install the app from your computer, get the code (`git clone https://github.com/claudiodangelis/dart-FirefoxOS-Boilerplate-App.git`) and learn how use Firefox's [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
 
