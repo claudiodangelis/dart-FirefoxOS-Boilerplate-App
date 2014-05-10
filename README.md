@@ -2,7 +2,7 @@ This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert
 
 ## Running the app
 
-To run the app you can simply open Firefox OS's browser and go to: [https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web](https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web) -- on top-right corner there will be a "+" button to install it. Warning: install button won't work out of the box because of app's security level.
+To run the app you can simply open Firefox OS's browser and go to: [https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web](https://claudiodangelis.github.io/dart-FirefoxOS-Boilerplate-App/build/web) -- on top-right corner there will be a "+" button to install it.
 
 If you want to install the app from your computer, get the code (`git clone https://github.com/claudiodangelis/dart-FirefoxOS-Boilerplate-App.git`) and learn how use Firefox's [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
 
@@ -50,7 +50,33 @@ var pick = new JsObject(context["MozActivity"], [
 where `context` is the JS's window object. To get more information about JS<->Dart interoperability check this article: (https://www.dartlang.org/articles/js-dart-interop/)[https://www.dartlang.org/articles/js-dart-interop/].
 
 
+## For Packaged Apps
 
+_Excerpt from the original [Boilerplate App](https://github.com/robnyman/Firefox-OS-Boilerplate-App)_
+
+You can test packaged apps in version 2 and higher of the App Manager, by using the Add Directory button. If you want to access privileged APIs - such as deviceStorage, cross-domain XMLHttpRequest etc - you need to set type and permissions in the manifest file. E.g.
+
+    {
+        "version": "1",
+        "name": "Firefox OS Boilerplate App",
+        "type" : "privileged"
+        …
+
+And:
+
+    "permissions": {
+        "device-storage:pictures": {
+            "access": "readcreate"
+        },
+        "systemXHR":{},
+        "contacts": {
+            "description" : "Reading out contacts",
+            "access": "readcreate"
+        }
+    }
+
+
+All options to test packaged apps are outlined in the [How to install packaged apps in Firefox OS – options and tools](https://hacks.mozilla.org/2013/03/how-to-install-packaged-apps-in-firefox-os-options-and-tools/) article
 
 ## Roadmap
 

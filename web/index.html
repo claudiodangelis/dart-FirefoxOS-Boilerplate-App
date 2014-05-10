@@ -131,7 +131,8 @@
 
     <!--TODO: port "base.js" (an install script) to Dart -->
     <script type="text/javascript" src="js/base.js"></script>
-    <script src="webapp.dart.precompiled.js"></script>
+    <!-- NOTE: if your app's type is "privileged", then change src to "webapp.dart.precompiled.js" to load CSP-compliant javascript sources-->
+    <script src="webapp.dart.js"></script>
 
     <!--
         Loosely based on fxosstub: https://github.com/Jaxo/fxosstub

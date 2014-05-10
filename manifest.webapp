@@ -1,6 +1,5 @@
 {
   "version": "1",
-  "type": "privileged",
   "name": "Dart Firefox OS Boilerplate App",
   "launch_path": "/build/web/index.html",
   "description": "Boilerplate Firefox OS app with example use cases to get started",
@@ -23,11 +22,6 @@
   ],
   "default_locale": "en",
   "permissions": {
-    "systemXHR": {},
-    "contacts": {
-      "description": "Reading out contacts",
-      "access": "readcreate"
-    },
     "desktop-notification": {
       "description": "To show notifications"
     },
