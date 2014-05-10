@@ -4576,7 +4576,7 @@ x=J.Vg(v)
 H.VM(new W.xC(0,x.uv,x.Ph,W.VF(new S.e8(z,v)),x.Sg),[H.Kp(x,0)]).Zz()},"call$0","HA",0,0,136],
 em:{
 "^":"Tp:132;",
-call$1:[function(a){if(window.confirm("The app has been updated.Do you want to download the latest files? \nOtherwise they will be updated at the next reload.")===!0)J.LE(C.ol.gmW(window))},"call$1",null,2,0,null,10,"call"],
+call$1:[function(a){if(window.confirm("The app has been updated.Do you want to download thelatest files? \nOtherwise they will be updated at the next reload.")===!0)J.LE(C.ol.gmW(window))},"call$1",null,2,0,null,10,"call"],
 $isEH:true},
 Lb:{
 "^":"Tp:132;b",
@@ -4766,7 +4766,7 @@ Zb:{
 call$1:[function(a){var z,y
 z=this.f
 y=J.U6(a)
-J.Qy(z,"<strong>Latitude:</strong> "+H.d(J.UQ(y.t(a,"coords"),"latitude"))+" <strong>Longitude:</strong> "+H.d(J.UQ(y.t(a,"coords"),"longitude")))
+J.Qy(z,"<strong>Latitude:</strong>"+H.d(J.UQ(y.t(a,"coords"),"latitude"))+"<strong>Longitude:</strong>"+H.d(J.UQ(y.t(a,"coords"),"longitude")))
 J.oH(z.style,"block")},"call$1",null,2,0,null,161,"call"],
 $isEH:true},
 oa:{
@@ -4805,7 +4805,7 @@ $isEH:true},
 y88:{
 "^":"Tp:132;Gq",
 call$1:[function(a){var z=this.Gq
-J.Qy(z,"<strong>User proximity - near:</strong> "+H.d(J.UQ(a,"near"))+"<br/>")
+J.Qy(z,"<strong>User proximity - near:</strong>"+H.d(J.UQ(a,"near"))+"<br/>")
 J.oH(z.style,"block")},"call$1",null,2,0,null,162,"call"],
 $isEH:true},
 e3:{
@@ -4821,7 +4821,7 @@ if(J.xZ(z.t(a,"beta"),45)&&J.u6(z.t(a,"beta"),135))y="top"
 else if(J.u6(z.t(a,"beta"),-45)&&J.xZ(z.t(a,"beta"),-135))y="bottom"
 else{if(J.xZ(z.t(a,"gamma"),45))x="right"
 else x=J.u6(z.t(a,"gamma"),-45)?"left":"flat"
-y=x}J.Qy(this.Rm,"<strong>Absolute: </strong> "+H.d(z.t(a,"absolute"))+"<br><strong>Alpha: </strong>  "+H.d(z.t(a,"alpha"))+"<br><strong>Beta: </strong> "+H.d(z.t(a,"beta"))+"<br><strong>Gamma: </strong> "+H.d(z.t(a,"gamma"))+"<br><strong>Device orientation: </strong> "+y)},"call$1",null,2,0,null,162,"call"],
+y=x}J.Qy(this.Rm,"<strong>Absolute: </strong>"+H.d(z.t(a,"absolute"))+"<br><strong>Alpha: </strong>  "+H.d(z.t(a,"alpha"))+"<br><strong>Beta: </strong> "+H.d(z.t(a,"beta"))+"<br><strong>Gamma: </strong> "+H.d(z.t(a,"gamma"))+"<br><strong>Device orientation: </strong> "+y)},"call$1",null,2,0,null,162,"call"],
 $isEH:true},
 e4:{
 "^":"Tp:132;",
@@ -4859,7 +4859,7 @@ call$1:[function(a){var z,y,x
 z=this.mG
 y=J.U6(z)
 if(J.de(y.t(z,"status"),200)&&J.de(y.t(z,"readyState"),4)){x=this.HZ
-J.Qy(x,"<h4>Result from Cross-domain XHR</h4> "+H.d(y.t(z,"response")))
+J.Qy(x,"<h4>Result from Cross-domain XHR</h4>"+H.d(y.t(z,"response")))
 J.oH(x.style,"block")}},"call$1",null,2,0,null,146,"call"],
 $isEH:true},
 u8k:{
@@ -4873,7 +4873,7 @@ e6:{
 call$1:[function(a){var z,y,x
 z=document.querySelector("#device-storage-pictures-display")
 y=J.UQ($.LX(),"navigator").K9("getDeviceStorage",["pictures"]).nQ("enumerate")
-J.Qy(z,"<h4>Result from deviceStorage - pictures</h4>")
+J.Qy(z,"<h4>Result from deviceStorage- pictures</h4>")
 x=J.w1(y)
 x.u(y,"onsuccess",new S.kJb(z,y))
 x.u(y,"onerror",new S.Una(z))},"call$1",null,2,0,null,10,"call"],
@@ -4888,7 +4888,7 @@ x=P.kW(y.t(z,"result"))
 w=J.UQ($.LX(),"URL").K9("createObjectURL",[x])
 z=J.U6(x)
 y=this.cj
-J.IR(y,"beforeend","<strong> "+H.d(z.t(x,"name"))+":</strong> "+H.d(J.FW(z.t(x,"size"),1024))+" kb<br><p><img src='"+H.d(w)+"' alt=''></p>")
+J.IR(y,"beforeend","<strong> "+H.d(z.t(x,"name"))+": </strong>"+H.d(J.FW(z.t(x,"size"),1024))+" kb<br><p><img src='"+H.d(w)+"' alt=''></p>")
 J.oH(y.style,"block")},"call$1",null,2,0,null,146,"call"],
 $isEH:true},
 Una:{
@@ -4914,7 +4914,7 @@ call$1:[function(a){var z,y,x
 z=this.Zm
 y=J.UQ(z,"result")
 if(y!=null){x=J.U6(y)
-J.IR(this.r,"beforeend",H.d(x.t(y,"givenName"))+" "+H.d(x.t(y,"familyName")))
+J.IR(this.r,"beforeend",H.d(x.t(y,"givenName"))+H.d(x.t(y,"familyName")))
 z.nQ("continue")}},"call$1",null,2,0,null,146,"call"],
 $isEH:true},
 oaa:{
