@@ -13,7 +13,7 @@ if (navigator.mozApps) {
         }
         else {
             var install = document.querySelector("#install"),
-                manifestURL = location.origin + "/dart-FirefoxOS-Boilerplate-App/manifest.webapp";
+                manifestURL = location.origin + "/dart-FirefoxOS-Boilerplate-App/manifest-hosted.webapp";
             install.className = "show-install";
             install.onclick = function () {
                 var installApp = navigator.mozApps.install(manifestURL);
