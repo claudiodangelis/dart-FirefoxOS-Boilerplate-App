@@ -12,8 +12,9 @@ main() {
 
   if (appCache != null) {
     appCache.onUpdateReady.listen((e) {
-      if (window.confirm("The app has been updated.Do you want to download the latest files? \nOtherwise they will be updated at the next reload.")) {
-        window.location.reload();
+      if (window.confirm("The app has been updated.Do you want to download the"
+        "latest files? \nOtherwise they will be updated at the next reload.")) {
+          window.location.reload();
       }
     });
 
@@ -32,7 +33,8 @@ main() {
           costcontrol/data_usage
           costcontrol/telephony
           dial
-          new (type: "websms/sms", "webcontacts/contact") (add-contact, compose-mail?)
+          new (type: "websms/sms", "webcontacts/contact") (add-contact,
+            compose-mail?)
           open
           pick (type: "image/png" etc)
           record (capture?)
@@ -201,7 +203,8 @@ main() {
         });
         new JsObject(context["MozActivity"], [sOptions]);
       };
-      new JsObject.fromBrowserObject(blobCanvas).callMethod("toBlob",[toBlobCallback]);
+      new JsObject.fromBrowserObject(blobCanvas).callMethod("toBlob",
+          [toBlobCallback]);
 
     } else {
       window.alert("Image failed to load, can't be shared");
@@ -276,24 +279,23 @@ main() {
             context["Notification"]["permission"] = permission;
           }
         };
-        context["Notification"].callMethod("requestPermission", [requestPermissionCallback]);
-
+        context["Notification"].callMethod("requestPermission",
+            [requestPermissionCallback]);
       }
 
       if (context["Notification"]["permission"] == "granted") {
         var notificationOptions = new JsObject.jsify({
           "body":"This is a notification"
         });
-        new JsObject(context["Notification"], ["See this", notificationOptions]);
+        new JsObject(context["Notification"], ["See this",
+                                               notificationOptions]);
       }
 
     } else {
       // Firefox OS 1.0
-      //WARNING: not tested yet
+      // WARNING: not tested yet
       var notify = context["navigator"]["mozNotification"].callMethod(
-          "createNotification",
-          ["See this", "This is a notification"]
-      );
+          "createNotification", ["See this", "This is a notification"]);
       notify.callMethod("show");
     }
   });
@@ -310,7 +312,8 @@ main() {
             "portrait-primary"
             "portrait-secondary"
     */
-    var portraitLock = context["screen"].callMethod("mozLockOrientation", ["portrait"]);
+    var portraitLock = context["screen"].callMethod("mozLockOrientation",
+        ["portrait"]);
     if (portraitLock != null) { // In Dart only `true' is `true'
       window.alert("Orientation locked to potrait");
     }
@@ -336,8 +339,10 @@ main() {
     DivElement connectionDisplay = querySelector('#connection-display');
     var connection = context["navigator"]["mozConnection"];
     //FIXME
-    String online = "<strong>Connected:</strong> " + connection["bandwidth"].toString();
-    String metered = "<strong>Metered:</strong> " + connection["metered"].toString();
+    String online = "<strong>Connected:</strong> " +
+        connection["bandwidth"].toString();
+    String metered = "<strong>Metered:</strong> " +
+        connection["metered"].toString();
 
     connectionDisplay
       ..innerHtml = "<h4>Result from Check connection</h4>" +
@@ -358,8 +363,8 @@ main() {
         batteryInfo = "<h4>Result from Check battery</h4>" +
                       "<strong>Battery level:</strong> $batteryLevel <br/>" +
                       "<strong>Battery charging:</strong> $charghing <br/>" +
-                      "<strong>Battery charging time:</strong> $chargingTime <br>" +
-                      "<strong>Battery discharging time:</strong> $dischargingTime";
+               "<strong>Battery charging time:</strong> $chargingTime <br>" +
+               "<strong>Battery discharging time:</strong> $dischargingTime";
 
     batteryDisplay
       ..innerHtml = batteryInfo
@@ -372,8 +377,11 @@ main() {
     DivElement geolocationDisplay = querySelector('#geolocation-display');
     var getCurrentPositionCallback = (position) {
       geolocationDisplay
-        ..innerHtml = "<strong>Latitude:</strong> ${position["coords"]["latitude"]} "
-                      "<strong>Longitude:</strong> ${position["coords"]["longitude"]}"
+        ..innerHtml = "<strong>Latitude:</strong>"
+                      "${position["coords"]["latitude"]}"
+                      "<strong>Longitude:</strong>"
+                      "${position["coords"]["longitude"]}"
+
         ..style.display = 'block';
     };
 
@@ -419,8 +427,10 @@ main() {
     DivElement userProximityDisplay = querySelector('#user-proximity-display');
     context["onuserproximity"] = (event) {
       // Check user proximity
-      String userProx = "<strong>User proximity - near:</strong> ${event["near"]}<br/>";
-      userProximityDisplay
+      String userProx = "<strong>User proximity - near:</strong>"
+          "${event["near"]}<br/>";
+
+          userProximityDisplay
         ..innerHtml = userProx
         ..style.display = 'block';
     };
@@ -429,7 +439,9 @@ main() {
   // Device orientation
   ButtonElement deviceOrientation = querySelector('#device-orientation');
   deviceOrientation.onClick.listen((e) {
-    DivElement deviceOrientationDisplay = querySelector('#device-orientation-display');
+    DivElement deviceOrientationDisplay =
+        querySelector('#device-orientation-display');
+
     context["ondeviceorientation"] = (event) {
       String orientedTo = (event["beta"] > 45 && event["beta"] < 135) ? "top" :
         (event["beta"] < -45 && event["beta"] > -135) ? "bottom" :
@@ -437,11 +449,11 @@ main() {
             (event["gamma"] < -45) ? "left" :
               "flat";
 
-      String orientation = "<strong>Absolute: </strong> ${event["absolute"]}<br>"
-                          "<strong>Alpha: </strong>  ${event["alpha"]}<br>"
-                          "<strong>Beta: </strong> ${event["beta"]}<br>"
-                          "<strong>Gamma: </strong> ${event["gamma"]}<br>"
-                          "<strong>Device orientation: </strong> $orientedTo";
+      String orientation = "<strong>Absolute: </strong>${event["absolute"]}<br>"
+                           "<strong>Alpha: </strong>  ${event["alpha"]}<br>"
+                           "<strong>Beta: </strong> ${event["beta"]}<br>"
+                           "<strong>Gamma: </strong> ${event["gamma"]}<br>"
+                           "<strong>Device orientation: </strong> $orientedTo";
 
       deviceOrientationDisplay.innerHtml = orientation;
     };
@@ -459,7 +471,7 @@ main() {
       // supported on Chrome and Safari at time of writing, using
       // `visiblityState' as a workaround.
       //
-      // https://api.dartlang.org/apidocs/channels/stable/dartdoc-viewer/dart-dom-html.HtmlDocument#id_hidden
+      // See API docs: http://goo.gl/nY7d3x
       switch(document.visibilityState) {
         case "visible":
           print("Firefox OS Boilerplate App has focus");
@@ -475,25 +487,31 @@ main() {
 
   ButtonElement crossDomainXhr = querySelector('#cross-domain-xhr');
   crossDomainXhr.onClick.listen((e) {
-    DivElement crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display');
+    var crossDomainXhrDisplay = querySelector('#cross-domain-xhr-display');
     // NOTE: We can not pass the constructor of HttpRequest (Dart implementation
     //  of `XMLHttpRequest' the parameter {mozSystem: true}, required by FFOS
     //  for cross-domains requests, so we'll use JS's XMLHttpRequest instead
     var xhr = new JsObject(context["XMLHttpRequest"],
         [new JsObject.jsify({"mozSystem":true})]);
 
-    xhr.callMethod("open", ["GET", "http://robnyman.github.io/Firefox-OS-Boilerplate-App/README.md", true]);
+    xhr.callMethod("open",
+        ["GET",
+         "http://robnyman.github.io/Firefox-OS-Boilerplate-App/README.md",
+         true]);
+
     xhr["onreadystatechange"] = (_) {
       if (xhr["status"] == 200 && xhr["readyState"] == 4) {
         crossDomainXhrDisplay
-          ..innerHtml = "<h4>Result from Cross-domain XHR</h4> ${xhr["response"]}"
+          ..innerHtml = "<h4>Result from Cross-domain XHR</h4>"
+                        "${xhr["response"]}"
           ..style.display = 'block';
       }
     };
 
     xhr["onerror"] = () {
       crossDomainXhrDisplay
-        ..innerHtml = '<h4>Result from Cross-domain XHR</h4><p>Cross-domain XHR failed</p>'
+        ..innerHtml = "<h4>Result from Cross-domain XHR</h4>"
+                      "<p>Cross-domain XHR failed</p>"
         ..style.display = 'block';
     };
 
@@ -501,13 +519,17 @@ main() {
   });
 
   // deviceStorage, pictures
-  ButtonElement deviceStoragePictures = querySelector('#device-storage-pictures');
+  var deviceStoragePictures =querySelector('#device-storage-pictures');
   deviceStoragePictures.onClick.listen((e) {
-    DivElement deviceStoragePicturesDisplay = querySelector('#device-storage-pictures-display');
-    var deviceStorage = context["navigator"].callMethod("getDeviceStorage", ["pictures"]);
+    var deviceStoragePicturesDisplay =
+        querySelector('#device-storage-pictures-display');
+
+    var deviceStorage = context["navigator"].callMethod("getDeviceStorage",
+        ["pictures"]);
 
     var cursor = deviceStorage.callMethod("enumerate");
-    deviceStoragePicturesDisplay.innerHtml = '<h4>Result from deviceStorage - pictures</h4>';
+    deviceStoragePicturesDisplay.innerHtml = "<h4>Result from deviceStorage"
+        "- pictures</h4>";
 
     cursor["onsuccess"] = (_) {
 
@@ -519,7 +541,8 @@ main() {
       String filePresentation;
       // FIXME: Use native Dart elements instead of mixing html and data
       String fileSrcUrl = context["URL"].callMethod("createObjectURL", [file]);
-      filePresentation = "<strong> ${file["name"]}:</strong> ${file["size"] / 1024} kb<br>"
+      filePresentation = "<strong> ${file["name"]}: </strong>"
+                         "${file["size"] / 1024} kb<br>"
                          "<p><img src='$fileSrcUrl' alt=''></p>";
 
       deviceStoragePicturesDisplay
@@ -530,7 +553,8 @@ main() {
     cursor["onerror"] = () {
       print("Error");
       deviceStoragePicturesDisplay
-        ..innerHtml = "<h4>Result from deviceStorage - pictures</h4><p>deviceStorage failed</p>"
+        ..innerHtml = "<h4>Result from deviceStorage - pictures</h4>"
+                      "<p>deviceStorage failed</p>"
         ..style.display = 'block';
     };
 
@@ -539,7 +563,7 @@ main() {
   // List contacts
   ButtonElement getAllContacts = querySelector('#get-all-contacts');
   getAllContacts.onClick.listen((e) {
-    DivElement getAllContactsDisplay = querySelector('#get-all-contacts-display');
+    var getAllContactsDisplay = querySelector('#get-all-contacts-display');
     var getContacts = context["navigator"]["mozContacts"].callMethod("getAll",
         [new JsObject.jsify({})]);
 
@@ -549,7 +573,8 @@ main() {
       var result = getContacts["result"];
       if (result != null) {
         // FIXME: results should not look like [givenName] [familyName]
-        getAllContactsDisplay.appendHtml("${result["givenName"]} ${result["familyName"]}");
+        getAllContactsDisplay.appendHtml("${result["givenName"]}"
+                                         "${result["familyName"]}");
         getContacts.callMethod("continue");
       }
     };
