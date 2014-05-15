@@ -118,10 +118,10 @@ All options to test packaged apps are outlined in the [How to install packaged a
 
 ### Other
 
-- [x] ~~l18n~~
-- [x] ~~offline capabilities~~
-- [x] ~~comments~~
-- [x] ~~instructions on how to setup the environment and run the app~~
+- [x] l18n
+- [x] offline capabilities
+- [x] comments
+- [x] instructions on how to setup the environment and run the app
 
 ## TODO
 
