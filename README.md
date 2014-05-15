@@ -82,51 +82,51 @@ All options to test packaged apps are outlined in the [How to install packaged a
 
 ### WebActivities
 
-- ~~Pick image~~
-- ~~Pick anything~~
-- ~~Take picture~~
-- ~~Dial number~~
-- ~~Send SMS~~
-- ~~Add contact~~
-- ~~Share URL~~
-- ~~Share Image~~
-- ~~View URL~~
-- ~~Compose mail~~
-- ~~Save bookmark~~
-- ~~Open video~~
+- [x] Pick image
+- [x] Pick anything
+- [x] Take picture
+- [x] Dial number
+- [x] Send SMS
+- [x] Add contact
+- [x] Share URL
+- [x] Share Image
+- [x] View URL
+- [x] Compose mail
+- [x] Save bookmark
+- [x] Open video
 
 ### WebAPIs
 
-- ~~Add notification~~
-- ~~Orientation lock~~
-- ~~Vibrate 2 sec~~
-- ~~Check connection~~
-- ~~Check battery~~
-- ~~Geolocation~~
-- ~~Ambient light~~
-- ~~Proximity~~
-- ~~User proximity~~
-- ~~Device orientation~~
-- ~~Keep screen on~~
+- [x] Add notification
+- [x] Orientation lock
+- [x] Vibrate 2 sec
+- [x] Check connection
+- [x] Check battery
+- [x] Geolocation
+- [x] Ambient light
+- [x] Proximity
+- [x] User proximity
+- [x] Device orientation
+- [x] Keep screen on
 
 ### Privileged APIs
 
-- ~~App visibility~~
-- ~~Cross-domain XHR~~
-- ~~deviceStorage - pictures~~
-- ~~Get all contacts~~
+- [x] App visibility
+- [x] Cross-domain XHR
+- [x] deviceStorage - pictures
+- [x] Get all contacts
 
 ### Other
 
-- ~~l18n~~
-- ~~offline capabilities~~
-- ~~comments~~
-- ~~instructions on how to setup the environment and run the app~~
+- [x] ~~l18n~~
+- [x] ~~offline capabilities~~
+- [x] ~~comments~~
+- [x] ~~instructions on how to setup the environment and run the app~~
 
 ## TODO
 
-- Implement more Dart features (e.g. native wrapper classes for MozActivities and Web APIs)
-- Port the `l10n.js` script to Dart
+- [ ] Implement more Dart features (e.g. native wrapper classes for MozActivities and Web APIs)
+- [ ] Port the `l10n.js` script to Dart
 
 ## Credits
 
