@@ -8667,38 +8667,40 @@ var $$ = {};
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure11()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
     t2 = J.get$onClick$x(document.querySelector("#open-video"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure12()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#add-notification"));
+    t2 = J.get$onClick$x(document.querySelector("#open-settings"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure13()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#lock-orientation"));
+    t2 = J.get$onClick$x(document.querySelector("#add-notification"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure14()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#vibrate"));
+    t2 = J.get$onClick$x(document.querySelector("#lock-orientation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure15()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#check-connection"));
+    t2 = J.get$onClick$x(document.querySelector("#vibrate"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure16()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#check-battery"));
+    t2 = J.get$onClick$x(document.querySelector("#check-connection"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure17()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#geolocation"));
+    t2 = J.get$onClick$x(document.querySelector("#check-battery"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure18()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#ambient-light"));
+    t2 = J.get$onClick$x(document.querySelector("#geolocation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure19()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#proximity"));
+    t2 = J.get$onClick$x(document.querySelector("#ambient-light"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure20()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#user-proximity"));
+    t2 = J.get$onClick$x(document.querySelector("#proximity"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure21()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#device-orientation"));
+    t2 = J.get$onClick$x(document.querySelector("#user-proximity"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure22()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#log-visibility"));
+    t2 = J.get$onClick$x(document.querySelector("#device-orientation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure23()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#cross-domain-xhr"));
+    t2 = J.get$onClick$x(document.querySelector("#log-visibility"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure24()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#device-storage-pictures"));
+    t2 = J.get$onClick$x(document.querySelector("#cross-domain-xhr"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure25()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#get-all-contacts"));
+    t2 = J.get$onClick$x(document.querySelector("#device-storage-pictures"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure26()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+    t2 = J.get$onClick$x(document.querySelector("#get-all-contacts"));
+    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure27()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
     keepscreen = document.querySelector("#keep-screen-on");
     t1.lock_0 = null;
     t2 = J.get$onClick$x(keepscreen);
-    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure27(t1, keepscreen)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure28(t1, keepscreen)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
   }, "call$0", "main$closure", 0, 0, 35],
   main_closure: {
     "^": "Closure:32;",
@@ -8910,6 +8912,13 @@ var $$ = {};
   main_closure13: {
     "^": "Closure:32;",
     call$1: [function(e) {
+      P.JsObject_JsObject(J.$index$asx($.get$context(), "MozActivity"), [P.JsObject_JsObject$jsify(P.LinkedHashMap_LinkedHashMap$_literal(["name", "configure", "target", "device"], null, null))]);
+    }, "call$1", null, 2, 0, null, 1, "call"],
+    $isFunction: true
+  },
+  main_closure14: {
+    "^": "Closure:32;",
+    call$1: [function(e) {
       var t1, notificationOptions;
       t1 = $.get$context();
       if (t1.hasProperty$1("Notification")) {
@@ -8933,7 +8942,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 57, "call"],
     $isFunction: true
   },
-  main_closure14: {
+  main_closure15: {
     "^": "Closure:32;",
     call$1: [function(e) {
       if (J.$index$asx($.get$context(), "screen").callMethod$2("mozLockOrientation", ["portrait"]) != null)
@@ -8941,14 +8950,14 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure15: {
+  main_closure16: {
     "^": "Closure:32;",
     call$1: [function(e) {
       J.$index$asx($.get$context(), "navigator").callMethod$2("vibrate", [2000]);
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure16: {
+  main_closure17: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var connectionDisplay, connection, t1, online, metered;
@@ -8962,7 +8971,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure17: {
+  main_closure18: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var batteryDisplay, battery, t1, batteryLevel, charghing, chargingTime, dischargingTime;
@@ -8978,7 +8987,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure18: {
+  main_closure19: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var geolocationDisplay = document.querySelector("#geolocation-display");
@@ -9006,7 +9015,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 15, "call"],
     $isFunction: true
   },
-  main_closure19: {
+  main_closure20: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var ambientLightDisplay = document.querySelector("#ambient-light-display");
@@ -9022,7 +9031,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure20: {
+  main_closure21: {
     "^": "Closure:32;",
     call$1: [function(e) {
       J.set$display$x(document.querySelector("#proximity-display").style, "block");
@@ -9040,7 +9049,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure21: {
+  main_closure22: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var userProximityDisplay = document.querySelector("#user-proximity-display");
@@ -9057,7 +9066,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure22: {
+  main_closure23: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var deviceOrientationDisplay = document.querySelector("#device-orientation-display");
@@ -9085,7 +9094,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure23: {
+  main_closure24: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var logVisibilityDisplay, t1;
@@ -9114,7 +9123,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure24: {
+  main_closure25: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var crossDomainXhrDisplay, xhr, t1;
@@ -9151,7 +9160,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure25: {
+  main_closure26: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var deviceStoragePicturesDisplay, cursor, t1;
@@ -9191,7 +9200,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure26: {
+  main_closure27: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var getAllContactsDisplay, getContacts, t1;
@@ -9225,7 +9234,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure27: {
+  main_closure28: {
     "^": "Closure:32;box_0,keepscreen_20",
     call$1: [function(e) {
       var t1, t2, t3;
@@ -15939,15 +15948,6 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main_closure13.prototype = $desc;
-  function main__closure6() {
-  }
-  main__closure6.builtin$cls = "main__closure6";
-  if (!"name" in main__closure6)
-    main__closure6.name = "main__closure6";
-  $desc = $collectedClasses.main__closure6;
-  if ($desc instanceof Array)
-    $desc = $desc[1];
-  main__closure6.prototype = $desc;
   function main_closure14() {
   }
   main_closure14.builtin$cls = "main_closure14";
@@ -15957,6 +15957,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main_closure14.prototype = $desc;
+  function main__closure6() {
+  }
+  main__closure6.builtin$cls = "main__closure6";
+  if (!"name" in main__closure6)
+    main__closure6.name = "main__closure6";
+  $desc = $collectedClasses.main__closure6;
+  if ($desc instanceof Array)
+    $desc = $desc[1];
+  main__closure6.prototype = $desc;
   function main_closure15() {
   }
   main_closure15.builtin$cls = "main_closure15";
@@ -15993,6 +16002,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main_closure18.prototype = $desc;
+  function main_closure19() {
+  }
+  main_closure19.builtin$cls = "main_closure19";
+  if (!"name" in main_closure19)
+    main_closure19.name = "main_closure19";
+  $desc = $collectedClasses.main_closure19;
+  if ($desc instanceof Array)
+    $desc = $desc[1];
+  main_closure19.prototype = $desc;
   function main__closure7(geolocationDisplay_5) {
     this.geolocationDisplay_5 = geolocationDisplay_5;
   }
@@ -16013,15 +16031,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure8.prototype = $desc;
-  function main_closure19() {
+  function main_closure20() {
   }
-  main_closure19.builtin$cls = "main_closure19";
-  if (!"name" in main_closure19)
-    main_closure19.name = "main_closure19";
-  $desc = $collectedClasses.main_closure19;
+  main_closure20.builtin$cls = "main_closure20";
+  if (!"name" in main_closure20)
+    main_closure20.name = "main_closure20";
+  $desc = $collectedClasses.main_closure20;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure19.prototype = $desc;
+  main_closure20.prototype = $desc;
   function main__closure9(ambientLightDisplay_7) {
     this.ambientLightDisplay_7 = ambientLightDisplay_7;
   }
@@ -16032,24 +16050,6 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure9.prototype = $desc;
-  function main_closure20() {
-  }
-  main_closure20.builtin$cls = "main_closure20";
-  if (!"name" in main_closure20)
-    main_closure20.name = "main_closure20";
-  $desc = $collectedClasses.main_closure20;
-  if ($desc instanceof Array)
-    $desc = $desc[1];
-  main_closure20.prototype = $desc;
-  function main__closure10() {
-  }
-  main__closure10.builtin$cls = "main__closure10";
-  if (!"name" in main__closure10)
-    main__closure10.name = "main__closure10";
-  $desc = $collectedClasses.main__closure10;
-  if ($desc instanceof Array)
-    $desc = $desc[1];
-  main__closure10.prototype = $desc;
   function main_closure21() {
   }
   main_closure21.builtin$cls = "main_closure21";
@@ -16059,6 +16059,24 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main_closure21.prototype = $desc;
+  function main__closure10() {
+  }
+  main__closure10.builtin$cls = "main__closure10";
+  if (!"name" in main__closure10)
+    main__closure10.name = "main__closure10";
+  $desc = $collectedClasses.main__closure10;
+  if ($desc instanceof Array)
+    $desc = $desc[1];
+  main__closure10.prototype = $desc;
+  function main_closure22() {
+  }
+  main_closure22.builtin$cls = "main_closure22";
+  if (!"name" in main_closure22)
+    main_closure22.name = "main_closure22";
+  $desc = $collectedClasses.main_closure22;
+  if ($desc instanceof Array)
+    $desc = $desc[1];
+  main_closure22.prototype = $desc;
   function main__closure11(userProximityDisplay_8) {
     this.userProximityDisplay_8 = userProximityDisplay_8;
   }
@@ -16069,15 +16087,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure11.prototype = $desc;
-  function main_closure22() {
+  function main_closure23() {
   }
-  main_closure22.builtin$cls = "main_closure22";
-  if (!"name" in main_closure22)
-    main_closure22.name = "main_closure22";
-  $desc = $collectedClasses.main_closure22;
+  main_closure23.builtin$cls = "main_closure23";
+  if (!"name" in main_closure23)
+    main_closure23.name = "main_closure23";
+  $desc = $collectedClasses.main_closure23;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure22.prototype = $desc;
+  main_closure23.prototype = $desc;
   function main__closure12(deviceOrientationDisplay_9) {
     this.deviceOrientationDisplay_9 = deviceOrientationDisplay_9;
   }
@@ -16088,15 +16106,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure12.prototype = $desc;
-  function main_closure23() {
+  function main_closure24() {
   }
-  main_closure23.builtin$cls = "main_closure23";
-  if (!"name" in main_closure23)
-    main_closure23.name = "main_closure23";
-  $desc = $collectedClasses.main_closure23;
+  main_closure24.builtin$cls = "main_closure24";
+  if (!"name" in main_closure24)
+    main_closure24.name = "main_closure24";
+  $desc = $collectedClasses.main_closure24;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure23.prototype = $desc;
+  main_closure24.prototype = $desc;
   function main__closure13(logVisibilityDisplay_10) {
     this.logVisibilityDisplay_10 = logVisibilityDisplay_10;
   }
@@ -16107,15 +16125,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure13.prototype = $desc;
-  function main_closure24() {
+  function main_closure25() {
   }
-  main_closure24.builtin$cls = "main_closure24";
-  if (!"name" in main_closure24)
-    main_closure24.name = "main_closure24";
-  $desc = $collectedClasses.main_closure24;
+  main_closure25.builtin$cls = "main_closure25";
+  if (!"name" in main_closure25)
+    main_closure25.name = "main_closure25";
+  $desc = $collectedClasses.main_closure25;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure24.prototype = $desc;
+  main_closure25.prototype = $desc;
   function main__closure14(crossDomainXhrDisplay_11, xhr_12) {
     this.crossDomainXhrDisplay_11 = crossDomainXhrDisplay_11;
     this.xhr_12 = xhr_12;
@@ -16137,15 +16155,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure15.prototype = $desc;
-  function main_closure25() {
+  function main_closure26() {
   }
-  main_closure25.builtin$cls = "main_closure25";
-  if (!"name" in main_closure25)
-    main_closure25.name = "main_closure25";
-  $desc = $collectedClasses.main_closure25;
+  main_closure26.builtin$cls = "main_closure26";
+  if (!"name" in main_closure26)
+    main_closure26.name = "main_closure26";
+  $desc = $collectedClasses.main_closure26;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure25.prototype = $desc;
+  main_closure26.prototype = $desc;
   function main__closure16(deviceStoragePicturesDisplay_14, cursor_15) {
     this.deviceStoragePicturesDisplay_14 = deviceStoragePicturesDisplay_14;
     this.cursor_15 = cursor_15;
@@ -16167,15 +16185,15 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure17.prototype = $desc;
-  function main_closure26() {
+  function main_closure27() {
   }
-  main_closure26.builtin$cls = "main_closure26";
-  if (!"name" in main_closure26)
-    main_closure26.name = "main_closure26";
-  $desc = $collectedClasses.main_closure26;
+  main_closure27.builtin$cls = "main_closure27";
+  if (!"name" in main_closure27)
+    main_closure27.name = "main_closure27";
+  $desc = $collectedClasses.main_closure27;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure26.prototype = $desc;
+  main_closure27.prototype = $desc;
   function main__closure18(getAllContactsDisplay_17, getContacts_18) {
     this.getAllContactsDisplay_17 = getAllContactsDisplay_17;
     this.getContacts_18 = getContacts_18;
@@ -16197,16 +16215,16 @@ function dart_precompiled($collectedClasses) {
   if ($desc instanceof Array)
     $desc = $desc[1];
   main__closure19.prototype = $desc;
-  function main_closure27(box_0, keepscreen_20) {
+  function main_closure28(box_0, keepscreen_20) {
     this.box_0 = box_0;
     this.keepscreen_20 = keepscreen_20;
   }
-  main_closure27.builtin$cls = "main_closure27";
-  if (!"name" in main_closure27)
-    main_closure27.name = "main_closure27";
-  $desc = $collectedClasses.main_closure27;
+  main_closure28.builtin$cls = "main_closure28";
+  if (!"name" in main_closure28)
+    main_closure28.name = "main_closure28";
+  $desc = $collectedClasses.main_closure28;
   if ($desc instanceof Array)
     $desc = $desc[1];
-  main_closure27.prototype = $desc;
-  return [HtmlElement, AnchorElement, AnimationEvent, ApplicationCache, AreaElement, AudioElement, AutocompleteErrorEvent, BRElement, BaseElement, BeforeLoadEvent, BeforeUnloadEvent, Blob, BodyElement, ButtonElement, CDataSection, CanvasElement, CanvasRenderingContext, CanvasRenderingContext2D, CharacterData, CloseEvent, Comment, CompositionEvent, ContentElement, Coordinates, CssFontFaceLoadEvent, CssStyleDeclaration, CustomEvent, DListElement, DataListElement, DetailsElement, DeviceMotionEvent, DeviceOrientationEvent, DialogElement, DivElement, Document, DocumentFragment, DomError, DomException, DomImplementation, Element, EmbedElement, ErrorEvent, Event, EventTarget, FieldSetElement, File, FileError, FocusEvent, FormElement, Geolocation, Geoposition, HRElement, HashChangeEvent, HeadElement, HeadingElement, HtmlDocument, HtmlHtmlElement, IFrameElement, ImageData, ImageElement, InputElement, InstallEvent, InstallPhaseEvent, KeyboardEvent, KeygenElement, LIElement, LabelElement, LegendElement, LinkElement, Location, MapElement, MediaElement, MediaError, MediaKeyError, MediaKeyEvent, MediaKeyMessageEvent, MediaKeyNeededEvent, MediaStreamEvent, MediaStreamTrackEvent, MenuElement, MessageEvent, MetaElement, MeterElement, MidiConnectionEvent, MidiInput, MidiMessageEvent, MidiOutput, MidiPort, ModElement, MouseEvent, Navigator, NavigatorUserMediaError, Node, NodeList, OListElement, ObjectElement, OptGroupElement, OptionElement, OutputElement, OverflowEvent, PageTransitionEvent, ParagraphElement, ParamElement, PopStateEvent, PositionError, PreElement, ProcessingInstruction, ProgressElement, ProgressEvent, QuoteElement, Range, ResourceProgressEvent, RtcDataChannelEvent, RtcDtmfToneChangeEvent, RtcIceCandidateEvent, ScriptElement0, SecurityPolicyViolationEvent, SelectElement, ShadowElement, ShadowRoot, SourceElement, SpanElement, SpeechInputEvent, SpeechRecognitionError, SpeechRecognitionEvent, SpeechSynthesisEvent, StorageEvent, StyleElement, TableCaptionElement, TableCellElement, TableColElement, TableElement, TableRowElement, TableSectionElement, TemplateElement, Text, TextAreaElement, TextEvent, TitleElement, TouchEvent, TrackElement, TrackEvent, TransitionEvent, UIEvent, UListElement, UnknownElement, VideoElement, WheelEvent, Window, XmlDocument, _Attr, _DocumentType, _HTMLAppletElement, _HTMLDirectoryElement, _HTMLFontElement, _HTMLFrameElement, _HTMLFrameSetElement, _HTMLMarqueeElement, _MutationEvent, _NamedNodeMap, _Notation, _XMLHttpRequestProgressEvent, KeyRange, VersionChangeEvent, AElement, AltGlyphElement, AnimateElement, AnimateMotionElement, AnimateTransformElement, AnimatedLength, AnimatedNumberList, AnimationElement, CircleElement, ClipPathElement, DefsElement, DescElement, DiscardElement, EllipseElement, FEBlendElement, FEColorMatrixElement, FEComponentTransferElement, FECompositeElement, FEConvolveMatrixElement, FEDiffuseLightingElement, FEDisplacementMapElement, FEDistantLightElement, FEFloodElement, FEFuncAElement, FEFuncBElement, FEFuncGElement, FEFuncRElement, FEGaussianBlurElement, FEImageElement, FEMergeElement, FEMergeNodeElement, FEMorphologyElement, FEOffsetElement, FEPointLightElement, FESpecularLightingElement, FESpotLightElement, FETileElement, FETurbulenceElement, FilterElement, ForeignObjectElement, GElement, GeometryElement, GraphicsElement, ImageElement0, LineElement, LinearGradientElement, MarkerElement, MaskElement, MetadataElement, PathElement, PatternElement, PolygonElement, PolylineElement, RadialGradientElement, RectElement, ScriptElement, SetElement, StopElement, StyleElement0, SvgElement, SvgSvgElement, SwitchElement, SymbolElement, TSpanElement, TextContentElement, TextElement, TextPathElement, TextPositioningElement, TitleElement0, UseElement, ViewElement, ZoomEvent, _GradientElement, _SVGAltGlyphDefElement, _SVGAltGlyphItemElement, _SVGComponentTransferFunctionElement, _SVGCursorElement, _SVGFEDropShadowElement, _SVGFontElement, _SVGFontFaceElement, _SVGFontFaceFormatElement, _SVGFontFaceNameElement, _SVGFontFaceSrcElement, _SVGFontFaceUriElement, _SVGGlyphElement, _SVGGlyphRefElement, _SVGHKernElement, _SVGMPathElement, _SVGMissingGlyphElement, _SVGVKernElement, AudioProcessingEvent, OfflineAudioCompletionEvent, ContextEvent, RenderingContext, SqlError, NativeByteBuffer, NativeTypedData, NativeByteData, NativeFloat32List, NativeFloat64List, NativeInt16List, NativeInt32List, NativeInt8List, NativeUint16List, NativeUint32List, NativeUint8ClampedList, NativeUint8List, JS_CONST, Interceptor, JSBool, JSNull, JavaScriptObject, PlainJavaScriptObject, UnknownJavaScriptObject, JSArray, JSNumber, JSInt, JSDouble, JSString, startRootIsolate_closure, startRootIsolate_closure0, _Manager, _IsolateContext, _IsolateContext_handlePing_respond, _EventLoop, _EventLoop__runHelper_next, _IsolateEvent, _MainManagerStub, IsolateNatives__processWorkerMessage_closure, IsolateNatives__startIsolate_runStartFunction, _BaseSendPort, _NativeJsSendPort, _NativeJsSendPort_send_closure, _WorkerSendPort, RawReceivePortImpl, _JsSerializer, _JsCopier, _JsDeserializer, _JsVisitedMap, _MessageTraverserVisitedMap, _MessageTraverser, _Copier, _Copier_visitMap_closure, _Serializer, _Deserializer, TimerImpl, TimerImpl_internalCallback, TimerImpl_internalCallback0, CapabilityImpl, JSInvocationMirror, ReflectionInfo, ReflectionInfo_sortedIndex_closure, Primitives_functionNoSuchMethod_closure, Primitives_applyFunction_closure, TypeErrorDecoder, NullError, JsNoSuchMethodError, UnknownJsTypeError, unwrapException_saveStackTrace, _StackTrace, invokeClosure_closure, invokeClosure_closure0, invokeClosure_closure1, invokeClosure_closure2, invokeClosure_closure3, Closure, TearOffClosure, BoundClosure, RuntimeError, RuntimeType, RuntimeFunctionType, DynamicRuntimeType, initHooks_closure, initHooks_closure0, initHooks_closure1, ListIterable, ListIterator, MappedIterable, EfficientLengthMappedIterable, MappedIterator, MappedListIterable, WhereIterable, WhereIterator, FixedLengthListMixin, Symbol0, _AsyncRun__scheduleImmediateJsOverride_internalCallback, _AsyncError, _Completer, _AsyncCompleter, _Future, _Future__addListener_closure, _Future__chainForeignFuture_closure, _Future__chainForeignFuture_closure0, _Future__asyncComplete_closure0, _Future__asyncComplete_closure, _Future__asyncCompleteError_closure, _Future__propagateToListeners_handleValueCallback, _Future__propagateToListeners_handleError, _Future__propagateToListeners_handleWhenCompleteCallback, _Future__propagateToListeners_handleWhenCompleteCallback_closure, _Future__propagateToListeners_handleWhenCompleteCallback_closure0, _AsyncCallbackEntry, Stream, Stream_forEach_closure, Stream_forEach__closure, Stream_forEach__closure0, Stream_forEach_closure0, Stream_length_closure, Stream_length_closure0, StreamSubscription, _EventSink, _BufferingStreamSubscription, _BufferingStreamSubscription__sendError_sendError, _BufferingStreamSubscription__sendDone_sendDone, _DelayedEvent, _DelayedData, _DelayedError, _DelayedDone, _PendingEvents, _PendingEvents_schedule_closure, _StreamImplEvents, _cancelAndError_closure, _cancelAndErrorClosure_closure, _ForwardingStream, _ForwardingStreamSubscription, _MapStream, _BaseZone, _BaseZone_bindCallback_closure, _BaseZone_bindCallback_closure0, _BaseZone_bindUnaryCallback_closure, _BaseZone_bindUnaryCallback_closure0, _rootHandleUncaughtError_closure, _rootHandleUncaughtError__closure, _RootZone, _HashMap, _HashMap_values_closure, _IdentityHashMap, HashMapKeyIterable, HashMapKeyIterator, _LinkedHashMap, _LinkedHashMap_values_closure, LinkedHashMapCell, LinkedHashMapKeyIterable, LinkedHashMapKeyIterator, _HashSet, _IdentityHashSet, HashSetIterator, _LinkedHashSet, LinkedHashSetCell, LinkedHashSetIterator, _HashSetBase, IterableBase, ListBase, ListMixin, Maps_mapToString_closure, ListQueue, _ListQueueIterator, Function__toMangledNames_closure, NoSuchMethodError_toString_closure, bool, Comparable, DateTime, $double, Duration, Duration_toString_sixDigits, Duration_toString_twoDigits, Error, NullThrownError, ArgumentError, RangeError, NoSuchMethodError, UnsupportedError, UnimplementedError, StateError, ConcurrentModificationError, OutOfMemoryError, StackOverflowError, CyclicInitializationError, _ExceptionImplementation, IntegerDivisionByZeroException, Expando, Function, $int, Iterator, List, Null, num, Object, StackTrace, String, StringBuffer, Symbol, Interceptor_CssStyleDeclarationBase, CssStyleDeclarationBase, Element_Element$html_closure, Geolocation_getCurrentPosition_closure, Geolocation_getCurrentPosition_closure0, _GeopositionWrapper, _ChildNodeListLazy, Interceptor_ListMixin, Interceptor_ListMixin_ImmutableListMixin, Interceptor_ListMixin0, Interceptor_ListMixin_ImmutableListMixin0, _AttributeMap, _ElementAttributeMap, EventStreamProvider, _EventStream, _ElementEventStreamImpl, _EventStreamSubscription, _CustomEventStreamProvider, _Html5NodeValidator, ImmutableListMixin, NodeValidatorBuilder, NodeValidatorBuilder_allowsElement_closure, NodeValidatorBuilder_allowsAttribute_closure, _SimpleNodeValidator, _TemplatingNodeValidator, _TemplatingNodeValidator_closure, _SvgNodeValidator, FixedSizeListIterator, NodeValidator, _SameOriginUriPolicy, _ValidatingTreeSanitizer, _ValidatingTreeSanitizer_sanitizeTree_walk, Capability, JsObject, JsObject__convertDataTree__convert, JsFunction, JsArray, JsObject_ListMixin, _convertToJS_closure, _convertToJS_closure0, _wrapToDart_closure, _wrapToDart_closure0, _wrapToDart_closure1, NativeTypedArray, NativeTypedArrayOfDouble, NativeTypedArray_ListMixin, NativeTypedArray_ListMixin_FixedLengthListMixin, NativeTypedArrayOfInt, NativeTypedArray_ListMixin0, NativeTypedArray_ListMixin_FixedLengthListMixin0, main_closure, main_closure0, main_closure1, main__closure, main__closure0, main_closure2, main__closure1, main__closure2, main_closure3, main__closure3, main__closure4, main_closure4, main_closure5, main_closure6, main_closure7, main_closure8, main__closure5, main_closure9, main_closure10, main_closure11, main_closure12, main_closure13, main__closure6, main_closure14, main_closure15, main_closure16, main_closure17, main_closure18, main__closure7, main__closure8, main_closure19, main__closure9, main_closure20, main__closure10, main_closure21, main__closure11, main_closure22, main__closure12, main_closure23, main__closure13, main_closure24, main__closure14, main__closure15, main_closure25, main__closure16, main__closure17, main_closure26, main__closure18, main__closure19, main_closure27];
+  main_closure28.prototype = $desc;
+  return [HtmlElement, AnchorElement, AnimationEvent, ApplicationCache, AreaElement, AudioElement, AutocompleteErrorEvent, BRElement, BaseElement, BeforeLoadEvent, BeforeUnloadEvent, Blob, BodyElement, ButtonElement, CDataSection, CanvasElement, CanvasRenderingContext, CanvasRenderingContext2D, CharacterData, CloseEvent, Comment, CompositionEvent, ContentElement, Coordinates, CssFontFaceLoadEvent, CssStyleDeclaration, CustomEvent, DListElement, DataListElement, DetailsElement, DeviceMotionEvent, DeviceOrientationEvent, DialogElement, DivElement, Document, DocumentFragment, DomError, DomException, DomImplementation, Element, EmbedElement, ErrorEvent, Event, EventTarget, FieldSetElement, File, FileError, FocusEvent, FormElement, Geolocation, Geoposition, HRElement, HashChangeEvent, HeadElement, HeadingElement, HtmlDocument, HtmlHtmlElement, IFrameElement, ImageData, ImageElement, InputElement, InstallEvent, InstallPhaseEvent, KeyboardEvent, KeygenElement, LIElement, LabelElement, LegendElement, LinkElement, Location, MapElement, MediaElement, MediaError, MediaKeyError, MediaKeyEvent, MediaKeyMessageEvent, MediaKeyNeededEvent, MediaStreamEvent, MediaStreamTrackEvent, MenuElement, MessageEvent, MetaElement, MeterElement, MidiConnectionEvent, MidiInput, MidiMessageEvent, MidiOutput, MidiPort, ModElement, MouseEvent, Navigator, NavigatorUserMediaError, Node, NodeList, OListElement, ObjectElement, OptGroupElement, OptionElement, OutputElement, OverflowEvent, PageTransitionEvent, ParagraphElement, ParamElement, PopStateEvent, PositionError, PreElement, ProcessingInstruction, ProgressElement, ProgressEvent, QuoteElement, Range, ResourceProgressEvent, RtcDataChannelEvent, RtcDtmfToneChangeEvent, RtcIceCandidateEvent, ScriptElement0, SecurityPolicyViolationEvent, SelectElement, ShadowElement, ShadowRoot, SourceElement, SpanElement, SpeechInputEvent, SpeechRecognitionError, SpeechRecognitionEvent, SpeechSynthesisEvent, StorageEvent, StyleElement, TableCaptionElement, TableCellElement, TableColElement, TableElement, TableRowElement, TableSectionElement, TemplateElement, Text, TextAreaElement, TextEvent, TitleElement, TouchEvent, TrackElement, TrackEvent, TransitionEvent, UIEvent, UListElement, UnknownElement, VideoElement, WheelEvent, Window, XmlDocument, _Attr, _DocumentType, _HTMLAppletElement, _HTMLDirectoryElement, _HTMLFontElement, _HTMLFrameElement, _HTMLFrameSetElement, _HTMLMarqueeElement, _MutationEvent, _NamedNodeMap, _Notation, _XMLHttpRequestProgressEvent, KeyRange, VersionChangeEvent, AElement, AltGlyphElement, AnimateElement, AnimateMotionElement, AnimateTransformElement, AnimatedLength, AnimatedNumberList, AnimationElement, CircleElement, ClipPathElement, DefsElement, DescElement, DiscardElement, EllipseElement, FEBlendElement, FEColorMatrixElement, FEComponentTransferElement, FECompositeElement, FEConvolveMatrixElement, FEDiffuseLightingElement, FEDisplacementMapElement, FEDistantLightElement, FEFloodElement, FEFuncAElement, FEFuncBElement, FEFuncGElement, FEFuncRElement, FEGaussianBlurElement, FEImageElement, FEMergeElement, FEMergeNodeElement, FEMorphologyElement, FEOffsetElement, FEPointLightElement, FESpecularLightingElement, FESpotLightElement, FETileElement, FETurbulenceElement, FilterElement, ForeignObjectElement, GElement, GeometryElement, GraphicsElement, ImageElement0, LineElement, LinearGradientElement, MarkerElement, MaskElement, MetadataElement, PathElement, PatternElement, PolygonElement, PolylineElement, RadialGradientElement, RectElement, ScriptElement, SetElement, StopElement, StyleElement0, SvgElement, SvgSvgElement, SwitchElement, SymbolElement, TSpanElement, TextContentElement, TextElement, TextPathElement, TextPositioningElement, TitleElement0, UseElement, ViewElement, ZoomEvent, _GradientElement, _SVGAltGlyphDefElement, _SVGAltGlyphItemElement, _SVGComponentTransferFunctionElement, _SVGCursorElement, _SVGFEDropShadowElement, _SVGFontElement, _SVGFontFaceElement, _SVGFontFaceFormatElement, _SVGFontFaceNameElement, _SVGFontFaceSrcElement, _SVGFontFaceUriElement, _SVGGlyphElement, _SVGGlyphRefElement, _SVGHKernElement, _SVGMPathElement, _SVGMissingGlyphElement, _SVGVKernElement, AudioProcessingEvent, OfflineAudioCompletionEvent, ContextEvent, RenderingContext, SqlError, NativeByteBuffer, NativeTypedData, NativeByteData, NativeFloat32List, NativeFloat64List, NativeInt16List, NativeInt32List, NativeInt8List, NativeUint16List, NativeUint32List, NativeUint8ClampedList, NativeUint8List, JS_CONST, Interceptor, JSBool, JSNull, JavaScriptObject, PlainJavaScriptObject, UnknownJavaScriptObject, JSArray, JSNumber, JSInt, JSDouble, JSString, startRootIsolate_closure, startRootIsolate_closure0, _Manager, _IsolateContext, _IsolateContext_handlePing_respond, _EventLoop, _EventLoop__runHelper_next, _IsolateEvent, _MainManagerStub, IsolateNatives__processWorkerMessage_closure, IsolateNatives__startIsolate_runStartFunction, _BaseSendPort, _NativeJsSendPort, _NativeJsSendPort_send_closure, _WorkerSendPort, RawReceivePortImpl, _JsSerializer, _JsCopier, _JsDeserializer, _JsVisitedMap, _MessageTraverserVisitedMap, _MessageTraverser, _Copier, _Copier_visitMap_closure, _Serializer, _Deserializer, TimerImpl, TimerImpl_internalCallback, TimerImpl_internalCallback0, CapabilityImpl, JSInvocationMirror, ReflectionInfo, ReflectionInfo_sortedIndex_closure, Primitives_functionNoSuchMethod_closure, Primitives_applyFunction_closure, TypeErrorDecoder, NullError, JsNoSuchMethodError, UnknownJsTypeError, unwrapException_saveStackTrace, _StackTrace, invokeClosure_closure, invokeClosure_closure0, invokeClosure_closure1, invokeClosure_closure2, invokeClosure_closure3, Closure, TearOffClosure, BoundClosure, RuntimeError, RuntimeType, RuntimeFunctionType, DynamicRuntimeType, initHooks_closure, initHooks_closure0, initHooks_closure1, ListIterable, ListIterator, MappedIterable, EfficientLengthMappedIterable, MappedIterator, MappedListIterable, WhereIterable, WhereIterator, FixedLengthListMixin, Symbol0, _AsyncRun__scheduleImmediateJsOverride_internalCallback, _AsyncError, _Completer, _AsyncCompleter, _Future, _Future__addListener_closure, _Future__chainForeignFuture_closure, _Future__chainForeignFuture_closure0, _Future__asyncComplete_closure0, _Future__asyncComplete_closure, _Future__asyncCompleteError_closure, _Future__propagateToListeners_handleValueCallback, _Future__propagateToListeners_handleError, _Future__propagateToListeners_handleWhenCompleteCallback, _Future__propagateToListeners_handleWhenCompleteCallback_closure, _Future__propagateToListeners_handleWhenCompleteCallback_closure0, _AsyncCallbackEntry, Stream, Stream_forEach_closure, Stream_forEach__closure, Stream_forEach__closure0, Stream_forEach_closure0, Stream_length_closure, Stream_length_closure0, StreamSubscription, _EventSink, _BufferingStreamSubscription, _BufferingStreamSubscription__sendError_sendError, _BufferingStreamSubscription__sendDone_sendDone, _DelayedEvent, _DelayedData, _DelayedError, _DelayedDone, _PendingEvents, _PendingEvents_schedule_closure, _StreamImplEvents, _cancelAndError_closure, _cancelAndErrorClosure_closure, _ForwardingStream, _ForwardingStreamSubscription, _MapStream, _BaseZone, _BaseZone_bindCallback_closure, _BaseZone_bindCallback_closure0, _BaseZone_bindUnaryCallback_closure, _BaseZone_bindUnaryCallback_closure0, _rootHandleUncaughtError_closure, _rootHandleUncaughtError__closure, _RootZone, _HashMap, _HashMap_values_closure, _IdentityHashMap, HashMapKeyIterable, HashMapKeyIterator, _LinkedHashMap, _LinkedHashMap_values_closure, LinkedHashMapCell, LinkedHashMapKeyIterable, LinkedHashMapKeyIterator, _HashSet, _IdentityHashSet, HashSetIterator, _LinkedHashSet, LinkedHashSetCell, LinkedHashSetIterator, _HashSetBase, IterableBase, ListBase, ListMixin, Maps_mapToString_closure, ListQueue, _ListQueueIterator, Function__toMangledNames_closure, NoSuchMethodError_toString_closure, bool, Comparable, DateTime, $double, Duration, Duration_toString_sixDigits, Duration_toString_twoDigits, Error, NullThrownError, ArgumentError, RangeError, NoSuchMethodError, UnsupportedError, UnimplementedError, StateError, ConcurrentModificationError, OutOfMemoryError, StackOverflowError, CyclicInitializationError, _ExceptionImplementation, IntegerDivisionByZeroException, Expando, Function, $int, Iterator, List, Null, num, Object, StackTrace, String, StringBuffer, Symbol, Interceptor_CssStyleDeclarationBase, CssStyleDeclarationBase, Element_Element$html_closure, Geolocation_getCurrentPosition_closure, Geolocation_getCurrentPosition_closure0, _GeopositionWrapper, _ChildNodeListLazy, Interceptor_ListMixin, Interceptor_ListMixin_ImmutableListMixin, Interceptor_ListMixin0, Interceptor_ListMixin_ImmutableListMixin0, _AttributeMap, _ElementAttributeMap, EventStreamProvider, _EventStream, _ElementEventStreamImpl, _EventStreamSubscription, _CustomEventStreamProvider, _Html5NodeValidator, ImmutableListMixin, NodeValidatorBuilder, NodeValidatorBuilder_allowsElement_closure, NodeValidatorBuilder_allowsAttribute_closure, _SimpleNodeValidator, _TemplatingNodeValidator, _TemplatingNodeValidator_closure, _SvgNodeValidator, FixedSizeListIterator, NodeValidator, _SameOriginUriPolicy, _ValidatingTreeSanitizer, _ValidatingTreeSanitizer_sanitizeTree_walk, Capability, JsObject, JsObject__convertDataTree__convert, JsFunction, JsArray, JsObject_ListMixin, _convertToJS_closure, _convertToJS_closure0, _wrapToDart_closure, _wrapToDart_closure0, _wrapToDart_closure1, NativeTypedArray, NativeTypedArrayOfDouble, NativeTypedArray_ListMixin, NativeTypedArray_ListMixin_FixedLengthListMixin, NativeTypedArrayOfInt, NativeTypedArray_ListMixin0, NativeTypedArray_ListMixin_FixedLengthListMixin0, main_closure, main_closure0, main_closure1, main__closure, main__closure0, main_closure2, main__closure1, main__closure2, main_closure3, main__closure3, main__closure4, main_closure4, main_closure5, main_closure6, main_closure7, main_closure8, main__closure5, main_closure9, main_closure10, main_closure11, main_closure12, main_closure13, main_closure14, main__closure6, main_closure15, main_closure16, main_closure17, main_closure18, main_closure19, main__closure7, main__closure8, main_closure20, main__closure9, main_closure21, main__closure10, main_closure22, main__closure11, main_closure23, main__closure12, main_closure24, main__closure13, main_closure25, main__closure14, main__closure15, main_closure26, main__closure16, main__closure17, main_closure27, main__closure18, main__closure19, main_closure28];
 }

@@ -8667,38 +8667,40 @@ var $$ = {};
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure11()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
     t2 = J.get$onClick$x(document.querySelector("#open-video"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure12()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#add-notification"));
+    t2 = J.get$onClick$x(document.querySelector("#open-settings"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure13()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#lock-orientation"));
+    t2 = J.get$onClick$x(document.querySelector("#add-notification"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure14()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#vibrate"));
+    t2 = J.get$onClick$x(document.querySelector("#lock-orientation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure15()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#check-connection"));
+    t2 = J.get$onClick$x(document.querySelector("#vibrate"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure16()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#check-battery"));
+    t2 = J.get$onClick$x(document.querySelector("#check-connection"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure17()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#geolocation"));
+    t2 = J.get$onClick$x(document.querySelector("#check-battery"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure18()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#ambient-light"));
+    t2 = J.get$onClick$x(document.querySelector("#geolocation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure19()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#proximity"));
+    t2 = J.get$onClick$x(document.querySelector("#ambient-light"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure20()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#user-proximity"));
+    t2 = J.get$onClick$x(document.querySelector("#proximity"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure21()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#device-orientation"));
+    t2 = J.get$onClick$x(document.querySelector("#user-proximity"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure22()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#log-visibility"));
+    t2 = J.get$onClick$x(document.querySelector("#device-orientation"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure23()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#cross-domain-xhr"));
+    t2 = J.get$onClick$x(document.querySelector("#log-visibility"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure24()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#device-storage-pictures"));
+    t2 = J.get$onClick$x(document.querySelector("#cross-domain-xhr"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure25()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
-    t2 = J.get$onClick$x(document.querySelector("#get-all-contacts"));
+    t2 = J.get$onClick$x(document.querySelector("#device-storage-pictures"));
     H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure26()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+    t2 = J.get$onClick$x(document.querySelector("#get-all-contacts"));
+    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure27()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
     keepscreen = document.querySelector("#keep-screen-on");
     t1.lock_0 = null;
     t2 = J.get$onClick$x(keepscreen);
-    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure27(t1, keepscreen)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+    H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._target, t2._eventType, W._wrapZone(new S.main_closure28(t1, keepscreen)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
   }, "call$0", "main$closure", 0, 0, 35],
   main_closure: {
     "^": "Closure:32;",
@@ -8910,6 +8912,13 @@ var $$ = {};
   main_closure13: {
     "^": "Closure:32;",
     call$1: [function(e) {
+      P.JsObject_JsObject(J.$index$asx($.get$context(), "MozActivity"), [P.JsObject_JsObject$jsify(P.LinkedHashMap_LinkedHashMap$_literal(["name", "configure", "target", "device"], null, null))]);
+    }, "call$1", null, 2, 0, null, 1, "call"],
+    $isFunction: true
+  },
+  main_closure14: {
+    "^": "Closure:32;",
+    call$1: [function(e) {
       var t1, notificationOptions;
       t1 = $.get$context();
       if (t1.hasProperty$1("Notification")) {
@@ -8933,7 +8942,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 57, "call"],
     $isFunction: true
   },
-  main_closure14: {
+  main_closure15: {
     "^": "Closure:32;",
     call$1: [function(e) {
       if (J.$index$asx($.get$context(), "screen").callMethod$2("mozLockOrientation", ["portrait"]) != null)
@@ -8941,14 +8950,14 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure15: {
+  main_closure16: {
     "^": "Closure:32;",
     call$1: [function(e) {
       J.$index$asx($.get$context(), "navigator").callMethod$2("vibrate", [2000]);
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure16: {
+  main_closure17: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var connectionDisplay, connection, t1, online, metered;
@@ -8962,7 +8971,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure17: {
+  main_closure18: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var batteryDisplay, battery, t1, batteryLevel, charghing, chargingTime, dischargingTime;
@@ -8978,7 +8987,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure18: {
+  main_closure19: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var geolocationDisplay = document.querySelector("#geolocation-display");
@@ -9006,7 +9015,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 15, "call"],
     $isFunction: true
   },
-  main_closure19: {
+  main_closure20: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var ambientLightDisplay = document.querySelector("#ambient-light-display");
@@ -9022,7 +9031,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure20: {
+  main_closure21: {
     "^": "Closure:32;",
     call$1: [function(e) {
       J.set$display$x(document.querySelector("#proximity-display").style, "block");
@@ -9040,7 +9049,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure21: {
+  main_closure22: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var userProximityDisplay = document.querySelector("#user-proximity-display");
@@ -9057,7 +9066,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure22: {
+  main_closure23: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var deviceOrientationDisplay = document.querySelector("#device-orientation-display");
@@ -9085,7 +9094,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 61, "call"],
     $isFunction: true
   },
-  main_closure23: {
+  main_closure24: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var logVisibilityDisplay, t1;
@@ -9114,7 +9123,7 @@ var $$ = {};
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
-  main_closure24: {
+  main_closure25: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var crossDomainXhrDisplay, xhr, t1;
@@ -9151,7 +9160,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure25: {
+  main_closure26: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var deviceStoragePicturesDisplay, cursor, t1;
@@ -9191,7 +9200,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure26: {
+  main_closure27: {
     "^": "Closure:32;",
     call$1: [function(e) {
       var getAllContactsDisplay, getContacts, t1;
@@ -9225,7 +9234,7 @@ var $$ = {};
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
-  main_closure27: {
+  main_closure28: {
     "^": "Closure:32;box_0,keepscreen_20",
     call$1: [function(e) {
       var t1, t2, t3;

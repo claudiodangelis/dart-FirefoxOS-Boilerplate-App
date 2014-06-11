@@ -266,6 +266,15 @@ main() {
     new JsObject(context["MozActivity"], [openVideoOptions]);
   });
 
+  // Open settings
+  ButtonElement openSettings = querySelector("#open-settings");
+  openSettings.onClick.listen((e) {
+    new JsObject(context["MozActivity"], [new JsObject.jsify({
+      "name": "configure",
+      "target": "device"
+    })]);
+  });
+
   // Notifications
   ButtonElement addNotification = querySelector('#add-notification');
   addNotification.onClick.listen((e) {
