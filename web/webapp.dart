@@ -4,7 +4,6 @@
 // dart:js => support for interoperating with Javascript
 import 'dart:html';
 import 'dart:js' show context, JsObject;
-import 'dart:convert' show JSON;
 
 // `main()' is the entry point of a Dart app
 main() {
@@ -399,25 +398,6 @@ main() {
         ..innerHtml = "Failed to get your current location"
         ..style.display = 'block';
     });
-
-//    var getCurrentPositionCallback = (position) {
-//      geolocationDisplay
-//        ..innerHtml = "<strong>Latitude:</strong>"
-//                      "${position["coords"]["latitude"]}"
-//                      "<strong>Longitude:</strong>"
-//                      "${position["coords"]["longitude"]}"
-//
-//        ..style.display = 'block';
-//    };
-//
-//    var getCurrentPositionFallback = () {
-//      geolocationDisplay
-//        ..innerHtml = "Failed to get your current location"
-//        ..style.display = 'block';
-//    };
-//
-//    context["navigator"]["geolocation"].callMethod("getCurrentPosition",
-//        [getCurrentPositionCallback, getCurrentPositionFallback]);
   });
 
   ButtonElement ambientLight = querySelector('#ambient-light');
@@ -632,12 +612,12 @@ main() {
   DivElement alarmDisplay = querySelector('#alarm-display');
 
   addAlarm.onClick.listen((e) {
+    var data = new JsObject.jsify({"optionalData" : "I am data"});
     var alarm = context["navigator"]["mozAlarms"].callMethod("add", [
-      "honorTimezone", new JsObject.jsify({"optionalData" : "I am data"})
-      ]);
+      alarmDate, "honorTimezone", data]);
 
     alarm["onsuccess"] = (_) {
-      alarmDisplay.innerHtml = 'Alarm shceduled for ' + alarmDate.toString();
+      alarmDisplay.innerHtml = 'Alarm scheduled for ' + alarmDate.toString();
     };
 
     alarm["onerror"] = ([_]) {
@@ -648,23 +628,26 @@ main() {
     var getAllAlarms = context["navigator"]["mozAlarms"].callMethod("getAll");
 
     getAllAlarms["onsuccess"] = (_) {
-      alarmDisplay.innerHtml = '<h4>All alarms</h4>';
-      getAllAlarms["result"].callmethod("forEach", [(alarm) {
-        alarmDisplay.innerHtml += "<p><strong>Id:</strong> " + alarm["id"].toString() +
+      alarmDisplay.innerHtml += '<h4>All alarms</h4>';
 
-                    ", <strong>date:</strong> " + alarm["date"].toString() +
-
-                    ", <strong>respectTimezone:</strong> " + alarm["respectTimezone"].toString() +
-
-                    ", <strong>data:</strong> " + JSON.decode(alarm["data"]).toString() + "</p>";
-      }]);
+      // Note that `.forEach' is a method of Dart's List
+      getAllAlarms["result"].forEach((JsObject alarm) {
+        alarmDisplay.innerHtml += "<p><strong>Id:</strong> " +
+            alarm["id"].toString() + ", <strong>date:</strong> " +
+            alarm["date"].toString() + ", <strong>respectTimezone:</strong> " +
+            alarm["respectTimezone"].toString();
+            // TODO: print serialized `alarm.data'
+      });
     };
 
     getAllAlarms["onerror"] = ([_]) {
-      alarmDisplay.innerHtml = '<p>Failed to get all alarms</p>' + getAllAlarms["error"]["name"].toString();
+      alarmDisplay.innerHtml = '<p>Failed to get all alarms</p>' +
+          getAllAlarms["error"]["name"].toString();
     };
-
   });
 
+  // TODO: port `removeAllAlarms'
+  // ref: d90b99539456d606c945abde30a17f79e2496316
+  // . . .
 
 }
