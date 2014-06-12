@@ -4,6 +4,7 @@
 // dart:js => support for interoperating with Javascript
 import 'dart:html';
 import 'dart:js' show context, JsObject;
+import 'dart:convert' show JSON;
 
 // `main()' is the entry point of a Dart app
 main() {
@@ -623,5 +624,47 @@ main() {
       keepscreen.innerHtml = 'Keep screen on';
     }
   });
+
+  // Alarm API
+  // Aug 31, 2014 15:20:00
+  DateTime alarmDate = new DateTime(2014, 8, 31, 15, 20);
+  ButtonElement addAlarm = querySelector("#add-alarm");
+  DivElement alarmDisplay = querySelector('#alarm-display');
+
+  addAlarm.onClick.listen((e) {
+    var alarm = context["navigator"]["mozAlarms"].callMethod("add", [
+      "honorTimezone", new JsObject.jsify({"optionalData" : "I am data"})
+      ]);
+
+    alarm["onsuccess"] = (_) {
+      alarmDisplay.innerHtml = 'Alarm shceduled for ' + alarmDate.toString();
+    };
+
+    alarm["onerror"] = ([_]) {
+      alarmDisplay.innerHtml = 'Failed to set the alarm<br/>' +
+          alarm["error"]["name"].toString();
+    };
+
+    var getAllAlarms = context["navigator"]["mozAlarms"].callMethod("getAll");
+
+    getAllAlarms["onsuccess"] = (_) {
+      alarmDisplay.innerHtml = '<h4>All alarms</h4>';
+      getAllAlarms["result"].callmethod("forEach", [(alarm) {
+        alarmDisplay.innerHtml += "<p><strong>Id:</strong> " + alarm["id"].toString() +
+
+                    ", <strong>date:</strong> " + alarm["date"].toString() +
+
+                    ", <strong>respectTimezone:</strong> " + alarm["respectTimezone"].toString() +
+
+                    ", <strong>data:</strong> " + JSON.decode(alarm["data"]).toString() + "</p>";
+      }]);
+    };
+
+    getAllAlarms["onerror"] = ([_]) {
+      alarmDisplay.innerHtml = '<p>Failed to get all alarms</p>' + getAllAlarms["error"]["name"].toString();
+    };
+
+  });
+
 
 }
