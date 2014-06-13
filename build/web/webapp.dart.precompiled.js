@@ -511,7 +511,7 @@ aX:{
 v8:function(a,b){if(!this.Qy.n(0,a))return
 if(this.lJ.h(0,b)&&!this.UF)this.UF=!0
 this.PC()},
-cK:function(a){var z,y,x,w,v,u
+NR:function(a){var z,y,x,w,v,u
 if(!this.UF)return
 z=this.lJ
 z.Rz(0,a)
@@ -572,7 +572,7 @@ if(this.ml!=null)for(;x=this.ml,!x.gl0(x);)this.ml.Ux().$0()}return y},
 Ds:function(a){var z=J.U6(a)
 switch(z.t(a,0)){case"pause":this.v8(z.t(a,1),z.t(a,2))
 break
-case"resume":this.cK(z.t(a,1))
+case"resume":this.NR(z.t(a,1))
 break
 case"add-ondone":this.iK(z.t(a,1))
 break
@@ -4617,7 +4617,7 @@ GS:{
 $1:function(a){return J.Mp(a)},
 $isEH:true}}],["","file:///home/dawson/me/dev/github/claudiodangelis/dart-FirefoxOS-Boilerplate-App/web/webapp.dart",,S,{
 "^":"",
-QL:[function(){var z,y,x,w,v,u,t,s
+QL:[function(){var z,y,x,w,v,u,t,s,r,q
 z={}
 y=window.applicationCache
 if(y!=null){x=C.E4.aM(y)
@@ -4687,7 +4687,11 @@ u.Yf(2014,8,31,15,20,0,0,!1)
 t=document.querySelector("#add-alarm")
 s=document.querySelector("#alarm-display")
 z=J.Vg(t)
-H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e10(u,s)),z.Sg),[H.Kp(z,0)]).Zz()},"$0","HA",0,0,35],
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e10(u,s)),z.Sg),[H.Kp(z,0)]).Zz()
+r=document.querySelector("#remove-all-alarms")
+q=document.querySelector("#remove-alarms-display")
+z=J.Vg(r)
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e11(s,q)),z.Sg),[H.Kp(z,0)]).Zz()},"$0","HA",0,0,35],
 em:{
 "^":"Tp:32;",
 $1:[function(a){if(window.confirm("The app has been updated.Do you want to download thelatest files? \nOtherwise they will be updated at the next reload.")===!0)window.location.reload()},"$1",null,2,0,null,1,"call"],
@@ -5098,6 +5102,29 @@ $isEH:true},
 V3:{
 "^":"Tp:62;yL,VI",
 $1:[function(a){J.Qy(this.yL,C.xB.g("<p>Failed to get all alarms</p>",J.AG(J.UQ(J.UQ(this.VI,"error"),"name"))))},function(){return this.$1(null)},"$0","$1",null,null,0,2,null,14,44,"call"],
+$isEH:true},
+e11:{
+"^":"Tp:32;Ap,vp",
+$1:[function(a){var z,y,x
+z=J.UQ(J.UQ($.LX(),"navigator"),"mozAlarms").nQ("getAll")
+y=this.vp
+x=J.w1(z)
+x.u(z,"onsuccess",new S.V4(this.Ap,y,z))
+x.u(z,"onerror",new S.V5(y,z))},"$1",null,2,0,null,1,"call"],
+$isEH:true},
+V4:{
+"^":"Tp:32;a6,x3,cK",
+$1:[function(a){J.kH(J.UQ(this.cK,"result"),new S.ql())
+J.Qy(this.x3,"All alarms removed")
+J.Qy(this.a6,"")},"$1",null,2,0,null,44,"call"],
+$isEH:true},
+ql:{
+"^":"Tp:64;",
+$1:[function(a){J.UQ(J.UQ($.LX(),"navigator"),"mozAlarms").K9("remove",[J.AG(J.UQ(a,"id"))])},"$1",null,2,0,null,63,"call"],
+$isEH:true},
+V5:{
+"^":"Tp:62;bF,Gl",
+$1:[function(a){J.Qy(this.bF,C.xB.g("<p>Failed to remove all alamrs</p>",J.AG(J.UQ(J.UQ(this.Gl,"error"),"name"))))},function(){return this.$1(null)},"$0","$1",null,null,0,2,null,14,44,"call"],
 $isEH:true}},1],])
 I.$finishClasses($$,$,null)
 $$=null
@@ -5469,7 +5496,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 
 init.functionAliases={}
-init.metadata=["sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},{func:"EC",ret:P.qU,args:[W.D0]},{func:"Vv",ret:P.a2,args:[W.cv,P.qU,P.qU,W.JQ]},"element","attributeName","context","callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"NT"},"invocation",{func:"bh",args:[null,null]},{func:"WD",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","_",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},"position","attr",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","pos",{func:"Pl",args:[W.YY]},{func:"iu",args:[W.rR]},"event",{func:"hd",opt:[null]},"alarm",{func:"FB",args:[P.l9]},];$=null
+init.metadata=["sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Ib",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},{func:"EC",ret:P.qU,args:[W.D0]},{func:"Vv",ret:P.a2,args:[W.cv,P.qU,P.qU,W.JQ]},"element","attributeName","context","callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"NT"},"invocation",{func:"bh",args:[null,null]},{func:"WD",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","_",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},"position","attr",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","pos",{func:"Pl",args:[W.YY]},{func:"iu",args:[W.rR]},"event",{func:"hd",opt:[null]},"alarm",{func:"FB",args:[P.l9]},];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(properties) {
@@ -8950,4 +8977,28 @@ if(!"name" in V3)V3.name="V3"
 $desc=$collectedClasses.V3
 if($desc instanceof Array)$desc=$desc[1]
 V3.prototype=$desc
-return[qE,Gh,fF,zS,fY,Mr,lJ,P2,nB,i3,it,Az,QP,IF,n6,Ny,Y5,Gc,nx,QQ,fW,y4,d7,Xc,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,ae,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,Vu,YY,iG,jP,Ax,xf,xn,Vb,QH,ST,X2,tb,Sg,pA,Mi,KD,Ln,HL,Xb,wP,eP,AL,Og,cS,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,xe,Hw,bn,Ik,xI,Aj,oU,eY,KV,BH,KY,G7,b1,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,u2,bX,A6,MC,Mx,qI,Ea,lp,kd,I0,yN,Cp,ua,HN,Ul,G0,ii,fq,h4,qk,GI,Tb,Iv,WP,yY,yJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,J6,u9,Xg,UM,hq,NL,yp,Eh,Mq,Nf,Nc,rj,rh,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,JY,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,Tx,HC,kK,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,eW,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,GH,To,MU,j2,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,bi,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Jo,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,mh,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,U5,SO,SU,GD,C6,Ca,Pf,Zf,vs,da,pV,U7,eX,rH,ZL,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,K5,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,LU,lD,LG,Sw,o0,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,AT,bJ,mp,ub,ds,lj,UV,Ts,VS,t7,HG,eV,qo,EH,KN,An,WO,c8,lf,a,mE,qU,Rn,wv,BV,id,VG,l4,rK,Vw,KK,zL,ec,wi,dx,x5,hm,HR,tJ,i7,I2,RO,Cq,xC,kG,JQ,Pb,vD,mD,Eg,m6,ct,tE,Ow,W9,kF,mk,MM,fm,IU,l9,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,D7,hT,GS,em,Lb,QA,VW,oZ,Cv,y8,Hi,ed,BT,PY,wa,Or,YL,wf,Oa,kJ,emv,Lbd,QAa,CvS,edy,waE,Un,Ore,YLa,wfa,Oaa,e0,Zb,oa,e1,VWl,e2,oZ2,e3,y88,e4,HiS,e5,BTP,e6,PYo,u8k,e7,kJb,Una,e8,Zba,oaa,e9,e10,V0,V1,V2,jr,V3]}
+function e11(Ap,vp){this.Ap=Ap
+this.vp=vp}e11.builtin$cls="e11"
+if(!"name" in e11)e11.name="e11"
+$desc=$collectedClasses.e11
+if($desc instanceof Array)$desc=$desc[1]
+e11.prototype=$desc
+function V4(a6,x3,cK){this.a6=a6
+this.x3=x3
+this.cK=cK}V4.builtin$cls="V4"
+if(!"name" in V4)V4.name="V4"
+$desc=$collectedClasses.V4
+if($desc instanceof Array)$desc=$desc[1]
+V4.prototype=$desc
+function ql(){}ql.builtin$cls="ql"
+if(!"name" in ql)ql.name="ql"
+$desc=$collectedClasses.ql
+if($desc instanceof Array)$desc=$desc[1]
+ql.prototype=$desc
+function V5(bF,Gl){this.bF=bF
+this.Gl=Gl}V5.builtin$cls="V5"
+if(!"name" in V5)V5.name="V5"
+$desc=$collectedClasses.V5
+if($desc instanceof Array)$desc=$desc[1]
+V5.prototype=$desc
+return[qE,Gh,fF,zS,fY,Mr,lJ,P2,nB,i3,it,Az,QP,IF,n6,Ny,Y5,Gc,nx,QQ,fW,y4,d7,Xc,Um,oJ,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,ae,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,Vu,YY,iG,jP,Ax,xf,xn,Vb,QH,ST,X2,tb,Sg,pA,Mi,KD,Ln,HL,Xb,wP,eP,AL,Og,cS,M6,El,mC,SV,aB,fJ,Ih,Vh,rC,ZY,cx,Ee,Qb,PG,xe,Hw,bn,Ik,xI,Aj,oU,eY,KV,BH,KY,G7,b1,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,fs,u2,bX,A6,MC,Mx,qI,Ea,lp,kd,I0,yN,Cp,ua,HN,Ul,G0,ii,fq,h4,qk,GI,Tb,Iv,WP,yY,yJ,FB,xV,FH,y6,RH,Kn,Z2,w6,BR,vw,aG,J6,u9,Xg,UM,hq,NL,yp,Eh,Mq,Nf,Nc,rj,rh,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,JY,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,Tx,HC,kK,TC,ih,Nd,zp,Xu,lu,tk,me,oB,Ah,EI,MI,Ub,bM,eW,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,GH,To,MU,j2,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,MT,Rk,Eo,Pe,o4,ZD,vt,cu,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,bi,Et,np,Pi,qO,xt,tG,P0,xl,Xr,Sl,Jo,Qm,D8,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,vK,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,mh,lb,tD,hJ,dC,wN,VX,aL,a7,i1,xy,MH,A8,U5,SO,SU,GD,C6,Ca,Pf,Zf,vs,da,pV,U7,eX,rH,ZL,rq,RW,YP,jZ,FZ,OM,qh,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,dR,uR,YR,fB,t3,fZ,TF,K5,Cg,Hs,pK,eM,R8,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,jg,YO,oz,b6,tj,zQ,u3,mW,LU,lD,LG,Sw,o0,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,AT,bJ,mp,ub,ds,lj,UV,Ts,VS,t7,HG,eV,qo,EH,KN,An,WO,c8,lf,a,mE,qU,Rn,wv,BV,id,VG,l4,rK,Vw,KK,zL,ec,wi,dx,x5,hm,HR,tJ,i7,I2,RO,Cq,xC,kG,JQ,Pb,vD,mD,Eg,m6,ct,tE,Ow,W9,kF,mk,MM,fm,IU,l9,Gn,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip,D7,hT,GS,em,Lb,QA,VW,oZ,Cv,y8,Hi,ed,BT,PY,wa,Or,YL,wf,Oa,kJ,emv,Lbd,QAa,CvS,edy,waE,Un,Ore,YLa,wfa,Oaa,e0,Zb,oa,e1,VWl,e2,oZ2,e3,y88,e4,HiS,e5,BTP,e6,PYo,u8k,e7,kJb,Una,e8,Zba,oaa,e9,e10,V0,V1,V2,jr,V3,e11,V4,ql,V5]}

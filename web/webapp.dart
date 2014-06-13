@@ -606,7 +606,8 @@ main() {
   });
 
   // Alarm API
-  // Aug 31, 2014 15:20:00
+
+  // Alarm date: Aug 31, 2014 15:20:00
   DateTime alarmDate = new DateTime(2014, 8, 31, 15, 20);
   ButtonElement addAlarm = querySelector("#add-alarm");
   DivElement alarmDisplay = querySelector('#alarm-display');
@@ -646,8 +647,25 @@ main() {
     };
   });
 
-  // TODO: port `removeAllAlarms'
-  // ref: d90b99539456d606c945abde30a17f79e2496316
-  // . . .
+  ButtonElement removeAllAlarms = querySelector("#remove-all-alarms");
+  DivElement removeAlarmsDisplay = querySelector("#remove-alarms-display");
+
+  removeAllAlarms.onClick.listen((e) {
+    var getAddedAlarms = context["navigator"]["mozAlarms"].callMethod("getAll");
+
+    getAddedAlarms["onsuccess"] = (_) {
+      getAddedAlarms["result"].forEach((JsObject alarm) {
+        context["navigator"]["mozAlarms"].callMethod("remove",
+            [alarm["id"].toString()]);
+      });
+      removeAlarmsDisplay.innerHtml = 'All alarms removed';
+      alarmDisplay.innerHtml = '';
+    };
+
+    getAddedAlarms["onerror"] = ([_]) {
+      removeAlarmsDisplay.innerHtml = "<p>Failed to remove all alamrs</p>" +
+          getAddedAlarms["error"]["name"].toString();
+    };
+  });
 
 }

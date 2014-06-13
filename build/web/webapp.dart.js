@@ -511,7 +511,7 @@ aX:{
 v8:function(a,b){if(!this.Qy.n(0,a))return
 if(this.lJ.h(0,b)&&!this.UF)this.UF=!0
 this.PC()},
-cK:function(a){var z,y,x,w,v,u
+NR:function(a){var z,y,x,w,v,u
 if(!this.UF)return
 z=this.lJ
 z.Rz(0,a)
@@ -572,7 +572,7 @@ if(this.ml!=null)for(;x=this.ml,!x.gl0(x);)this.ml.Ux().$0()}return y},
 Ds:function(a){var z=J.U6(a)
 switch(z.t(a,0)){case"pause":this.v8(z.t(a,1),z.t(a,2))
 break
-case"resume":this.cK(z.t(a,1))
+case"resume":this.NR(z.t(a,1))
 break
 case"add-ondone":this.iK(z.t(a,1))
 break
@@ -4617,7 +4617,7 @@ GS:{
 $1:function(a){return J.Mp(a)},
 $isEH:true}}],["","file:///home/dawson/me/dev/github/claudiodangelis/dart-FirefoxOS-Boilerplate-App/web/webapp.dart",,S,{
 "^":"",
-QL:[function(){var z,y,x,w,v,u,t,s
+QL:[function(){var z,y,x,w,v,u,t,s,r,q
 z={}
 y=window.applicationCache
 if(y!=null){x=C.E4.aM(y)
@@ -4687,7 +4687,11 @@ u.Yf(2014,8,31,15,20,0,0,!1)
 t=document.querySelector("#add-alarm")
 s=document.querySelector("#alarm-display")
 z=J.Vg(t)
-H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e10(u,s)),z.Sg),[H.Kp(z,0)]).Zz()},"$0","HA",0,0,35],
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e10(u,s)),z.Sg),[H.Kp(z,0)]).Zz()
+r=document.querySelector("#remove-all-alarms")
+q=document.querySelector("#remove-alarms-display")
+z=J.Vg(r)
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new S.e11(s,q)),z.Sg),[H.Kp(z,0)]).Zz()},"$0","HA",0,0,35],
 em:{
 "^":"Tp:32;",
 $1:[function(a){if(window.confirm("The app has been updated.Do you want to download thelatest files? \nOtherwise they will be updated at the next reload.")===!0)window.location.reload()},"$1",null,2,0,null,1,"call"],
@@ -5098,6 +5102,29 @@ $isEH:true},
 V3:{
 "^":"Tp:62;yL,VI",
 $1:[function(a){J.Qy(this.yL,C.xB.g("<p>Failed to get all alarms</p>",J.AG(J.UQ(J.UQ(this.VI,"error"),"name"))))},function(){return this.$1(null)},"$0","$1",null,null,0,2,null,14,44,"call"],
+$isEH:true},
+e11:{
+"^":"Tp:32;Ap,vp",
+$1:[function(a){var z,y,x
+z=J.UQ(J.UQ($.LX(),"navigator"),"mozAlarms").nQ("getAll")
+y=this.vp
+x=J.w1(z)
+x.u(z,"onsuccess",new S.V4(this.Ap,y,z))
+x.u(z,"onerror",new S.V5(y,z))},"$1",null,2,0,null,1,"call"],
+$isEH:true},
+V4:{
+"^":"Tp:32;a6,x3,cK",
+$1:[function(a){J.kH(J.UQ(this.cK,"result"),new S.ql())
+J.Qy(this.x3,"All alarms removed")
+J.Qy(this.a6,"")},"$1",null,2,0,null,44,"call"],
+$isEH:true},
+ql:{
+"^":"Tp:64;",
+$1:[function(a){J.UQ(J.UQ($.LX(),"navigator"),"mozAlarms").K9("remove",[J.AG(J.UQ(a,"id"))])},"$1",null,2,0,null,63,"call"],
+$isEH:true},
+V5:{
+"^":"Tp:62;bF,Gl",
+$1:[function(a){J.Qy(this.bF,C.xB.g("<p>Failed to remove all alamrs</p>",J.AG(J.UQ(J.UQ(this.Gl,"error"),"name"))))},function(){return this.$1(null)},"$0","$1",null,null,0,2,null,14,44,"call"],
 $isEH:true}},1],])
 I.$finishClasses($$,$,null)
 $$=null
@@ -5469,7 +5496,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 
 init.functionAliases={}
-init.metadata=["sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},{func:"EC",ret:P.qU,args:[W.D0]},{func:"Vv",ret:P.a2,args:[W.cv,P.qU,P.qU,W.JQ]},"element","attributeName","context","callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"NT"},"invocation",{func:"bh",args:[null,null]},{func:"WD",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","_",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},"position","attr",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","pos",{func:"Pl",args:[W.YY]},{func:"iu",args:[W.rR]},"event",{func:"hd",opt:[null]},"alarm",{func:"FB",args:[P.l9]},];$=null
+init.metadata=["sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Ib",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},{func:"EC",ret:P.qU,args:[W.D0]},{func:"Vv",ret:P.a2,args:[W.cv,P.qU,P.qU,W.JQ]},"element","attributeName","context","callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"NT"},"invocation",{func:"bh",args:[null,null]},{func:"WD",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","_",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},"position","attr",{func:"qu",void:true,args:[W.KV]},"blob",{func:"ow",args:[W.Az]},"permission","pos",{func:"Pl",args:[W.YY]},{func:"iu",args:[W.rR]},"event",{func:"hd",opt:[null]},"alarm",{func:"FB",args:[P.l9]},];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(properties) {
