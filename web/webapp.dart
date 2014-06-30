@@ -557,9 +557,32 @@ main() {
 
     cursor["onerror"] = () {
       print("Error");
+
+      var errorMessage = cursor["error"]["message"];
+      var errorName = cursor["error"]["name"];
+      var error = cursor["error"].toString();
+      // TODO: test this
+      String errorDetails = "";
+
+      if (errorMessage != null) {
+        errorDetails += "Error message: ";
+        errorDetails += errorMessage.toString();
+      }
+
+      if (errorName != null) {
+        errorDetails += "Error name: ";
+        errorDetails += errorName.toString();
+      }
+
+      if (error != null) {
+        errorDetails += "Error: ";
+        errorDetails += error;
+      }
+
       deviceStoragePicturesDisplay
         ..innerHtml = "<h4>Result from deviceStorage - pictures</h4>"
                       "<p>deviceStorage failed</p>"
+                      "<p>$errorDetails</p>"
         ..style.display = 'block';
     };
 
