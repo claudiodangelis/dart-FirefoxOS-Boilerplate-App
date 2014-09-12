@@ -1,4 +1,4 @@
-This is an attempt of porting the legendary Firefox OS Boilerplate App by Robert Nyman to Dart.
+[Firefox OS Boilerplate App](https://github.com/robnyman/Firefox-OS-Boilerplate-App) ported to Dart.
 
 ## Running the app
 
@@ -13,7 +13,7 @@ If you want to install the app from your computer, get the code (`git clone http
 This code repository already has the compiled-to-Javscript version of the Boilerplate, these steps are needed only if you make some changes to the Dart code.
 
 1. Get and install Dart => [Get Dart](https://www.dartlang.org/tools/download.html)
-2. If you use Dart Editor, open the app's directory, right-click on file `pubspec.yaml` then choose "Pub Build ("generates JS")"; if you have `/path/to/dart-sdk/bin` in your $PATH, then change to app's directory and run `pub build` from the command line. 
+2. If you use Dart Editor, open the app's directory, right-click on file `pubspec.yaml` then choose "Pub Build ("generates JS")"; if you have `/path/to/dart-sdk/bin` in your $PATH, then change to app's directory and run `pub build` from the command line.
 
 
 ## About this porting
