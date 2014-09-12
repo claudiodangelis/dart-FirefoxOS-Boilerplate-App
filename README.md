@@ -78,55 +78,6 @@ And:
 
 All options to test packaged apps are outlined in the [How to install packaged apps in Firefox OS – options and tools](https://hacks.mozilla.org/2013/03/how-to-install-packaged-apps-in-firefox-os-options-and-tools/) article
 
-## Roadmap
-
-### WebActivities
-
-- [x] Pick image
-- [x] Pick anything
-- [x] Take picture
-- [x] Dial number
-- [x] Send SMS
-- [x] Add contact
-- [x] Share URL
-- [x] Share Image
-- [x] View URL
-- [x] Compose mail
-- [x] Save bookmark
-- [x] Open video
-
-### WebAPIs
-
-- [x] Add notification
-- [x] Orientation lock
-- [x] Vibrate 2 sec
-- [x] Check connection
-- [x] Check battery
-- [x] Geolocation
-- [x] Ambient light
-- [x] Proximity
-- [x] User proximity
-- [x] Device orientation
-- [x] Keep screen on
-
-### Privileged APIs
-
-- [x] App visibility
-- [x] Cross-domain XHR
-- [x] deviceStorage - pictures
-- [x] Get all contacts
-
-### Other
-
-- [x] l18n
-- [x] offline capabilities
-- [x] comments
-- [x] instructions on how to setup the environment and run the app
-
-## TODO
-
-- [ ] Implement more Dart features (e.g. native wrapper classes for MozActivities and Web APIs)
-- [ ] Port the `l10n.js` script to Dart
 
 ## Credits
 
