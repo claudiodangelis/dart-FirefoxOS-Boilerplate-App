@@ -78,6 +78,9 @@ And:
 
 All options to test packaged apps are outlined in the [How to install packaged apps in Firefox OS – options and tools](https://hacks.mozilla.org/2013/03/how-to-install-packaged-apps-in-firefox-os-options-and-tools/) article
 
+## Screenshot
+
+![Screenshot](screenshot.png)
 
 ## Credits
 
